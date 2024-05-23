@@ -1,0 +1,317 @@
+/**
+ * Fit Image Styles
+ * ----------------------------------------------------------------------------
+ *
+ * Needs to have a parent with some sort of positioning value applied to it
+ *
+ */
+.fit-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+
+  &.object-contain {
+    background-size: contain;
+  }
+
+  &.object-cover {
+    background-size: cover;
+  }
+
+  &.object-fill {
+    background-size: 100%;
+  }
+
+  &.object-none {
+    background-size: auto;
+  }
+
+  &.object-scale-down {
+    background-size: contain;
+  }
+
+  &.object-bottom {
+    background-position: bottom center;
+  }
+
+  &.object-center {
+    background-position: center center;
+  }
+
+  &.object-left {
+    background-position: center left;
+  }
+
+  &.object-left-bottom {
+    background-position: bottom left;
+  }
+
+  &.object-left-top {
+    background-position: top left;
+  }
+
+  &.object-right {
+    background-position: center right;
+  }
+
+  &.object-right-bottom {
+    background-position: bottom right;
+  }
+
+  &.object-right-top {
+    background-position: top right;
+  }
+
+  &.object-top {
+    background-position: top center;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+
+  /*
+   * if element has been polyfilled
+   */
+  &.compat-object-fit {
+    img {
+      @apply .sr-only;
+    }
+  }
+}
+
+@screen sm {
+  .sm\:object-contain.fit-image {
+    background-size: contain;
+  }
+
+  .sm\:object-cover.fit-image {
+    background-size: cover;
+  }
+
+  .sm\:object-fill.fit-image {
+    background-size: 100%;
+  }
+
+  .sm\:object-none.fit-image {
+    background-size: auto;
+  }
+
+  .sm\:object-scale-down.fit-image {
+    background-size: contain;
+  }
+
+  .sm\:object-bottom.fit-image {
+    background-position: bottom center;
+  }
+
+  .sm\:object-center.fit-image {
+    background-position: center center;
+  }
+
+  .sm\:object-left.fit-image {
+    background-position: center left;
+  }
+
+  .sm\:object-left-bottom.fit-image {
+    background-position: bottom left;
+  }
+
+  .sm\:object-left-top.fit-image {
+    background-position: top left;
+  }
+
+  .sm\:object-right.fit-image {
+    background-position: center right;
+  }
+
+  .sm\:object-right-bottom.fit-image {
+    background-position: bottom right;
+  }
+
+  .sm\:object-right-top.fit-image {
+    background-position: top right;
+  }
+
+  .sm\:object-top.fit-image {
+    background-position: top center;
+  }
+}
+
+@screen md {
+  .md\:object-contain.fit-image {
+    background-size: contain;
+  }
+
+  .md\:object-cover.fit-image {
+    background-size: cover;
+  }
+
+  .md\:object-fill.fit-image {
+    background-size: 100%;
+  }
+
+  .md\:object-none.fit-image {
+    background-size: auto;
+  }
+
+  .md\:object-scale-down.fit-image {
+    background-size: contain;
+  }
+
+  .md\:object-bottom.fit-image {
+    background-position: bottom center;
+  }
+
+  .md\:object-center.fit-image {
+    background-position: center center;
+  }
+
+  .md\:object-left.fit-image {
+    background-position: center left;
+  }
+
+  .md\:object-left-bottom.fit-image {
+    background-position: bottom left;
+  }
+
+  .md\:object-left-top.fit-image {
+    background-position: top left;
+  }
+
+  .md\:object-right.fit-image {
+    background-position: center right;
+  }
+
+  .md\:object-right-bottom.fit-image {
+    background-position: bottom right;
+  }
+
+  .md\:object-right-top.fit-image {
+    background-position: top right;
+  }
+
+  .md\:object-top.fit-image {
+    background-position: top center;
+  }
+}
+
+@screen lg {
+  .lg\:object-contain.fit-image {
+    background-size: contain;
+  }
+
+  .lg\:object-cover.fit-image {
+    background-size: cover;
+  }
+
+  .lg\:object-fill.fit-image {
+    background-size: 100%;
+  }
+
+  .lg\:object-none.fit-image {
+    background-size: auto;
+  }
+
+  .lg\:object-scale-down.fit-image {
+    background-size: contain;
+  }
+
+  .lg\:object-bottom.fit-image {
+    background-position: bottom center;
+  }
+
+  .lg\:object-center.fit-image {
+    background-position: center center;
+  }
+
+  .lg\:object-left.fit-image {
+    background-position: center left;
+  }
+
+  .lg\:object-left-bottom.fit-image {
+    background-position: bottom left;
+  }
+
+  .lg\:object-left-top.fit-image {
+    background-position: top left;
+  }
+
+  .lg\:object-right.fit-image {
+    background-position: center right;
+  }
+
+  .lg\:object-right-bottom.fit-image {
+    background-position: bottom right;
+  }
+
+  .lg\:object-right-top.fit-image {
+    background-position: top right;
+  }
+
+  .lg\:object-top.fit-image {
+    background-position: top center;
+  }
+}
+
+@screen xl {
+  .xl\:object-contain.fit-image {
+    background-size: contain;
+  }
+
+  .xl\:object-cover.fit-image {
+    background-size: cover;
+  }
+
+  .xl\:object-fill.fit-image {
+    background-size: 100%;
+  }
+
+  .xl\:object-none.fit-image {
+    background-size: auto;
+  }
+
+  .xl\:object-scale-down.fit-image {
+    background-size: contain;
+  }
+
+  .xl\:object-bottom.fit-image {
+    background-position: bottom center;
+  }
+
+  .xl\:object-center.fit-image {
+    background-position: center center;
+  }
+
+  .xl\:object-left.fit-image {
+    background-position: center left;
+  }
+
+  .xl\:object-left-bottom.fit-image {
+    background-position: bottom left;
+  }
+
+  .xl\:object-left-top.fit-image {
+    background-position: top left;
+  }
+
+  .xl\:object-right.fit-image {
+    background-position: center right;
+  }
+
+  .xl\:object-right-bottom.fit-image {
+    background-position: bottom right;
+  }
+
+  .xl\:object-right-top.fit-image {
+    background-position: top right;
+  }
+
+  .xl\:object-top.fit-image {
+    background-position: top center;
+  }
+}

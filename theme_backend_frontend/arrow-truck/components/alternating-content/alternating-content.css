@@ -1,0 +1,54 @@
+/**
+ * Alternating Content Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.alternating-content {
+  .icon-wrapper {
+    height: 53px;
+    width: 53px;
+    border-radius: 50%;
+    @apply .relative .bg-brand-primary .text-white .text-4xl;
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .image-wrapper {
+    position: relative;
+
+    .fit-image {
+      overflow: hidden;
+      img {
+        transform: scale3d(1.1, 1.1, 1.1);
+      }
+    }
+  }
+
+  .image-1 {
+    &::after {
+      content: '';
+      display: block;
+      padding-top: 166%;
+    }
+  }
+
+  .image-2 {
+    &::after {
+      content: '';
+      display: block;
+      padding-top: 204%;
+    }
+  }
+
+  .two-col {
+    margin-bottom: 0 !important;
+  }
+}

@@ -1,0 +1,26 @@
+/**
+ * Column Photos Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.column-photos {
+  .col:nth-child(1) .relative,
+  .col:nth-child(3) .relative {
+    &::after {
+      content: '';
+      display: block;
+      padding-top: 200%;
+    }
+  }
+
+  .col:nth-child(2) .relative {
+    &::after {
+      content: '';
+      display: block;
+      padding-top: 167%;
+    }
+  }
+}

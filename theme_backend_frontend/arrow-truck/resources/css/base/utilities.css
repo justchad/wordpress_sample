@@ -1,0 +1,282 @@
+/*
+ * Additional Utility classes
+ *
+ * Only add tailwind variations if
+ * they're actually needed. Remember, variations
+ * create many versions of a class which could
+ * potentially get out of hand really quick
+ */
+
+/*
+ * Wordpress WYSIWYG Figure alignment override
+ */
+.top-nav {
+  top: calc( var(--navbarHeight) + var(--adminbarHeight) );
+}
+
+figure.aligncenter,
+img.aligncenter {
+  @apply .block .mt-0 .mb-4 .mx-auto .text-center;
+
+  img {
+    @apply .inline-block;
+  }
+}
+
+figure.alignleft,
+img.alignleft {
+  @apply .float-left .mt-0 .mr-3 .mb-4 .ml-0 .text-left;
+
+  img {
+    @apply .inline-block;
+  }
+}
+
+figure.alignright,
+img.alignright {
+  @apply .float-right .mt-0 .mr-0 .mb-4 .ml-3 .text-right;
+
+  img {
+    @apply .inline-block;
+  }
+}
+
+
+
+.aspect-square::before,
+.aspect-1\/1::before {
+  content:'';
+  display: block;
+  padding-top: 100%;
+}
+
+.aspect-2\/1::before {
+  content:'';
+  display: block;
+  padding-top: 50%;
+}
+
+.aspect-4\/3::before {
+  content:'';
+  display: block;
+  padding-top: 75%;
+}
+
+.aspect-16\/9::before {
+  content:'';
+  display: block;
+  padding-top: 56.25%;
+}
+
+.aspect-5\/3::before {
+  content:'';
+  display: block;
+  padding-top: 60%;
+}
+
+.aspect-3\/5::before {
+  content:'';
+  display: block;
+  padding-top: 16%;
+}
+
+.aspect-3\/2::before {
+  content:'';
+  display: block;
+  padding-top: 150%;
+}
+
+.aspect-2\/3::before {
+  content:'';
+  display: block;
+  padding-top: 66.666667%;
+}
+
+.wowza {
+  background: tomato;
+}
+
+.top-1\/2 {
+  top: 50%;
+}
+
+.left-1\/2 {
+  left: 50%;
+}
+
+.overlay {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.overlay-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 51;
+}
+
+.overlay-gradient {
+  background: linear-gradient(180.22deg, rgba(0, 0, 0, 0) 0.19%, rgba(0, 0, 0, 0.6) 75.1%);
+}
+
+.translate-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+figcaption {
+  @apply .mb-4 .text-xs .text-center .italic .text-gray-300;
+  margin-top: 0.5rem;
+}
+
+.flex-0 {
+  flex: 0 0 auto;
+}
+
+.flex-fill {
+  flex: 1 0 0px;
+}
+
+.opacity-60 {
+  opacity: 0.6;
+}
+
+.opacity-20 {
+  opacity: 0.2;
+}
+
+.rounded-md {
+  border-radius: 6px;
+}
+
+.rounded-lg {
+  border-radius: 8px;
+}
+
+.overlay-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 51;
+}
+
+.image-half-color-header {
+  @apply .relative .overflow-hidden;
+  padding-bottom: 16px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: calc( 174px / 2 );
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50vh;
+    width: 100vw;
+    @apply .bg-brand-primary;
+    z-index: -1;
+  }
+
+  .image-wrapper {
+    border-radius: 9999px;
+    border: 4px solid white;
+    box-shadow: 0px 0px 20px -5px rgba(50, 50, 50, 0.25);
+    background-color: theme(colors.brand.light-gray);
+    height: 158px;
+    width: 158px;
+    margin: 0 auto;
+    overflow: hidden;
+    z-index: 0;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.language-list {
+  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+}
+
+.max-4-col {
+  max-width: 368px;
+}
+
+.employee-card {
+  height: 306px;
+}
+.truck-inquiry-form_wrapper{
+
+  .gform_heading{
+    display: none;
+  }
+
+  .truck-inquiry-title{
+    display: block !important;
+
+    h2{
+      font-weight: normal !important;
+
+      span{
+        font-weight: bold;
+      }
+    }
+  }
+
+  .truck-inquiry-copy{
+
+    a{
+      color: #C72027;
+      text-decoration: none;
+
+      &:hover{
+        font-weight: bold;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .gform_hidden{
+    display: none !important;
+  }
+
+  .ginput_counter{
+    font-size: .75rem;
+    opacity: 0.75;
+  }
+
+  .gfield_required_asterisk{
+    color: #C72027;
+  }
+}
+
+.embed-responsive {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+
+  iframe, object, embed { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

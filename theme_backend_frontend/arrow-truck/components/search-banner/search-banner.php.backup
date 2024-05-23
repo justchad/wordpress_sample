@@ -1,0 +1,321 @@
+<?php
+/**
+* Search Banner
+* -----------------------------------------------------------------------------
+*
+* Search Banner component
+*/
+global $wp;
+
+$defaults = [
+  'hdg'            => [],
+  'image'          => null,
+  'image_focus'    => null,
+];
+
+$component_data = ll_parse_args( $component_data, $defaults );
+?>
+
+<?php
+/**
+ * Any additional classes to apply to the main component container.
+ *
+ * @var array
+ * @see args['classes']
+ */
+$classes = ( isset( $component_args['classes'] ) ? $component_args['classes'] : array() );
+/**
+ * ID to apply to the main component container.
+ *
+ * @var array
+ * @see args['id']
+ */
+$component_id   = ( isset( $component_args['id'] ) ? $component_args['id'] : false );
+$filters = new ArrowFilters;
+?>
+
+<?php if ( ll_empty( $component_data ) ) return; ?>
+<section class="search-banner relative <?php echo implode( " ", $classes ); ?>" <?php echo ( $component_id ? 'id="'.$component_id.'"' : '' ) ?> data-component="search-banner">
+  <?php
+    if ( $component_data['video_url'] )  {
+      ll_include_component(
+        'loop-video',
+        [
+          'video' => $component_data['video_url']
+        ]
+      );
+    } else {
+      ll_include_component(
+        'fit-image',
+        [
+          'image_id'            => $component_data['image'],
+          'thumbnail_size'      => 'full',
+          'position'            => $component_data['image_focus']
+        ]
+      );
+    }
+  ?>
+
+  <div class="alignment-container flex justify-center items-end lg:items-center relative z-10">
+
+    <div class="container px-5 lg:px-7">
+
+      <div class="w-full flex py-12 flex-col">
+
+        <<?php echo $component_data['hdg']['tag']; ?> class="hdg-2 mb-8 text-white text-center video-header-headline"><?php echo $component_data['hdg']['text']; ?></<?php echo $component_data['hdg']['tag']; ?>>
+
+        <form action="<?php echo arrow_page_url( 'search_inventory' ) ?>">
+          <div class="grid gap-x-2 grid-cols-4 justify-between items-center form-buttons">
+            <?php foreach( $filters->fields as $index => $field ) : ?>
+              <?php if ( $field->context == 'main' && $index <= 2 ) : ?>
+
+                <button data-toggle-target="#<?php echo $field->id; ?>-dropdown"
+                        data-toggle-class="is-open"
+                        data-toggle-group="search-form"
+                        data-toggle-outside
+                        data-toggle-escape
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                        aria-controls="#<?php echo $field->id; ?>-dropdown">
+                  <?php echo $field->label; ?>
+                  <svg class="icon icon-chevron-down hidden lg:inline-block"><use xlink:href="#icon-chevron-down"></use></svg>
+                </button>
+
+                <div class="search-dropdown" id="<?php echo $field->id; ?>-dropdown">
+                  <span class="arrow"></span>
+                  <div class="search-dropdown-inner px-6 py-6">
+                    <?php include( locate_template( $field->template ) ); ?>
+                  </div>
+                </div> <!-- /.search-dropdown -->
+
+              <?php endif; ?>
+            <?php endforeach; ?>
+
+
+            <button class="lg:hidden" data-toggle-target="#advanced-search, #search-title-menu, #search-nav-toggle" data-toggle-class="is-open">
+              More
+              <svg class="icon icon-right-arrow text-brand-primary text-lg svg-align"><use xlink:href="#icon-right-arrow"></use></svg>
+            </button>
+
+            <button class="hidden lg:block" data-toggle-target="#more-filters-dropdown"
+                    data-toggle-class="is-open"
+                    data-toggle-group="search-form"
+                    data-toggle-outside
+                    data-toggle-escape
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    aria-controls="#more-filters-dropdown">
+              More
+              <svg class="icon icon-right-arrow text-brand-primary text-lg svg-align"><use xlink:href="#icon-right-arrow"></use></svg>
+            </button>
+
+            <div class="search-dropdown is-wide" id="more-filters-dropdown">
+              <span class="arrow"></span>
+              <div class="search-dropdown-inner px-6 py-6">
+                <?php foreach( $filters->fields as $field ) : ?>
+                  <?php if ( $field->context == 'additional' ) : ?>
+                    <?php include(locate_template( $field->template )); ?>
+                  <?php endif; ?>
+                <?php endforeach; ?>
+              </div>
+            </div> <!-- /.search-dropdown -->
+          </div> <!-- /.flex -->
+
+          <?php /*
+          <div class="flex justify-between items-center form-buttons">
+
+            <button data-toggle-target="#make-dropdown" data-toggle-class="is-open" data-toggle-group="search-form" data-toggle-outside data-toggle-escape aria-haspopup="true" aria-expanded="false">Make</button>
+
+            <div class="search-dropdown" id="make-dropdown">
+
+              <span class="arrow"></span>
+
+              <ul class="checkbox-list">
+                <li>
+                  <label for="over-the-road" tabindex="0">Over the Road</label>
+                  <input type="checkbox" name="make" id="over-the-road">
+                  <div class="icon-area">
+                    <span class="icon icon-checkmark-empty"></span>
+                    <svg class="icon icon-checkmark-filled"><use xlink:href="#icon-checkmark-filled"></use></svg>
+                  </div>
+                </li>
+                <li>
+                  <label for="regional" tabindex="0">Regional</label>
+                  <input type="checkbox" name="make" id="regional">
+                  <div class="icon-area">
+                    <span class="icon icon-checkmark-empty"></span>
+                    <svg class="icon icon-checkmark-filled"><use xlink:href="#icon-checkmark-filled"></use></svg>
+                  </div>
+                </li>
+                <li>
+                  <label for="local" tabindex="0">Local</label>
+                  <input type="checkbox" name="make" id="local">
+                  <div class="icon-area">
+                    <span class="icon icon-checkmark-empty"></span>
+                    <svg class="icon icon-checkmark-filled"><use xlink:href="#icon-checkmark-filled"></use></svg>
+                  </div>
+                </li>
+                <li>
+                  <label for="moving-storage" tabindex="0">Moving &amp; Storage</label>
+                  <input type="checkbox" name="make" id="moving-storage">
+                  <div class="icon-area">
+                    <span class="icon icon-checkmark-empty"></span>
+                    <svg class="icon icon-checkmark-filled"><use xlink:href="#icon-checkmark-filled"></use></svg>
+                  </div>
+                </li>
+                <li>
+                  <label for="construction" tabindex="0">Construction</label>
+                  <input type="checkbox" name="make" id="construction">
+                  <div class="icon-area">
+                    <span class="icon icon-checkmark-empty"></span>
+                    <svg class="icon icon-checkmark-filled"><use xlink:href="#icon-checkmark-filled"></use></svg>
+                  </div>
+                </li>
+                <li>
+                  <label for="agricultural" tabindex="0">Agricultural</label>
+                  <input type="checkbox" name="make" id="agricultural">
+                  <div class="icon-area">
+                    <span class="icon icon-checkmark-empty"></span>
+                    <svg class="icon icon-checkmark-filled"><use xlink:href="#icon-checkmark-filled"></use></svg>
+                  </div>
+                </li>
+              </ul>
+
+            </div> <!-- /.search-dropdown -->
+
+            <button data-toggle-target="#model-dropdown" data-toggle-class="is-open" data-toggle-group="search-form" data-toggle-outside data-toggle-escape aria-haspopup="true" aria-expanded="false">Model</button>
+
+            <div class="search-dropdown" id="model-dropdown">
+
+              <span class="arrow"></span>
+
+              <fieldset>
+                <legend>Engine Make</legend>
+                <div class="inputs">
+                  <div>
+                    <input type="checkbox" name="format" id="CAT" value="CAT">
+                    <label for="CAT" tabindex="0">CAT</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="format" id="CUMM" value="CUMM">
+                    <label for="CUMM" tabindex="0">CUMM</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="format" id="DET" value="DET">
+                    <label for="DET" tabindex="0">DET</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="format" id="HINO" value="HINO">
+                    <label for="HINO" tabindex="0">HINO</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="format" id="INTL" value="INTL">
+                    <label for="INTL" tabindex="0">INTL</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="format" id="PACCAR" value="PACCAR">
+                    <label for="PACCAR" tabindex="0">PACCAR</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="format" id="VOLVO" value="VOLVO">
+                    <label for="VOLVO" tabindex="0">VOLVO</label>
+                  </div>
+                </div>
+              </fieldset>
+
+            </div> <!-- /.search-dropdown -->
+
+            <button data-toggle-target="#year-dropdown" data-toggle-class="is-open" data-toggle-group="search-form" data-toggle-outside data-toggle-escape aria-haspopup="true" aria-expanded="false">Model</button>
+
+            <div class="search-dropdown" id="year-dropdown">
+
+              <span class="arrow"></span>
+
+              <fieldset>
+                <legend>Year</legend>
+                <div class="inputs">
+                  <div>
+                    <input type="checkbox" name="format" id="1990" value="1990">
+                    <label for="1990" tabindex="0">1990</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="format" id="1991" value="1991">
+                    <label for="1991" tabindex="0">1991</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="format" id="1992" value="1992">
+                    <label for="1992" tabindex="0">1992</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="format" id="1993" value="1993">
+                    <label for="1993" tabindex="0">1993</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="format" id="1994" value="1994">
+                    <label for="1994" tabindex="0">1994</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="format" id="1995" value="1995">
+                    <label for="1995" tabindex="0">1995</label>
+                  </div>
+                </div>
+              </fieldset>
+
+            </div> <!-- /.search-dropdown -->
+
+            <button data-toggle-target="#more-filters-dropdown" data-toggle-class="is-open" data-toggle-group="search-form" data-toggle-outside data-toggle-escape aria-haspopup="true" aria-expanded="false">More <svg class="icon icon-right-arrow text-brand-primary text-lg svg-align"><use xlink:href="#icon-right-arrow"></use></svg></button>
+
+            <div class="search-dropdown is-wide" id="more-filters-dropdown">
+
+              <span class="arrow"></span>
+
+              <div class="input-area">
+                <label for="stock-num">Stock #</label>
+                <input type="text" placeholder="Enter Stock Number">
+              </div>
+
+              <fieldset>
+                <legend>Engine Make</legend>
+                <div class="inputs">
+                  <div>
+                    <input type="checkbox" name="format" id="0-299" value="0-299">
+                    <label for="0-299" tabindex="0">0-299</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="format" id="300-399" value="300-399">
+                    <label for="300-399" tabindex="0">300-399</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="format" id="400-499" value="400-499">
+                    <label for="400-499" tabindex="0">400-499</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="format" id="500+" value="500+">
+                    <label for="500+" tabindex="0">500+</label>
+                  </div>
+                </div>
+              </fieldset>
+
+            </div> <!-- /.search-dropdown -->
+
+          </div> <!-- /.flex -->
+          */ ?>
+
+          <div class="search-footer mt-6 text-right flex justify-between lg:block">
+
+            <a href="<?php echo home_url( add_query_arg( array(), $wp->request ) ) ?>" class="clear-filters border border-white text-white rounded text-sm transition duration-150 hover:bg-white hover:text-gray-400"><svg class="icon icon-restart"><use xlink:href="#icon-restart"></use></svg> Clear Filters</a>
+
+            <button type="submit" class="bg-brand-primary text-white rounded transition duration-150 hover:bg-red-400">Search</button>
+
+          </div> <!-- /.search-footer -->
+
+        </form>
+
+      </div> <!-- /.col -->
+
+
+    </div> <!-- /.container -->
+
+  </div> <!-- /.alignment-container -->
+
+</section> <!-- /.search-banner -->

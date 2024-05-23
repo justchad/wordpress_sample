@@ -1,0 +1,97 @@
+/**
+ * Promotions Slider Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.promotions-slider,
+.promo-card {
+  .image-wrapper {
+    &::after {
+      @apply .overlay .overlay-gradient;
+    }
+  }
+
+  .icon-wrapper {
+    display: block;
+    border-radius: 50%;
+    @apply .mx-auto .relative .mb-3;
+  }
+
+  .icon-wrapper {
+    height: 44px;
+    width: 44px;
+  }
+
+  .icon-wrapper svg {
+    height: 55px;
+    width: 55px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .hdg-5 {
+    line-height: 1.125;
+  }
+
+  .promotion {
+
+    @screen lg {
+      opacity: 0.5;
+      transition: 0.15s ease;
+
+      &.slick-center {
+        opacity: 1;
+      }
+    }
+  }
+
+  .slick-dots {
+    @apply .flex .justify-center;
+    bottom: -50px;
+
+    li {
+      height: 10px;
+      width: 10px;
+      margin: 0 4px;
+      flex: 0 0 auto;
+
+      button {
+        background-color: #C4C4C4;
+        opacity: 1;
+        height: 10px;
+        width: 10px;
+        margin: 0;
+        padding: 0;
+        vertical-align: middle;
+        border-radius: 50%;
+
+        &::before {
+          display: none;
+        }
+      }
+
+      &.slick-active {
+        button {
+          @apply .bg-brand-primary;
+        }
+      }
+    }
+  }
+}
+
+.promotion.promo-card .image-wrapper {
+  &::before {
+    content:'';
+    display: block;
+    padding-top: 100%;
+
+    @screen lg {
+      padding-top: 60%;
+    }
+  }
+}

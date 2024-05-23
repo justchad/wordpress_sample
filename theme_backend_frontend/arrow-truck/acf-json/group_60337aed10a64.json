@@ -1,0 +1,70 @@
+{
+    "key": "group_60337aed10a64",
+    "title": "Filters",
+    "fields": [
+        {
+            "key": "field_60337af1a499f",
+            "label": "Associated With",
+            "name": "association",
+            "type": "text",
+            "instructions": "PARENTFIELD | FIELDVALUE",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_62302e451f1bd",
+            "label": "Formatted As",
+            "name": "association_formatted_as",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "No Format",
+                "currency": "Currency",
+                "thousands": "Thousands",
+                "time": "Time"
+            },
+            "default_value": "none",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1647324945
+}

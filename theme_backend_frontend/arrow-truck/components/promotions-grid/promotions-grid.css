@@ -1,0 +1,17 @@
+/**
+ * Promotions Grid Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.promotions-grid {
+  .tag-wrapper {
+    position: absolute;
+    top: 1.25rem;
+    right: 0;
+    letter-spacing: 0.12em;
+    z-index: 10;
+  }
+}

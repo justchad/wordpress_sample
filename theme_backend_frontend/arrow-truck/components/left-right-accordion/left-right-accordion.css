@@ -1,0 +1,82 @@
+/**
+ * Left Right Accordion Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.left-right-accordion {
+  .image-area {
+    .image-wrapper {
+      position: relative;
+      opacity: 0;
+      transition: 0.15s ease;
+
+      &:not(:first-child) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      &.is-open {
+        opacity: 1;
+      }
+    }
+  }
+
+  .num-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 33px;
+    width: 33px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: 0.15s ease;
+    @apply .bg-brand-primary .font-bold .text-sm;
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .left-right-accordion__item-title {
+    cursor: pointer;
+
+    .title {
+      @apply .text-2xl .block;
+      transform: translateX( 0 ) scale3d(1, 1, 1);
+      transition: 0.15s ease;
+    }
+  }
+
+  .left-right-accordion__item {
+    transition: 0.15s ease;
+
+    &.is-open {
+      @apply .border-brand-primary;
+      color: inherit;
+
+      .num-wrapper {
+        opacity: 1;
+      }
+
+      .left-right-accordion__item-title {
+        .title {
+          transform: translateX( 40px ) scale3d(0.75, 0.75, 0.75);
+        }
+      }
+
+      .left-right-accordion__item-answer {
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+    "key": "group_6029b5a8e4162",
+    "title": "Template : Register",
+    "fields": [
+        {
+            "key": "field_6029b5afa22f3",
+            "label": "Registration Form ID",
+            "name": "register_form_id",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "2": "Contact",
+                "11": "Create an Account",
+                "1": "Credit Application",
+                "7": "Down Payment Estimator",
+                "8": "Estimate Your Payment",
+                "9": "Let's Stay In Touch",
+                "10": "Login",
+                "5": "Pre-Qualify",
+                "4": "Sell My Truck",
+                "3": "Submit a Warranty Form"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/template-register.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1613368536
+}

@@ -1,0 +1,7 @@
+webpack.mix.js
+tailwind.js
+tailwind.config.js
+resources/js/plugins/*.js
+resources/js/vendor/*.js
+resources/js/_pagination.js
+resources/js/_locations.js

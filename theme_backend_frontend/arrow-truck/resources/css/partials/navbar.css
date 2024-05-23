@@ -1,0 +1,459 @@
+/*
+ * navbar base styles are using plain css with some tailwind
+ * sprinkled in. @apply tailwind utilities for theme specifics
+ * like font sizes, colors, and even spacings as necessary. The
+ * rest we will just do in plain css.
+ */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  @apply .bg-white;
+  z-index: 999;
+
+  /*
+   * quality of life enhancement for logged in admins
+   * not on IE
+   */
+  .logged-in.admin-bar & {
+    top: var(--adminbarHeight);
+  }
+
+  .navbar-top-wrapper {
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.12);
+  }
+
+  .wishlist-link {
+    position: relative;
+    vertical-align: 15%;
+
+    @screen lg {
+      vertical-align: initial;
+    }
+
+    .wishlist-num {
+      position: absolute;
+      bottom: -0.25rem;
+      right: 0;
+      height: 16px;
+      width: 16px;
+      @apply .text-xs .font-bold .bg-white .text-gray-300;
+      border-radius: 50%;
+
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  .nav-title {
+    @apply .uppercase .tracking-wider .text-gray-500 .text-sm .font-medium;
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    white-space: nowrap;
+    transform: translateX(-1rem) translateY(-50%);
+    opacity: 0;
+    transition: 0.15s ease;
+
+    &.is-open {
+      transform: translateX(0) translateY(-50%);
+      opacity: 1;
+    }
+
+    @screen lg {
+      display: none;
+    }
+  }
+}
+
+.primary-nav,
+.accordion-nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  /*
+   * 61px is --bottomNavbarHeight. Hardsetting it because
+   * when JS sets the value it won't see the height of the bottomNavbar
+   * that is in the menu because it's hidden by default.
+   */
+  height: calc( 100vh - ( var(--adminbarHeight) + var(--navbarHeight) + 61px ) );
+  overflow-y: auto;
+  @apply .bg-white;
+
+  @screen lg {
+    position: unset;
+    top: auto;
+    left: auto;
+    width: auto;
+    height: auto;
+    overflow-y: unset;
+    margin-bottom: 0;
+    @apply .bg-transparent;
+  }
+
+  > ul {
+
+  }
+
+  > ul > li {
+    width: 100%;
+    padding-right: 30px;
+    padding-left: 30px;
+
+    @screen sm {
+      max-width: 640px;
+    }
+
+    @screen md {
+      max-width: 768px;
+    }
+
+    @screen lg {
+      padding-right: 0;
+      padding-left: 0;
+      max-width: 1024px;
+      width: auto;
+    }
+
+    @screen xl {
+      max-width: 1270px;
+    }
+  }
+}
+
+.navbar-toggle {
+  position: relative;
+  display: inline-block;
+  width: 22px;
+  height: 14px;
+  outline: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.navbar-toggle.is-open {
+  .navbar-toggle-icon {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    transform-origin: center center;
+
+    &::before {
+      opacity: 0;
+    }
+
+    &::after {
+      top: 50%;
+      transform: translateY(-50%) rotate(-90deg);
+      transform-origin: center center;
+    }
+  }
+}
+
+.navbar-toggle-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-50%);
+  display: inline-block;
+  width: 22px;
+  height: 2px;
+  background-color: currentColor;
+  transition: all 0.15s ease;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    width: 22px;
+    height: 2px;
+    background-color: currentColor;
+  }
+
+  &::before {
+    top: 6px;
+  }
+
+  &::after {
+    top: 12px;
+    transition: all 0.15s ease;
+  }
+}
+
+.primary-menu-item {
+  position: relative;
+  z-index: 0;
+
+  @screen lg {
+    position: unset;
+  }
+
+  .icon-chevron-down {
+    transform: rotate(0);
+  }
+
+  > a.is-open,
+  > button.is-open {
+    @screen lg {
+      @apply .text-brand-primary;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      @apply .bg-gray-100;
+      z-index: -1;
+
+      @screen lg {
+        display: none;
+      }
+    }
+
+    .icon-chevron-down {
+      transform: rotate(180deg);
+    }
+
+    .icon-plus {
+      @apply .hidden;
+    }
+
+    .icon-minus {
+      @apply .block;
+
+      @screen lg {
+        @apply .hidden;
+      }
+    }
+  }
+}
+
+.sub-menu {
+  @screen lg {
+    @apply .bg-gray-100;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: calc( 100vh - ( var(--adminbarHeight) + var(--navbarHeight) ) );
+  }
+
+  &.is-open {
+    display: block;
+  }
+
+  .hide-title {
+    > span.hdg-6 {
+      display: none;
+    }
+  }
+
+  .container {
+    @apply .px-0;
+
+    @screen lg {
+      padding-left: theme(container.padding);
+      padding-right: theme(container.padding);
+    }
+  }
+
+  .nav-btn {
+    @apply .mb-4;
+  }
+}
+
+.account-nav-toggle {
+  .icon-chevron-down {
+    transform: rotate(0);
+    transition: 0.15s ease;
+  }
+
+  &.is-open {
+    .icon-chevron-down {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.account-nav-list {
+  @apply .bg-gray-100 .font-bold .py-4 .px-4 .w-full .hidden;
+
+  @screen lg {
+    position: absolute;
+    top: 100%;
+    right: theme( spacing.gutter );
+    max-width: 150px;
+    @apply rounded-b;
+  }
+
+  &.account-nav-list--mobile {
+    &.is-open {
+      display: block;
+
+      @screen lg {
+        display: none;
+      }
+    }
+  }
+
+  &.account-nav-list--desktop {
+    @apply .text-right;
+    &.is-open {
+      @screen lg {
+        display: block;
+      }
+    }
+  }
+
+  li:not(:last-child) {
+    @apply .mb-3;
+  }
+}
+
+#location-information-dropdown,
+#advanced-search {
+  &.is-open {
+    display: block;
+  }
+
+  @screen lg {
+    display: none;
+  }
+}
+
+#location-action {
+  .icon {
+    transition: transform 0.15s ease;
+    transform-origin: center center;
+  }
+
+  &.is-open {
+    .icon {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+#favorites-dropdown {
+  &.is-open {
+    display: block;
+
+    &:not(.empty) #favorites-list {
+      display: block;
+
+      @screen md {
+        display: grid;
+      }
+    }
+
+    &.empty {
+      .favorites-tooltip {
+        display: block;
+      }
+    }
+  }
+}
+
+#favorites-list {
+  padding: 1.25rem;
+  padding-bottom: 50%;
+
+  .truck-card {
+    width: 335px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5625rem;
+
+    @screen md {
+      margin-bottom: 0;
+    }
+  }
+}
+
+#favorites-title-menu,
+#search-title-menu {
+  @apply text-brand-primary;
+}
+
+.favorites-tooltip {
+  @apply .bg-brand-primary .rounded .relative .text-white;
+  width: 100%;
+  max-width: 100%;
+  z-index: 50;
+  right: 42px;
+  max-width: 271px;
+  transform: translateX(-100%);
+
+  @screen lg {
+    width: 355px;
+    right: 120px;
+  }
+
+  &.is-open {
+    position: absolute;
+    display: block;
+  }
+
+  .arrow {
+    position: absolute;
+    right: 25px;
+    bottom: 100%;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 11px solid theme( colors.brand.primary );
+  }
+
+  .btn-outline {
+    flex: 2 2 auto;
+
+    & + .btn-outline {
+      flex: 1 1 auto;
+    }
+  }
+}
+
+.action-nav nav {
+  white-space: nowrap;
+}
+
+.search-open {
+  #main-nav-toggle {
+    display: none !important;
+  }
+
+  .wishlist-link,
+  #nav-title-menu,
+  #favorites-title-menu {
+    display: none !important;
+  }
+}
+
+#search-nav-toggle.is-open {
+  display: inline-block;
+}
+
+.locations-parent-menu span:first-of-type{
+  display: none;
+}
+
+.primary-nav.is-open{
+  display: block;
+}
+@media only screen and (max-width: 1023px) {
+  .locations-parent-menu-2{
+    margin-top: -1.5rem;
+  }
+}

@@ -1,0 +1,699 @@
+/*
+ * Most of the layout styling is being controlled through editing
+ * the actual markup output of gravity forms. This is happening in
+ * /lib/custom-gravity-forms. Further details are in that file
+ */
+.form-skin {
+  max-width: 580px;
+  @apply .mx-auto;
+
+  input[type="email"],
+  input[type="tel"],
+  input[type="text"],
+  input[type="password"],
+  input[type="number"],
+  input[type="file"],
+  select,
+  textarea {
+    display: block;
+    width: 100%;
+    @apply .px-4 .py-2 .bg-gray-100 .text-gray-300 .border .border-gray-100 .rounded;
+    border-width: 3px;
+    transition: 0.15s ease;
+
+    &:focus {
+      @apply .bg-white .border-gray-250;
+      outline: none;
+    }
+
+    &::placeholder {
+      @apply .text-gray-200 .opacity-100;
+    }
+  }
+
+  /*
+   * unset all default select styles
+   */
+  select {
+    appearance: none;
+    border-radius: 0;
+  }
+
+  select::-ms-expand {
+    display: none;
+  }
+
+
+  .ginput_container_select {
+    position: relative;
+  }
+
+  .select-dropdown-arrow {
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    transform: translateY(-50%);
+    font-size: 1em;
+    z-index: 1;
+  }
+
+  textarea {
+    max-height: 10em;
+    resize: none;
+  }
+
+  .gfield,
+  .ginput_complex > span {
+    @apply .mb-4;
+  }
+
+  .ginput_complex .address_city {
+    @apply .w-full;
+  }
+
+  .gfield_label:not(.ll_gfield_type_address),
+  .ginput_complex label {
+    @apply .text-sm .block .mb-1 .text-gray-300;
+  }
+
+  .gf_page_steps {
+    @apply .flex .justify-between .items-center .relative .my-6;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 9px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      border-bottom: 1px dashed theme(colors.brand.primary);
+    }
+
+    .gf_step {
+      @apply .pt-6 .text-center .font-semibold .tracking-wider .relative;
+      font-size: 10px;
+
+      .gf_step_label {
+        text-transform: uppercase;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 2px solid theme(colors.brand.primary);
+        height: 18px;
+        width: 18px;
+        border-radius: 50%;
+        box-shadow: 0 0 0 5px #ffffff;
+        @apply .bg-brand-primary;
+      }
+
+      &::after {
+        content: '\2713';
+        color: white;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 18px;
+        width: 18px;
+        line-height: 17px;
+        font-size: 16px;
+        border-radius: 50%;
+      }
+
+      .gf_step_number {
+        display: none;
+      }
+
+      &.gf_step_active ~ *,
+      &.gf_step_active {
+        &::before {
+          @apply .bg-white;
+        }
+
+        &::after {
+          display: none;
+        }
+      }
+
+      &.gf_step_active ~ * {
+        .gf_step_label {
+          opacity: 0.5;
+        }
+      }
+    }
+
+    .gf_step_clear {
+      display: none;
+    }
+  }
+
+  /**
+   * extend visuallyhidden rather than display: none to hide the input to
+   * allow the input to still be accessible by screen readers and keyboards
+   */
+    .ginput_container_checkbox {
+      .icon {
+        @apply .hidden;
+      }
+    }
+
+    .gfield_checkbox li {
+      display: block;
+      @apply .mb-2;
+
+      &:last-child {
+        @apply .mb-0;
+      }
+    }
+
+   .ginput_container_checkbox input[type="checkbox"] {
+      @apply .sr-only;
+
+      ~ label {
+        @apply .select-none .pl-6 .block .font-bold .text-lg;
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 4px;
+          left: 0;
+          height: 16px;
+          width: 16px;
+          border-radius: 50%;
+          @apply .border .border-gray-200;
+        }
+      }
+
+      &:checked ~ label {
+        &::after {
+          content: '\2713';
+          position: absolute;
+          top: 4px;
+          left: 0;
+          height: 16px;
+          width: 16px;
+          line-height: 14px;
+          border-radius: 50%;
+          @apply .border .border-brand-primary .text-white .bg-brand-primary .text-base .font-normal;
+        }
+      }
+   }
+
+   &:not(.estimate-form) {
+    .ginput_container_radio input[type="radio"] {
+      @apply .sr-only;
+
+      ~ label {
+        @apply .select-none .block .relative .border .border-brand-primary .rounded .bg-brand-primary .text-white .font-bold .text-sm .py-2 .pl-6 .pr-6 .px-5 .mt-3;
+        position: relative;
+
+        .icon {
+          @apply .hidden;
+        }
+      }
+      /**
+       * give the focused inputs label a style so keyboard users can tell
+       * which radio / checkbox is focused. Accessibility win
+       */
+      &:focus ~ label {
+      }
+    }
+
+    .ginput_container_radio input[type="radio"]:checked ~ label {
+      outline: none;
+      @apply .border-brand-primary .bg-gray-250 .text-brand-primary;
+    }
+  }
+
+  &.estimate-form {
+    .ll_gfield_type_radio,
+    .ll_gfield_type_checkbox {
+      @apply mt-16;
+
+      .gfield_label {
+        @apply pb-4 mb-6;
+        width: 100%;
+        border-bottom: 1px solid #C9C9C9;
+      }
+    }
+
+    .gfield_radio {
+      li + li {
+        @apply mt-7;
+      }
+    }
+
+    .ginput_container_radio input[type="radio"] {
+      @apply .sr-only;
+
+      ~ label {
+        display: inline-flex;
+        align-items: flex-start;
+        @apply text-sm text-gray-300;
+
+        .icon {
+          @apply text-gray-300 w-6 h-6 mr-4;
+          flex: 0 0 auto;
+          /*
+           * Push the top of icon down to align with the top of
+           * the actual label text.
+           */
+          transform: translateY(25%);
+        }
+
+        .icon-radio-selected {
+          display: none;
+        }
+      }
+      /**
+       * give the focused inputs label a style so keyboard users can tell
+       * which radio / checkbox is focused. Accessibility win
+       */
+      &:focus ~ label {
+      }
+    }
+
+    .ginput_container_radio input[type="radio"]:checked ~ label {
+      outline: none;
+
+      .icon-radio {
+        display: none;
+      }
+
+      .icon-radio-selected {
+        display: inline-block;
+      }
+
+      .icon {
+        @apply text-brand-primary;
+      }
+    }
+
+    .current-page-num {
+      display: none;
+    }
+  }
+
+  .gfield.validation_error {
+    input,
+    select,
+    textarea {
+      @apply .border-red-100;
+      background: rgba(223, 139, 143, 0.12);
+    }
+  }
+
+  .ginput_container_fileupload {
+    position: relative;
+    overflow: hidden;
+    @apply .rounded;
+
+    span {
+      pointer-events: none;
+    }
+
+    .file-upload-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 70%;
+      white-space: nowrap;
+      @apply .bg-gray-100 .text-gray-200 .px-4;
+    }
+
+    .file-upload-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 30%;
+      transition: 0.15s ease;
+      @apply .bg-brand-primary .text-white .text-center .text-sm;
+    }
+
+    &.has-file {
+      .file-upload-label {
+        @apply .bg-gray-100 .text-gray-300;
+      }
+    }
+
+    &:hover {
+      .file-upload-button {
+        @apply .bg-gray-400 .text-white;
+      }
+    }
+  }
+
+  .ll_gfield_type_password {
+    .gfield_label_before_complex {
+      display: none;
+    }
+  }
+
+  .ginput_container_password {
+
+    > span {
+      width: 100%;
+    }
+  }
+
+  .gfield_label_before_complex {
+    @apply .text-lg .font-bold .text-gray-400 .mb-4;
+  }
+
+  .gsection:first-child {
+    @apply .text-left .mb-12;
+
+    @screen md {
+      @apply .text-center;
+    }
+
+    .gsection_title {
+      @extend .hdg-5;
+      @apply .mb-4 .text-gray-400;
+    }
+  }
+
+  .gsection:not(:first-child) {
+    .gsection_title {
+      @apply .mt-2 .text-lg .font-bold .text-gray-400;
+    }
+  }
+
+  .ll_gfield_type_checkbox {
+    .gfield_label {
+      @apply .mt-2 .mb-5 .text-lg .font-bold .text-gray-400;
+    }
+  }
+
+  .ll_gfield_type_radio {
+    .gfield_label {
+      @apply .mt-2 .mb-2 .text-lg .font-bold .text-gray-400;
+    }
+  }
+
+
+  .ginput_container_consent {
+    input {
+      @apply .sr-only;
+    }
+
+    label {
+      position: relative;
+      padding-left: 24px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 1px;
+        left: 0;
+        height: 16px;
+        width: 16px;
+        border-radius: 2px;
+        @apply .border .border-gray-200;
+      }
+    }
+
+    input:checked ~ label {
+      &::after {
+        content: '\2713';
+        position: absolute;
+        top: 1px;
+        left: 0;
+        height: 16px;
+        width: 16px;
+        line-height: 13px;
+        border-radius: 2px;
+        @apply .border .border-gray-200 .bg-gray-200 .text-white;
+      }
+    }
+  }
+
+  .gfield_consent_label {
+    @apply .text-sm;
+
+    a {
+      @apply .font-bold .text-brand-primary .underline;
+    }
+  }
+
+  .hidden_label {
+    .gfield_label {
+      @apply .sr-only;
+    }
+  }
+
+  .gform_page_footer {
+    @apply .text-center .mt-5 flex justify-between;
+
+    input[type="button"],
+    input[type="submit"],
+    button[type="button"],
+    button[type="submit"] {
+      @apply .select-none .block .relative .rounded .bg-brand-primary .text-white .font-bold .text-sm .py-2 .px-5;
+      position: relative;
+      width: 100%;
+      max-width: 120px;
+      transition: 0.15s ease;
+      cursor: pointer;
+      margin-left: 2rem;
+
+      &:hover {
+        @apply .bg-red-400;
+      }
+    }
+
+    img {
+      @apply .mx-auto .mt-4;
+    }
+    img.gform_ajax_spinner{
+      margin-left: 2rem;
+      margin-right: 2rem;
+      width: 40px;
+      height: 40px;
+      margin-top: 0;
+    }
+  }
+
+  input[type="button"]:disabled{
+    background-color: #ccc;
+    color: rgba(0,0,0,0.2);
+
+    &:hover{
+      background-color: #ccc;
+      color: rgba(0,0,0,0.2);
+      cursor: not-allowed;
+    }
+  }
+
+  /*
+   * Extend styling of gform_fields and ginput_complex
+   * to act as rows. Make all direct children col's
+   */
+  .gform_fields,
+  .ginput_complex,
+  .gfield_radio {
+    @extend .row;
+    @apply .flex-wrap;
+    margin-left: -1rem;
+    margin-right: -1rem;
+
+    & > * {
+      @extend .col;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  .current-page-num {
+    height: 33px;
+    width: 33px;
+    border-radius: 50%;
+    line-height: 34px;
+    @apply .bg-brand-primary .text-white .font-bold .text-sm .mb-5 .block .text-center;
+
+    @screen md {
+      @apply .mx-auto;
+    }
+  }
+
+  .validation_message,
+  .validation_list {
+    @apply .text-red-400;
+  }
+
+  .validation_error {
+    background: rgba(247, 61, 68, 0.1);
+    @apply .p-4 .text-gray-400 .rounded .mb-5;
+  }
+
+  .gfield_error {
+    input,
+    select,
+    textarea {
+      @apply .border-red-100;
+    }
+  }
+
+  .gfield_visibility_hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border-width: 0 !important;
+  }
+}
+
+.screen-reader-text {
+  @apply .sr-only;
+}
+
+.inline-form {
+  position: relative;
+
+  .gform_body input {
+    display: block;
+    width: calc( 100% - 55px );
+    @apply bg-white text-gray-300 border border-gray-200 rounded-l;
+    border-right: none;
+    padding: 0.75rem 1rem;
+    transition: 0.15s ease;
+  }
+
+  .gform_body .gfield_error input {
+    @apply border-red-100;
+    background-color: rgba(223, 139, 143, 0.12);
+  }
+
+  .gfield_description.validation_message,
+  .validation_error,
+  .validation_list {
+    @apply text-sm block mt-1 text-red-100;
+  }
+
+  .validation_error,
+  .validation_list {
+    @apply text-sm block .text-red-400;
+  }
+
+  .validation_list {
+    @apply mb-1;
+  }
+
+  button[type="submit"] {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 55px;
+    height: 50px;
+    overflow: hidden;
+    text-indent: -9999px;
+    background-image: url('../img/right-arrow-white.svg');
+    background-size: 1rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: theme( colors.brand.primary );
+    @apply rounded-r;
+    transition: background-color 0.15s ease;
+
+    &::after {
+      display: none;
+    }
+
+    &:hover {
+      background-color: theme( colors.red.400 );
+    }
+  }
+
+
+  .gfield_html {
+    @apply mb-10;
+  }
+}
+
+.gform_validation_error .inline-form {
+  button[type="submit"] {
+    bottom: 25px;
+  }
+}
+
+.hide-label .gfield_label {
+  @apply sr-only;
+}
+
+
+.gform_ajax_spinner {
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: 100% !important;
+  height: 100% !important; */
+}
+
+.error-field {
+  background-color: rgba(223, 139, 143, 0.12) !important;
+  color: theme( colors.red.400 ) !important;
+  border-color: theme( colors.red.100 ) !important;
+}
+
+.ll_gfield_type_honeypot {
+  display: none;
+}
+
+.has-truck .calc-price {
+  @apply .sr-only;
+}
+.gform_confirmation_wrapper{
+  padding-top: 1.5rem;
+  border-top: solid 3px #C72027;
+  margin-top: 1.5rem;
+
+  h2{
+    color: #C72027;
+  }
+}
+
+.status-submit-container{
+  display: flex;
+  .status-submit{
+    min-width: 130px;
+    min-height: 50px;
+  }
+  .status-submit-loader-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.15rem;
+
+    img{
+      width: 50px;
+      height: 50px;
+      margin: 0;
+    }
+  }
+}
+
+.hidden-important{
+  display: none !important;
+}

@@ -1,0 +1,23 @@
+/*
+ * Most traditional variables will no longer
+ * be necessary as colors and such will be configured
+ * as utility classes inside of tailwind config.
+ */
+$navbarheight: 101px;
+$mobilenavbarheight: 90px;
+
+/*
+ * Height. Create a variable to use for navbar height. This is
+ * used to calc 100vh based components and allow them to be
+ * 100vh - navbarheight later on. This value also gets updated
+ * dynamically in the javascript to account for if the wp-admin bar
+ * is visible.
+:root {
+  --adminbarHeight: 46px;
+
+  @media screen and (min-width: 783px ) {
+    --adminbarHeight: 32px;
+  }
+}
+ */
+

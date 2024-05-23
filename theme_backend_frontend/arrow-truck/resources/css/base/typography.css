@@ -1,0 +1,482 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Medium.eot');
+    src: url('../fonts/Inter-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Inter-Medium.woff2') format('woff2'),
+        url('../fonts/Inter-Medium.woff') format('woff'),
+        url('../fonts/Inter-Medium.ttf') format('truetype'),
+        url('../fonts/Inter-Medium.svg#Inter-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Regular.eot');
+    src: url('../fonts/Inter-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Inter-Regular.woff2') format('woff2'),
+        url('../fonts/Inter-Regular.woff') format('woff'),
+        url('../fonts/Inter-Regular.ttf') format('truetype'),
+        url('../fonts/Inter-Regular.svg#Inter-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Bold.eot');
+    src: url('../fonts/Inter-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Inter-Bold.woff2') format('woff2'),
+        url('../fonts/Inter-Bold.woff') format('woff'),
+        url('../fonts/Inter-Bold.ttf') format('truetype'),
+        url('../fonts/Inter-Bold.svg#Inter-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-SemiBold.eot');
+    src: url('../fonts/Inter-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Inter-SemiBold.woff2') format('woff2'),
+        url('../fonts/Inter-SemiBold.woff') format('woff'),
+        url('../fonts/Inter-SemiBold.ttf') format('truetype'),
+        url('../fonts/Inter-SemiBold.svg#Inter-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/*
+ * Text defaults. Tailwind removes pretty much ALL styling
+ * from default elements to ensure that their utility classes
+ * work as expected. This is a good thing. This means any time
+ * you use an element, whether it's a p tag, li, a tag or a heading, you
+ * need to explicitly set a class on it. This is good for clarity.
+ * The wysiwyg wrapper class below will handle elements from WYSIWYGs
+ * that do not have classes / formats applied. Font sizes are documented here:
+ * https://tailwindcss.com/docs/font-size/#app
+ *
+ * Sizes set here are for example only. Overwrite and add formatting as necessary
+ */
+.hdg-1, .hdg-2, .hdg-3, .hdg-4, .hdg-5, .hdg-6, .paragraph-default, .paragraph-large, .paragraph-small, .paragraph-xsmall {
+  @apply leading-normal;
+}
+
+.hdg-hero, .hdg-1, .hdg-2, .hdg-3, .hdg-4, .hdg-5, .hdg-6, .paragraph-large {
+  &:not([class*="text-brand"], [class*="text-white"], [class*="text-black"], [class*="text-gray"]) {
+    @apply text-gray-400;
+  }
+
+  &.with-bg {
+    @apply .py-2 .px-4 .bg-gray-100 .rounded .block .text-center;
+
+    @screen sm {
+      @apply .inline-block .text-left;
+    }
+  }
+}
+
+.bg-brand-dark-gray {
+  .hdg-hero, .hdg-1, .hdg-2, .hdg-3, .hdg-4, .hdg-5, .hdg-6, .paragraph-large {
+    &:not([class*="text-brand"], [class*="text-white"], [class*="text-black"], [class*="text-gray"]) {
+      color: inherit;
+    }
+  }
+}
+
+.hdg-hero {
+  @apply .font-bold;
+  line-height: 0.9;
+  font-size: 65px;
+
+  @screen sm {
+    font-size: 88px;
+  }
+
+  @screen md {
+    font-size: 100px;
+  }
+}
+
+.hdg-1 {
+  @apply .text-5xl .font-bold;
+  line-height: calc( 48 / 40 );
+}
+
+/*
+ * Example for if your site has a different background color, but
+ * making it in a way to where wysiwyg color selectors and background
+ * color overrides still function as expected
+ *
+ * .hdg-1 {
+ *   @apply text-6xl;
+      &:not([class*="text-brand"], [class="text-white"], [class="text-black"]) {
+        color: theme( 'colors.brand.primary' );
+      }
+ * }
+ */
+
+.hdg-2 {
+  @apply .text-4xl .font-bold;
+  line-height: calc( 42 / 32 );
+}
+
+.hdg-3 {
+  @apply .text-3xl .font-bold;
+  line-height: calc( 36 / 28 );
+}
+
+.hdg-4 {
+  @apply .text-2xl .font-bold;
+  line-height: calc( 32 / 24 );
+}
+
+.hdg-5 {
+  @apply .text-xl .font-bold;
+  line-height: calc( 28 / 20 );
+}
+
+.hdg-6 {
+  @apply .text-sm .font-bold .uppercase;
+  line-height: calc( 14 / 12 );
+  letter-spacing: 0.12em;
+}
+
+.paragraph-default {
+  @apply text-base;
+  line-height: calc( 24 / 16 );
+}
+
+.paragraph-large {
+  @apply text-lg;
+  line-height: calc( 26 / 18 );
+}
+
+.paragraph-small {
+  @apply text-sm;
+  line-height: calc( 26 / 18 );
+}
+
+.paragraph-xsmall {
+  @apply text-xs;
+  line-height: calc( 26 / 18 );
+}
+
+/*
+ * Utility overwrites for automatically changing text colors
+ * based on background color. Will need to add any necessary
+ * possible background colors to the this. This is so that the user
+ * does not have to manually select colors within the WYSIWYG
+ * to fix the color scheme. Example, turning all text white
+ * if there is a black background. Otherwise, they wouldn't be able
+ * to see the text within the wysiwyg.
+ *
+ * Notice that it has classes for targeting the #tinymce.{background-color} for the
+ * backend, and then .{background-color} .wysiwyg for the front end.
+ *
+ * If you have to set default colors for any text classes, then you have
+ * to make these selectors more complex. Using the .hdg-1 color example from above
+ * This targets the normal non text class h1 element, as well as checks for
+ * any text color utilities. This is so the color can still be overwritten as expected
+ * within the WYSIWYG formats
+
+  #tinymce.bg-black,
+  .bg-black .wysiwyg {
+    h1:not([class*="hdg-"], [class*="paragraph-"], [class*="text-brand"], [class="text-white"], [class="text-black"]),
+    .hdg-1 {
+      color: white;
+    }
+  }
+ */
+#tinymce.bg-brand-dark-gray,
+.bg-brand-dark-gray .wysiwyg {
+  color: white;
+}
+
+/*
+ * .wysiwyg is a wrapper class for any content that will be
+ * echoed out via any wysiwyg editor. Be sure to use
+ * @apply .{utility-class} when declaring text styles
+ * when possible. #tinymce selector is used to target the body of the
+ * WYSIWYGS on the backend of the site. This should not be targeted in production
+ * on the front end anywhere on the site
+ */
+
+.wysiwyg,
+#tinymce {
+  /*
+   * zero out margins for first and
+   * last elements within a WYSIWYG
+   * to remove any unwanted vertical spacing
+   */
+  & > *:first-child {
+    &:not([class*="mt-"]) {
+      margin-top: 0 !important;
+    }
+  }
+
+  & > *:last-child {
+    &:not([class*="mb-"]) {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  /*
+   * set defaults to elements in the WYSIWYG that
+   * do not have a style format/class applied to them. Notice that
+   * by default, bottom margins get set. It's best to set bottom margin
+   * rules for the WYSIWYG wrapper and explicitely set bottom margins using
+   * utlities elswhere.
+   */
+  a:not([class*="hdg-"], [class*="paragraph-"], [class*="btn"]) {
+    @apply .underline;
+
+    &:hover, &:active, &:focus {
+      @apply .text-brand-primary;
+    }
+  }
+
+  p:not([class*="hdg-"], [class*="paragraph-"]) {
+    @extend .paragraph-default;
+
+    &:not([class*="mb-"]) {
+      @apply mb-5;
+    }
+  }
+
+  p:not([class*="hdg-"], [class*="text-gray"]) {
+    @apply .text-gray-300;
+  }
+
+
+
+  h1:not([class*="hdg-"], [class*="paragraph-"]) {
+    @extend .hdg-1;
+
+    &:not([class*="mb-"]) {
+      @apply mb-8;
+    }
+  }
+
+  h2:not([class*="hdg-"], [class*="paragraph-"]) {
+    @extend .hdg-2;
+
+    &:not([class*="mb-"]) {
+      @apply mb-6;
+    }
+  }
+
+  h3:not([class*="hdg-"], [class*="paragraph-"]) {
+    @extend .hdg-3;
+
+    &:not([class*="mb-"]) {
+      @apply mb-6;
+    }
+  }
+
+  h4:not([class*="hdg-"], [class*="paragraph-"]) {
+    @extend .hdg-4;
+
+    &:not([class*="mb-"]) {
+      @apply mb-6;
+    }
+  }
+
+  h5:not([class*="hdg-"], [class*="paragraph-"]) {
+    @extend .hdg-5;
+
+    &:not([class*="mb-"]) {
+      @apply mb-6;
+    }
+  }
+
+  h6:not([class*="hdg-"], [class*="paragraph-"]) {
+    @extend .hdg-6;
+
+    &:not([class*="mb-"]) {
+      @apply mb-5;
+    }
+  }
+
+  li:not([class*="hdg-"], [class*="paragraph-"]) {
+    @extend .paragraph-default;
+  }
+
+  ul:not([class]),
+  ol:not([class]) {
+    @apply mb-5 pl-5 text-gray-300;
+
+    li {
+      &:not(:last-child) {
+        &:not([class*="mb-"]) {
+          @apply mb-5;
+        }
+      }
+
+      &:last-child {
+        @apply mb-0;
+      }
+    }
+  }
+
+  /*
+   * Set default list styles back to disk
+   * and number
+   */
+  ul:not([class]) {
+    @apply list-disc;
+  }
+
+  ol:not([class]) {
+    padding-left: 0;
+    counter-reset: custom-counter;
+    list-style: none;
+  }
+
+  ol li {
+    @apply .flex .items-start .justify-start;
+    counter-increment: custom-counter;
+    position: relative;
+  }
+
+  ol li::before {
+    content: counter(custom-counter) '.';
+    @apply .font-bold .mr-2;
+  }
+
+  /*
+   * If you need to add any extra styling to specific
+   * text classes, add them here. For instance, when coming
+   * from the WYSIWYG, .hdg-1 needs a specific bottom margin
+   * no matter what element it is applied to.
+   */
+  .hdg-hero {
+    &:not([class*="mb-"]) {
+      @apply mb-5;
+    }
+  }
+
+  .hdg-1 {
+    &:not([class*="mb-"]) {
+      @apply mb-5;
+    }
+  }
+
+  .hdg-2 {
+    &:not([class*="mb-"]) {
+      @apply mb-5;
+    }
+  }
+
+  .hdg-3 {
+    &:not([class*="mb-"]) {
+      @apply mb-5;
+    }
+  }
+
+  .hdg-4 {
+    &:not([class*="mb-"]) {
+      @apply mb-5;
+    }
+  }
+
+  .hdg-5 {
+    &:not([class*="mb-"]) {
+      @apply mb-5;
+    }
+  }
+
+  .hdg-6 {
+    &:not([class*="mb-"]) {
+      @apply mb-5;
+    }
+  }
+
+  .paragraph-large {
+    &:not([class*="mb-"]) {
+      @apply mb-5;
+    }
+  }
+
+  .paragraph-default {
+    &:not([class*="mb-"]) {
+      @apply mb-5;
+    }
+  }
+
+  .paragraph-small {
+    &:not([class*="mb-"]) {
+      @apply mb-5;
+    }
+  }
+
+  .paragraph-xsmall {
+    &:not([class*="mb-"]) {
+      @apply mb-5;
+    }
+  }
+
+  address {
+    @extend .paragraph-small;
+    font-style: normal;
+
+    .street,
+    .streetAddress {
+      display: block;
+    }
+
+    .city::after,
+    .addressLocality::after {
+      content: ',';
+    }
+
+    .phone {
+      display: block;
+      @apply mt-2;
+    }
+  }
+}
+
+.bg-brand-dark-gray {
+  .hdg-hero, .hdg-1, .hdg-2, .hdg-3, .hdg-4, .hdg-5, .hdg-6 {
+    &:not([class*="text-brand"], [class*="text-white"], [class*="text-black"], [class*="text-gray"]) {
+      color: inherit;
+    }
+  }
+
+  &.wysiwyg p:not([class*="hdg-"]):not([class*="paragraph-"]):not([class*="text-gray"]),
+  .wysiwyg p:not([class*="hdg-"]):not([class*="paragraph-"]):not([class*="text-gray"]),
+  &#tinymce p:not([class*="hdg-"]):not([class*="paragraph-"]):not([class*="text-gray"]), {
+    @apply .text-gray-250;
+  }
+
+  .wysiwyg ul,
+  .wysiwyg ol {
+    @apply .text-gray-250;
+  }
+
+
+  .wysiwyg a:not([class*="hdg-"], [class*="paragraph-"], [class*="btn"]),
+  &.wysiwyg a:not([class*="hdg-"], [class*="paragraph-"], [class*="btn"]) {
+    @apply .underline .text-red-100;
+
+    &:hover, &:active, &:focus {
+      @apply .text-white;
+    }
+  }
+}
+
+.tag-wrapper {
+  @apply .bg-brand-primary .text-white .text-xs .font-bold .text-center .uppercase;
+  padding: 2px 0;
+  min-width: 103px;
+  border-radius: 100px 0 0 100px;
+}
+
+.lined-list {
+  li {
+    font-weight: 700;
+    padding: 1rem 0;
+    border-bottom: 1px solid #C9C9C9;
+  }
+}

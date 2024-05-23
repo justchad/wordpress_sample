@@ -1,0 +1,377 @@
+{
+    "key": "group_5f5ce46325217",
+    "title": "Component : Map",
+    "fields": [
+        {
+            "key": "field_5f5ce932aa3b8",
+            "label": "Heading",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5f5ce469f64cc",
+            "label": "Heading",
+            "name": "map",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_5f592cd62e1bc"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 1
+        },
+        {
+            "key": "field_5f5d257f8daed",
+            "label": "Content",
+            "name": "map_content",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_5f5ce93eaa3b9",
+            "label": "Map Pins",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5f61aada4579b",
+            "label": "Please Note:",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "To easily find the coordinates of your location, go to https:\/\/www.google.com\/maps and search for your location. After you search, a pin will display at the location you searched. Right click the pin and select \"What's Here\". A little box at the bottom of the screen will appear with the coordinates in the order of Latitude and Longitude",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5f5ce87eaa3b1",
+            "label": "Locations",
+            "name": "map_locations",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Location",
+            "sub_fields": [
+                {
+                    "key": "field_5f5ce894aa3b2",
+                    "label": "Address",
+                    "name": "address",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f5ce8a0aa3b3",
+                            "label": "Street",
+                            "name": "street",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5f5ce8a7aa3b4",
+                            "label": "Street 2",
+                            "name": "street_2",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5f5ce8afaa3b5",
+                            "label": "City",
+                            "name": "city",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33.333333",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5f5ce8c4aa3b7",
+                            "label": "State",
+                            "name": "state",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33.333333",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "AL": "Alabama",
+                                "AK": "Alaska",
+                                "AZ": "Arizona",
+                                "AR": "Arkansas",
+                                "CA": "California",
+                                "CO": "Colorado",
+                                "CT": "Connecticut",
+                                "DE": "Delaware",
+                                "DC": "District of Columbia",
+                                "FL": "Florida",
+                                "GA": "Georgia",
+                                "HI": "Hawaii",
+                                "ID": "Idaho",
+                                "IL": "Illinois",
+                                "IN": "Indiana",
+                                "IA": "Iowa",
+                                "KS": "Kansas",
+                                "KY": "Kentucky",
+                                "LA": "Louisiana",
+                                "ME": "Maine",
+                                "MD": "Maryland",
+                                "MA": "Massachusetts",
+                                "MI": "Michigan",
+                                "MN": "Minnesota",
+                                "MS": "Mississippi",
+                                "MO": "Missouri",
+                                "MT": "Montana",
+                                "NE": "Nebraska",
+                                "NV": "Nevada",
+                                "NH": "New Hampshire",
+                                "NJ": "New Jersey",
+                                "NM": "New Mexico",
+                                "NY": "New York",
+                                "NC": "North Carolina",
+                                "ND": "North Dakota",
+                                "OH": "Ohio",
+                                "OK": "Oklahoma",
+                                "OR": "Oregon",
+                                "PA": "Pennsylvania",
+                                "RI": "Rhode Island",
+                                "SC": "South Carolina",
+                                "SD": "South Dakota",
+                                "TN": "Tennessee",
+                                "TX": "Texas",
+                                "UT": "Utah",
+                                "VT": "Vermont",
+                                "VA": "Virginia",
+                                "WA": "Washington",
+                                "WV": "West Virginia",
+                                "WI": "Wisconsin",
+                                "WY": "Wyoming"
+                            },
+                            "default_value": [
+                                "KS"
+                            ],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 1,
+                            "ajax": 0,
+                            "return_format": "value",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_5f5ce8b3aa3b6",
+                            "label": "Zip",
+                            "name": "zip",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33.333333",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_5f5cf036adffc",
+                    "label": "Coordinates",
+                    "name": "coordinates",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f5cf04badffd",
+                            "label": "Lat",
+                            "name": "lat",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5f5cf04fadffe",
+                            "label": "Long",
+                            "name": "long",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_5f5d153dddae2",
+                    "label": "Phone",
+                    "name": "phone",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "modified": 1600239960
+}

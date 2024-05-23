@@ -1,0 +1,331 @@
+* {
+  scroll-margin: var(--navbarHeight);
+  scroll-snap-margin: var(--navbarHeight);
+}
+
+body:not(.component-preview) {
+  padding-top: var(--navbarHeight);
+  @apply .font-sans .text-gray-300;
+  margin-bottom: var(--bottomNavHeight);
+
+  &.logged-in.admin-bar {
+    padding-top: calc( var(--navbarHeight) + var(--adminbarHeight) );
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #wpadminbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+}
+
+a {
+  transition: all 0.15s ease-in-out;
+
+  &:hover, &:active, &:focus {
+    transition: all 0.15s ease-in-out;
+  }
+}
+
+.bg-white + .bg-white {
+  @apply .pt-0;
+}
+
+.bg-brand-dark-gray + .bg-brand-dark-gray {
+  @apply .pt-0;
+}
+
+.bottom-nav {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 80;
+  box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.12);
+  @apply .flex .justify-around .items-start .bg-white .py-2 .w-full;
+
+  &.grid {
+    place-items: center;
+  }
+
+  @screen lg {
+    @apply .hidden;
+  }
+
+  a:not(.btn) {
+    @apply .text-brand-primary .text-xs;
+    svg {
+      @apply .block .mx-auto .mb-1 .text-2xl;
+    }
+  }
+
+  .btn {
+    padding-left: 0;
+    padding-right: 0;
+    white-space: nowrap;
+    font-weight: normal;
+    width: 268px;
+    max-width: 100%;
+  }
+}
+
+.ll-tool-box {
+  min-height: 30px;
+}
+
+.hero-banner{
+  .alignment-container{
+    max-height: 50vh;
+  }
+}
+
+.afiv-extras-wrapper{
+  .afiv-header{
+    background-color: #C72027;
+    color: #fff;
+    padding: .5rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding-left: 2rem;
+    cursor: pointer;
+  }
+  .afiv-content{
+    background-color: #f7f7f7;
+
+
+    h1{
+      font-size: 1.25rem;
+      color: #000;
+      font-weight: bold;
+      padding: 2rem;
+      padding-bottom: 0;
+    }
+    h2{
+
+    }
+    p{
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      color: rgba(0,0,0,0.8);
+      font-weight: lighter;
+      padding: 2rem;
+      padding-top: 0;
+    }
+    ul{
+      padding: 0 2rem;
+      li{
+        margin-bottom: 2rem;
+        h2{
+          font-size: 1.25rem;
+          font-weight: bold;
+          color: #000;
+        }
+        p{
+          margin: 0;
+        }
+        a{
+
+        }
+        .asabutton{
+          border: solid 1px rgba(0,0,0,0.2);
+          padding: .5rem;
+          background-color: #fff;
+          border-radius: .25rem;
+          margin: 1rem 0;
+          margin-right: 10rem;
+          display: block;
+          width: 100%;
+          &:hover{
+            background-color: #C72027;
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    a{
+      color: #C72027;
+      padding: 0 2rem;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.afiv-last-wrapper{
+
+}
+.afiv-welcome{
+  padding-top: 3rem;
+  margin-top: 4rem;
+  border-top: solid 1px rgba(0,0,0,0.2);
+  padding-bottom: 6rem;
+}
+.afiv-welcome-h1{
+  font-size: 3rem;
+}
+.afiv-welcome-p{
+
+}
+.vieweditpersonalinformationlist{
+  li{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &:hover{
+      svg{
+        color: #C72027;
+      }
+
+    }
+
+    svg{
+
+    }
+    a{
+      display: flex;
+      width: 100%;
+
+      &:hover{
+        color: #C72027;
+      }
+      svg{
+
+      }
+    }
+  }
+}
+
+.account-helpful-resources{
+
+  .account-helpful-resources-title{
+    background-color: whitesmoke;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+
+    h2{
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+  }
+
+  ul{
+
+    li{
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+
+      &:hover{
+        svg{
+          color: #C72027;
+        }
+
+      }
+
+      svg{
+
+      }
+      a{
+        display: flex;
+        width: calc(100% - 50px);
+
+        &:hover{
+          color: #C72027;
+        }
+        svg{
+
+        }
+      }
+    }
+  }
+}
+
+.account-profile-resources{
+
+  .account-profile-resources-title{
+    background-color: whitesmoke;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+
+    h2{
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+  }
+}
+
+
+.vieweditpersonalinformationlist-alt{
+  li{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    max-height: 75px;
+
+    .dashboard-list-icon{
+      width: 45px;
+      min-width: 45px;
+      height: auto;
+    }
+    .dashboard-list-link{
+      width: unset;
+      padding: 0;
+
+      &:hover{
+        font-weight: bold;
+        color: #C72027;
+      }
+    }
+    .dashboard-list-edit{
+      display: flex;
+      align-items: center;
+      margin-left: 1rem;
+      border: solid 1px rgba(199, 32, 39, 1);
+      border-radius: 1rem;
+      padding: 0.25rem 0.5rem;
+      font-size: .5rem;
+      text-transform: uppercase;
+      font-weight: 100;
+      margin-right: 1rem;
+
+      img{
+        width: 13px;
+        height: auto;
+        margin-right: 0.25rem;
+      }
+      &:hover{
+        color: #C72027;
+        border: solid 2px rgba(199, 32, 39, 1);
+        font-weight: bold;
+        img{
+
+        }
+      }
+    }
+    .dashboard-list-arrow{
+      margin-left: auto;
+      border: solid 1px #464646;
+      padding: 0.5rem;
+      border-radius: 50%;
+
+      svg{
+
+      }
+      &:hover{
+        background-color: rgba(199, 32, 39, 1);
+        color: #fff;
+
+        svg{
+          color: #fff;
+        }
+      }
+    }
+  }
+}

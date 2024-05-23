@@ -1,0 +1,29 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true,
+    "jquery": true
+  },
+  "extends": ["eslint:recommended","google"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2018
+  },
+  "rules": {
+    "space-in-parens": ["error", "always"],
+    "no-undef": "off",
+    "max-len": "off",
+    "require-jsdoc": "off",
+    "no-unused-vars": "off",
+    "no-console": "off",
+    "no-invalid-this": "off",
+    "indent": "off",
+    "no-debugger":"off"
+  }
+}

@@ -1,0 +1,51 @@
+.js-fade:not(.js-ignore),
+.js-fade-group > *:not(.js-ignore) {
+  opacity: 0;
+  transform: translate3d(0,25px,0);
+  transition: opacity 0.35s ease, transform 1s theme(transitionTimingFunction.ease-out);
+
+  @for $o from 1 through 50 {
+    $delay: calc(#{$o}s / 10);
+
+    &:nth-child( #{$o} ) {
+      transition: opacity 0.35s $delay ease, transform 1s theme(transitionTimingFunction.ease-out);
+    }
+  }
+
+  &.js-animated {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+}
+
+.js-reveal:not(.js-ignore) {
+  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+
+.spinner-wrap {
+  position: relative;
+  min-height: 50vh;
+}
+
+.spinner {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  font-size: 32px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  .icon-loading {
+    animation: rotate-center 1s linear infinite both;
+  }
+}
+
+@keyframes rotate-center {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

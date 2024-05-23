@@ -1,0 +1,50 @@
+/**
+ * Image Links Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.image-links {
+  .link-wrapper {
+    &:nth-child(2) {
+      @apply .mt-8;
+
+      @screen lg {
+        @apply .mt-0;
+      }
+    }
+
+    &:nth-child(n+3) {
+      @apply .mt-8;
+    }
+  }
+  .image-wrapper {
+    
+    border-radius: 0px;
+    backface-visibility: hidden;
+    transform: translate3d(0,0,0);
+
+    &::after {
+      @apply .overlay .overlay-gradient;
+      z-index: 5;
+    }
+
+    .fit-image {
+      overflow: hidden;
+      img {
+        transform: scale3d(1, 1, 1);
+        transition: 0.5s ease;
+      }
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      .fit-image img {
+        transform: scale3d(1.1, 1.1, 1.1);
+      }
+    }
+  }
+}

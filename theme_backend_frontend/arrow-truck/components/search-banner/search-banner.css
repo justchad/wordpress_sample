@@ -1,0 +1,294 @@
+/**
+ * Search Banner Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.search-banner {
+  &::after {
+    @apply .overlay;
+    background: linear-gradient(179.8deg, rgba(0, 0, 0, 0) 27.52%, rgba(0, 0, 0, 0.8) 86.99%);
+  }
+
+  .alignment-container {
+    padding-top: 9.875rem;
+
+    @screen lg {
+      padding-top: 0;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+
+      @screen lg {
+        min-height: calc( 100vh - ( var(--adminbarHeight) + var(--navbarHeight) ) );
+      }
+    }
+  }
+
+  .keyword-input {
+    @apply .bg-white .rounded .block .w-full .py-2 .pl-12 .pr-4;
+    background-image: url('../img/search.svg');
+    background-size: 1rem;
+    background-repeat: no-repeat;
+    background-position: 3% center;
+
+    &::placeholder {
+      opacity: 1;
+      color: #707070;
+    }
+  }
+
+  form {
+    position: relative;
+
+    @screen lg {
+      position: unset;
+    }
+  }
+
+  .form-buttons {
+    margin-left: 0;
+    margin-right: 0;
+
+    button {
+      @apply .block .rounded .bg-white .rounded .text-sm .py-2 .px-1;
+
+      &.is-open {
+        @apply .bg-brand-primary .text-white;
+
+        svg {
+          @apply .text-white;
+        }
+      }
+    }
+  }
+
+  .checkbox-list,
+  fieldset {
+    @apply .px-6 .my-6;
+  }
+
+  .input-area {
+    @apply .bg-gray-250 .px-6 .py-6;
+
+    label {
+      @apply .font-medium .mb-2 .block;
+    }
+
+    input {
+      @apply .rounded .py-2 .px-6 .w-full;
+      border: 1px solid #C9C9C9;
+    }
+  }
+
+  .checkbox-list {
+    li {
+      @apply .flex .justify-between .items-start .mr-8 .mb-4 .relative;
+
+      &:last-child {
+        @apply .mb-0;
+      }
+
+      label {
+        flex: 1 0 0;
+        position: relative;
+      }
+
+      input {
+        @apply .sr-only;
+      }
+
+      .icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      svg {
+        @apply .text-brand-primary
+      }
+
+      span.icon {
+        display: block;
+      }
+
+      svg {
+        display: none;
+      }
+
+      input:checked ~ .icon-area {
+        span.icon {
+          display: none;
+        }
+
+        svg {
+          display: block;
+        }
+      }
+    }
+  }
+
+  fieldset {
+    @apply .px-6;
+
+    legend {
+      @apply .text-xs .font-bold .uppercase .text-brand-primary;
+      letter-spacing: 0.12em;
+    }
+
+    .inputs {
+      @apply .flex .items-stretch .justify-start .flex-wrap .-mx-2;
+
+      div {
+        flex: 0 0 auto;
+        width: 50%;
+        @apply .mt-4 .px-2;
+
+        label {
+          @apply .py-2 .text-center .bg-gray-100 .rounded .block .w-full .text-center .font-medium;
+        }
+
+        input {
+          @apply .sr-only;
+        }
+
+        input:checked ~ label {
+          @apply .bg-gray-300 .text-white;
+        }
+      }
+    }
+  }
+
+  label:focus {
+    border: 2px solid rgba(#bbd3fd, 0.7);
+  }
+
+  .search-dropdown {
+    display: none;
+    @apply .bg-white .rounded .relative;
+    border: 1px solid #D8D8D8;
+    width: 100%;
+    z-index: 50;
+
+    @screen lg {
+      width: 355px;
+    }
+
+    &.is-wide {
+
+      @screen lg {
+        width: 650px;
+      }
+    }
+
+    &.is-open {
+      position: absolute;
+      display: block;
+    }
+
+    .arrow {
+      position: absolute;
+      bottom: 100%;
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+      border-bottom: 11px solid #D8D8D8;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid white;
+      }
+    }
+
+    &.is-reversed {
+      &::before {
+        left: auto;
+        right: 23px;
+      }
+
+      &::after {
+        left: auto;
+        right: 25px;
+      }
+    }
+  }
+
+  .search-footer {
+    button,
+    a {
+      @apply .py-2 .px-4;
+      width: 48%;
+
+      @screen lg {
+        @apply .ml-2;
+        width: auto;
+        min-width: 161px;
+      }
+    }
+  }
+}
+
+.video-header-headline{
+
+  p{
+    font-size: 2rem;
+
+    @screen md{
+      font-size: 3rem;
+    }
+    @screen lg{
+      font-size: 4rem;
+    }
+    @screen xl{
+      font-size: 5rem;
+    }
+  }
+}
+.video-button-wrapper{
+  a{
+    margin: 0 2rem;
+    font-size: 1.25rem;
+    font-weight: normal;
+    margin-bottom: 2rem;
+
+    @screen md{
+      margin-bottom: 0;
+      font-size: 1.5rem;
+    }
+    @screen lg{
+      margin-bottom: 0;
+      font-size: 1rem;
+    }
+    @screen xl{
+      margin-bottom: 0;
+      font-size: 1rem;
+    }
+
+
+  }
+}
+.video-header-button-1{
+  background: transparent;
+  border: solid 1px #fff;
+  &:hover{
+    background-color: #C72027;
+    border: solid 1px #C72027;
+  }
+}
+.video-header-button-2{
+  background-color: #C72027;
+  border: solid 1px #C72027;
+  &:hover{
+    background: transparent;
+    border: solid 1px #fff;
+  }
+}

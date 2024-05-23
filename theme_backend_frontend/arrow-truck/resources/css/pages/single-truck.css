@@ -1,0 +1,662 @@
+.single-truck-page {
+  .slick-track {
+    will-change: transform;
+  }
+
+  .images-gallery {
+    margin-top: 1.5rem;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+
+    .image {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+
+    .slick-prev, .slick-next {
+      font-size: 16px;
+      @apply .text-white .text-lg;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .slick-prev {
+      left: 5%;
+      background-color: #C72027;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+
+      svg{
+        width: 80%;
+        height: auto;
+      }
+    }
+
+    .slick-next {
+      right: 5%;
+      background-color: #C72027;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+
+      svg{
+        width: 80%;
+        height: auto;
+      }
+    }
+  }
+
+  .links-row {
+    @apply .justify-start .items-stretch .flex-wrap;
+    bottom: var(--bottomNavHeight);
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+    box-shadow: 0px -4px 6px rgb(0 0 0 / 12%);
+
+    @screen lg {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      box-shadow: none;
+    }
+
+    .link-wrapper {
+      flex: 1 1 auto;
+
+      @screen lg {
+        flex: 0 0 auto;
+        width: 100%;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        @apply .mt-2;
+      }
+
+      @screen xl {
+        flex: 0 0 auto;
+        width: auto;
+      }
+
+      a {
+        border-color: #C9C9C9;
+
+        @screen lg {
+          background-color: #ECECEC;
+          &:hover {
+            @apply .bg-brand-primary .text-white;
+
+            * {
+              @apply .text-white;
+              transition: 0.15s ease;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.add-to-wishlist.favorited .icon {
+  @apply text-brand-primary;
+}
+
+#get-started.is-open {
+  display: block;
+
+  @screen lg {
+    display: grid;
+  }
+}
+
+
+
+.single-info-pane{
+
+  h1 {
+    font-style: normal;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  h2{
+    ffont-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+  .single-price-miles{
+    h3{
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      margin-bottom: .5rem;
+    }
+    .spm-red{
+      color: #C72027;
+    }
+    .spm-gray{
+      color: gray;
+    }
+  }
+}
+
+.single-vehicle-list-details{
+  p{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #7B7B7B;
+  }
+  span{
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    float: left;
+    margin-right: 1rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  .sv-engine{
+    background-image: url(/wp-content/themes/arrow-truck/assets/img/motor.png);
+  }
+  .sv-horse-power{
+    background-image: url(/wp-content/themes/arrow-truck/assets/img/speedometer.png);
+  }
+  .sv-location{
+    background-image: url(/wp-content/themes/arrow-truck/assets/img/location.png);
+  }
+  .sv-stock-number{
+    background-image: url(/wp-content/themes/arrow-truck/assets/img/location.png);
+  }
+}
+
+.single-truck-desription{
+
+  div{
+
+  }
+  h2{
+    font-style: normal;
+    font-size: 1.25rem;
+    line-height: 1rem;
+    color: #000;
+    font-weight: bold;
+  }
+  p{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.single-get-started-buttons{
+  div{
+
+  }
+  h2{
+    font-style: normal;
+    font-size: 1.25rem;
+    line-height: 1rem;
+    color: #000;
+    font-weight: bold;
+  }
+  .single-get-started-buttons-each{
+
+    div{
+
+    }
+    button{
+      color: #464646;
+      font-size: 1rem;
+      background: #F6F6F6;
+      border: 1px solid #C9C9C9;
+      display: flex;
+      align-items: center;
+
+      &:hover{
+        background-color: #C72027;
+        color: #F6F6F6;
+
+        .text-brand-primary{
+          color: #F6F6F6;
+        }
+
+
+      }
+      .text-brand-primary{
+        font-size: 2rem;
+      }
+    }
+    span{
+      display: block;
+      width: 1.5rem;
+      height: 1.5rem;
+      float: left;
+      margin-right: 1rem;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-color: #fff;
+    }
+
+  }
+  .sv-buynow{
+    background-image: url(/wp-content/themes/arrow-truck/assets/img/buynow.png);
+  }
+  .sv-downpaymentestimator{
+    background-image: url(/wp-content/themes/arrow-truck/assets/img/estimate.png);
+  }
+  .sv-prequalifyforcredit{
+    background-image: url(/wp-content/themes/arrow-truck/assets/img/prequalify.png);
+  }
+  .sv-creditapplication{
+    background-image: url(/wp-content/themes/arrow-truck/assets/img/creditapplication.png);
+  }
+  .sv-contactusaboutthistruck{
+    background-image: url(/wp-content/themes/arrow-truck/assets/img/contactus.png);
+  }
+}
+
+.single-drop-down-wrapper{
+  div{
+
+  }
+  .single-each-drop-down{
+
+    div{
+
+    }
+    .single-each-drop-down-top{
+      cursor: pointer;
+      div{
+
+      }
+      h2{
+        font-style: normal;
+        font-size: 1.25rem;
+        line-height: 1rem;
+        color: #000;
+        font-weight: bold;
+      }
+      span{
+        width: 1.5rem;
+        height: 1.5rem;
+        float: left;
+        margin-right: 1rem;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+      }
+    }
+    .single-each-drop-down-bottom{
+
+    }
+    .sv-chevron-down{
+      background-image: url(/wp-content/themes/arrow-truck/assets/img/map-pin.png);
+    }
+    .sv-chevron-up{
+      background-image: url(/wp-content/themes/arrow-truck/assets/img/map-pin.png);
+      transform: rotate(180deg) scaleX(-1);
+    }
+
+  }
+}
+
+.single-summary{
+  border: solid 1px #ccc;
+  div{
+
+  }
+  h2{
+    font-style: normal;
+    font-size: 1.25rem;
+    line-height: 1rem;
+    color: #000;
+    font-weight: bold;
+  }
+  .single-price-list{
+    div{
+
+    }
+    .single-price-list-each{
+      div{
+
+      }
+      span{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1rem;
+        line-height: 1rem;
+      }
+      .single-price-list-line-title{
+
+        div{
+
+        }
+        a{
+          color: #C72027;
+          text-decoration: none;
+          font-size: .8rem;
+          display: block;
+        }
+      }
+      .single-price-list-line-price{
+
+        input{
+          padding: .25rem 0.25rem;
+          background-color: rgba(247, 247, 247, var(--bg-opacity));
+          border-bottom: solid 1px rgba(0,0,0,0.2);
+        }
+      }
+
+    }
+  }
+  .sv-truckprice{
+
+  }
+  .sv-downpayment{
+
+  }
+  .sv-totalfinanceamount{
+
+  }
+  .single-estimated-monthly{
+    div{
+
+    }
+    .single-estimated-monthly-title{
+      text-align: center;
+      border-top: solid 1px #ccc;
+      margin-top: 1rem;
+      padding-top: 1rem;
+      font-style: normal;
+      font-size: 1rem;
+      line-height: 1rem;
+      color: #000;
+      font-weight: bold;
+      margin-bottom: .5rem;
+    }
+    .single-estimated-monthly-price{
+      font-style: normal;
+      font-weight: bold;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      text-align: center;
+      color: #C72027;
+      margin-bottom: 1rem;
+    }
+    button{
+      background: #C72027;
+      width: 100%;
+      padding: .75rem;
+      border-radius: 6px;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+  }
+  .single-price-list-bold{
+    font-weight: bold !important;
+  }
+  p{
+    font-size: .8rem;
+    text-align: center;
+  }
+
+}
+
+.single-roadside-assistance{
+
+  .single-roadside-wrapper{
+    background-color: #1B1B1B;
+    .single-roadside-left{
+      img{
+
+      }
+    }
+    .single-roadside-right{
+      color: #fff;
+      text-align: center;
+      padding-left: 1rem;
+
+      h1{
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: left;
+        margin-bottom: 1rem;
+      }
+      ul{
+        text-align: left;
+        list-style: none;
+        li{
+          margin-bottom: .5rem;
+        }
+      }
+    }
+    button{
+      color: #F63D44;
+      text-align: left;
+      float: left;
+      font-size: 1.1rem;
+      border-bottom: solid 1px #F63D44;
+      margin-top: 1rem;
+      &:hover{
+        color: #FFF;
+        border-bottom: solid 1px #FFF;
+      }
+    }
+    span{
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      float: left;
+      margin-right: .5rem;
+    }
+    .single-vehicle-checkmark{
+      background-image: url(/wp-content/themes/arrow-truck/assets/img/checkmark.png);
+    }
+  }
+  .single-roadside-inner{
+    border-bottom: solid 1px #fff;
+    padding-bottom: 2rem;
+  }
+}
+
+.single-inventory-back{
+  a{
+    &:hover{
+      color: #000;
+    }
+  }
+}
+
+.single-inventory-search-wrapper{
+  box-shadow: 0 -4px 20px 2px grey;
+  input{
+    width: 100%;
+    padding: .8rem 2rem;
+    background-color: #F7F7F7;
+    color: #7B7B7B;
+  }
+}
+
+.sv-stock-text{
+
+}
+
+h2.single-info-pane-headline{
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 1rem;
+
+}
+
+.fs-section{
+  h3{
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: #f6f6f6;
+    padding: 1rem 1.5rem;
+    color: #1d2327;
+  }
+  .fs-data-item{
+    padding: .75rem 1.5rem;
+    border-bottom: solid 1px rgba(0,0,0,0.25);
+  }
+  p{
+
+  }
+  .fs-title{
+    font-weight: 500;
+  }
+  .fs-data{
+    text-align: right;
+  }
+}
+
+
+.warranties-wrapper{
+  margin-bottom: 2rem;
+
+  .warranties-header{
+    align-items: center;
+
+    svg{
+      min-width: 20px;
+    }
+
+    .warranties-icon{
+
+    }
+    h3{
+      font-weight: bold;
+      color: #000;
+      font-size: 1.25rem;
+      em{
+
+      }
+    }
+
+  }
+  .warranties-content{
+    ul{
+      list-style: disc;
+      margin-left: 2rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+
+      li{
+
+      }
+    }
+  }
+  .warranties-button{
+    color: ##C72027;
+    text-decoration: underline;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    &:hover{
+      color: #000;
+    }
+  }
+}
+
+.favorite-heart-like{
+  color: gray;
+  font-size: 2rem !important;
+}
+.favorite-heart-dislike{
+  color: #C72027;
+  font-size: 2rem !important;
+}
+.wpfp-link span{
+  display: flex;
+  align-items: center;
+}
+.unfavorite-truck-link svg{
+  color: #C72027;
+}
+.favorite-truck-link svg{
+  color: gray;
+}
+
+.wpfp-span{
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.single-image-gallery{
+
+}
+.thickblackline{
+  background-color: black;
+  width: 100%;
+  height: 3px;
+}
+
+.is-a-video-placeholder{
+  height: 100%;
+  .is-a-video-thumbnail{
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    .is-a-video{
+      width: 90%;
+      height: auto;
+    }
+  }
+
+}
+
+.mobile-is-a{
+  display: flex;
+  justify-content: flex-start;
+  padding: 1rem 4.25rem;
+
+  .mobile-is-a-video-placeholder{
+    height: 100%;
+    max-width: 240px;
+
+    .mobile-is-a-video-thumbnail{
+      cursor: pointer;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+
+      .mobile-is-a-video{
+        width: 90%;
+        height: auto;
+      }
+    }
+
+  }
+}

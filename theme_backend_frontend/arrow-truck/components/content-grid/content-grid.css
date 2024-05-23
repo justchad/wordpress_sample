@@ -1,0 +1,24 @@
+/**
+ * Content Grid Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.content-grid {
+  .num-wrapper {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    @apply .relative .block .bg-brand-primary .mb-8;
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @apply .text-2xl .font-bold .text-white;
+    }
+  }
+}

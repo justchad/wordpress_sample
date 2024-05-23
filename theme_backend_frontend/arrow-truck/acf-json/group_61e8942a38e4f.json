@@ -1,0 +1,44 @@
+{
+    "key": "group_61e8942a38e4f",
+    "title": "CPT: Location (Hidden)",
+    "fields": [
+        {
+            "key": "field_61e8947599698",
+            "label": "Buyers",
+            "name": "location_hidden_buyers",
+            "type": "user",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "role": [
+                "arrow_buyer"
+            ],
+            "allow_null": 1,
+            "multiple": 1,
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post",
+                "operator": "==",
+                "value": "1932"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1642684427
+}

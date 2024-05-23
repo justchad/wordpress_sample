@@ -1,0 +1,71 @@
+.btn,
+.nav-btn > a,
+.nav-btn > button {
+  @apply .relative .rounded .bg-brand-primary .text-white .font-bold .text-sm .py-2 .pl-8 .pr-8 .text-center .inline-block;
+  transition: all 0.15s ease-in-out;
+
+  span {
+    display: inline-block;
+    transition: 0.15s ease;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0.5rem;
+    transform: translateX(-1rem) translateY(-50%);
+    height: 1rem;
+    width: 1rem;
+    vertical-align: -15%;
+    display: inline-block;
+    background-image: url('../img/right-arrow-white.svg');
+    background-size: 1rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: 0.15s;
+    opacity: 0;
+  }
+
+  &:hover {
+    @apply .pl-4 .pr-12 .text-white;
+
+    span {
+    }
+
+    &::after {
+      opacity: 1;
+      transform: translateX(0) translateY(-50%);
+    }
+  }
+
+  &.is-plain {
+
+    &:hover {
+      @apply .pl-8 .pr-8 .bg-red-400;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.btn-outline {
+  @apply relative rounded bg-brand-primary border border-white text-white font-bold text-sm py-2 text-center inline-block;
+}
+
+.btn-ghost {
+  @extend .btn;
+  background-color: transparent;
+  border: 1px solid theme(colors.brand.primary);
+  color: theme(colors.brand.primary);
+
+  &:hover {
+    color: theme( colors.brand.primary );
+  }
+
+  &::after {
+    background-image: url('../img/right-arrow-red.svg');
+  }
+}

@@ -1,0 +1,65 @@
+.slick-slider.slick-dotted[data-component="simple-slider"] {
+  margin-bottom: 24px;
+
+  .slick-dots {
+    @apply .flex .justify-center;
+    bottom: 0;
+    position: relative;
+    margin-bottom: 24px;
+    margin-top: 24px;
+
+    li {
+      height: 10px;
+      width: 10px;
+      margin: 0 4px;
+      flex: 0 0 auto;
+
+      button {
+        background-color: #C4C4C4;
+        opacity: 1;
+        height: 10px;
+        width: 10px;
+        margin: 0;
+        padding: 0;
+        vertical-align: middle;
+        border-radius: 50%;
+
+        &::before {
+          display: none;
+        }
+      }
+
+      &.slick-active {
+        button {
+          @apply .bg-brand-primary;
+        }
+      }
+    }
+  }
+
+  .slick-list {
+    margin-left: -25px;
+    margin-right: -25px;
+  }
+
+  .slick-slide {
+    will-change: transform;
+  }
+}
+
+
+
+.custom-simple-slider-updated{
+  .slick-prev, .slick-next{
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }
+  .slick-prev{
+    left: -50px;
+  }
+  .slick-next{
+    right: -50px;
+  }
+}

@@ -1,0 +1,2051 @@
+{
+    "key": "group_59a984ca1a34e",
+    "title": "Site Options",
+    "fields": [
+        {
+            "key": "field_59b2a2b106b73",
+            "label": "Contact Info",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59b2ab01ec54f",
+            "label": "Schema Type",
+            "name": "schema_type",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Organization": "Organization",
+                "Store": "Store",
+                "LocalBusiness": "Local Business",
+                "Person": "Person",
+                "Restaurant": "Restaurant"
+            },
+            "default_value": "LocalBusiness",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_59b2a851a1501",
+            "label": "Schema: Logo",
+            "name": "schema_logo",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Resolution max: 151x151",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59b2ab01ec54f",
+                        "operator": "!=",
+                        "value": "Person"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": 151,
+            "max_height": 151,
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_59b2a89da1502",
+            "label": "Schema: Photo of Building",
+            "name": "schema_building_photo",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Resolution max: 200x200",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59b2ab01ec54f",
+                        "operator": "!=",
+                        "value": "Person"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": 200,
+            "max_height": 200,
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_59a98d7c6044d",
+            "label": "Phone Number",
+            "name": "contact_phone_number",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59b2c035428bb",
+            "label": "Email Address",
+            "name": "contact_email_address",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59a990c8f0ec2",
+            "label": "Address",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_59a98ea0f0eb7",
+            "label": "Street Address",
+            "name": "contact_street_address",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59a98ebdf0eb8",
+            "label": "City",
+            "name": "contact_city",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59a98fd6f0eb9",
+            "label": "State",
+            "name": "contact_state",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59a98feaf0eba",
+            "label": "Zip",
+            "name": "contact_zip",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59b2adf78d646",
+            "label": "Country",
+            "name": "contact_country",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "United States",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e2b73cf7d638",
+            "label": "Location Coordinates",
+            "name": "location_coords",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5e2b73e97d639",
+                    "label": "Latitude",
+                    "name": "lat",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5e2b73f77d63a",
+                    "label": "Longitude",
+                    "name": "lng",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_59b2b0d897d8b",
+            "label": "Hours of Operation",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59b2ab01ec54f",
+                        "operator": "!=",
+                        "value": "Organization"
+                    },
+                    {
+                        "field": "field_59b2ab01ec54f",
+                        "operator": "!=",
+                        "value": "Person"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_59b2afcb2a68f",
+            "label": "Openings",
+            "name": "scehma_openings",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59b2ab01ec54f",
+                        "operator": "!=",
+                        "value": "Organization"
+                    },
+                    {
+                        "field": "field_59b2ab01ec54f",
+                        "operator": "!=",
+                        "value": "Person"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Day",
+            "sub_fields": [
+                {
+                    "key": "field_59b2b00a2a691",
+                    "label": "Days",
+                    "name": "days",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Su": "Sunday",
+                        "Mo": "Monday",
+                        "Tu": "Tuesday",
+                        "We": "Wednesday",
+                        "Th": "Thursday",
+                        "Fr": "Friday",
+                        "Sa": "Saturday"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 1,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": "",
+                    "parent_repeater": "field_59b2afcb2a68f"
+                },
+                {
+                    "key": "field_59b2b06f2a692",
+                    "label": "From",
+                    "name": "from",
+                    "aria-label": "",
+                    "type": "time_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_59b2b09b2a693",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "g:i a",
+                    "return_format": "g:i a",
+                    "parent_repeater": "field_59b2afcb2a68f"
+                },
+                {
+                    "key": "field_59b2b129947e8",
+                    "label": "To",
+                    "name": "to",
+                    "aria-label": "",
+                    "type": "time_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_59b2b09b2a693",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "g:i a",
+                    "return_format": "g:i a",
+                    "parent_repeater": "field_59b2afcb2a68f"
+                },
+                {
+                    "key": "field_59b2b09b2a693",
+                    "label": "Closed",
+                    "name": "closed",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "10",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "parent_repeater": "field_59b2afcb2a68f"
+                }
+            ],
+            "rows_per_page": 20
+        },
+        {
+            "key": "field_59b2b234d7d41",
+            "label": "Special Days",
+            "name": "schema_special_days",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59b2ab01ec54f",
+                        "operator": "!=",
+                        "value": "Organization"
+                    },
+                    {
+                        "field": "field_59b2ab01ec54f",
+                        "operator": "!=",
+                        "value": "Person"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Row",
+            "sub_fields": [
+                {
+                    "key": "field_59b2b349d7d42",
+                    "label": "Date: from",
+                    "name": "date_from",
+                    "aria-label": "",
+                    "type": "date_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "d\/m\/Y",
+                    "return_format": "d\/m\/Y",
+                    "first_day": 1,
+                    "parent_repeater": "field_59b2b234d7d41"
+                },
+                {
+                    "key": "field_59b2b380d7d43",
+                    "label": "Date: to",
+                    "name": "date_to",
+                    "aria-label": "",
+                    "type": "date_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "d\/m\/Y",
+                    "return_format": "d\/m\/Y",
+                    "first_day": 1,
+                    "parent_repeater": "field_59b2b234d7d41"
+                },
+                {
+                    "key": "field_59b2b400d7d47",
+                    "label": "Time: from",
+                    "name": "time_from",
+                    "aria-label": "",
+                    "type": "time_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_59b2b3e8d7d46",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "g:i a",
+                    "return_format": "g:i a",
+                    "parent_repeater": "field_59b2b234d7d41"
+                },
+                {
+                    "key": "field_59b2b3dad7d45",
+                    "label": "Time: to",
+                    "name": "time_to",
+                    "aria-label": "",
+                    "type": "time_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_59b2b3e8d7d46",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "g:i a",
+                    "return_format": "g:i a",
+                    "parent_repeater": "field_59b2b234d7d41"
+                },
+                {
+                    "key": "field_59b2b3e8d7d46",
+                    "label": "Closed",
+                    "name": "closed",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "10",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "Yes",
+                    "ui_off_text": "No",
+                    "parent_repeater": "field_59b2b234d7d41"
+                }
+            ],
+            "rows_per_page": 20
+        },
+        {
+            "key": "field_59a98cfe6044c",
+            "label": "Social Media",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59a98ff8f0ebb",
+            "label": "Facebook",
+            "name": "social_facebook",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_59a99000f0ebc",
+            "label": "Twitter",
+            "name": "social_twitter",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_59a99012f0ebd",
+            "label": "Instagram",
+            "name": "social_instagram",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_59a9905af0ebe",
+            "label": "Google Plus",
+            "name": "social_google_plus",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_59a99063f0ebf",
+            "label": "Pinterest",
+            "name": "social_pinterest",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_59a9906bf0ec0",
+            "label": "Youtube",
+            "name": "social_youtube",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_59a99082f0ec1",
+            "label": "LinkedIn",
+            "name": "social_linkedin",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_61540236f570f",
+            "label": "Blog",
+            "name": "social_blog",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_59a98cef6044b",
+            "label": "Site Options",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59a984cf42912",
+            "label": "Environment",
+            "name": "global_environment",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "production": "Production",
+                "development": "Development"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "development",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_59a9857842913",
+            "label": "MapBox Token",
+            "name": "global_mapbox_token",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e57d4a6c0988",
+            "label": "MapBox Style",
+            "name": "global_mapbox_style",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59a9858d42914",
+            "label": "Logo",
+            "name": "global_logo",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Business Logo",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5a3adad8bd541",
+            "label": "Bugherd Project Key",
+            "name": "global_bugherd_project_key",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Will only be included when in development mode.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_62c45c46211f2",
+            "label": "CRPY Activity Tracking",
+            "name": "crpy_activity_tracking",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5f61ae99c5ce6",
+            "label": "Footer Options",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5f61aeabc5ce7",
+            "label": "Footer Logo",
+            "name": "global_footer_logo",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5f61b3bc73491",
+            "label": "Locations \/ Information",
+            "name": "footer_locations",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "<p class=\"hdg-4 hdg-6\">Information<\/p>\r\n[address street=\"10261 W 87th St\" city=\"Overland Park\" state=\"KS\" zip=\"66212\" phone=\"(816) 298-7018\"]\r\n<p class=\"paragraph-small mt-5\">Mon-Fri: 9am - 9pm\r\nSat-Sun: 9am - 6pm<\/p>",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_5f61b3d173492",
+            "label": "Newsletter",
+            "name": "footer_newsletter",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "<p class=\"hdg-6\">Newsletter<\/p>",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_5f846e9b540b4",
+            "label": "Page Assignments",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5f846eb0540b5",
+            "label": "Privacy Policy",
+            "name": "page_id_privacy_policy",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_5f846eea540b6",
+            "label": "Legal Notice",
+            "name": "page_id_legal_notice",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_5f92d766dd75b",
+            "label": "Search Inventory",
+            "name": "page_id_search_inventory",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_5f92d789dd75c",
+            "label": "Estimate",
+            "name": "page_id_estimate",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_5f92d79edd75e",
+            "label": "Finance",
+            "name": "page_id_finance",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_5f92d7a8dd75f",
+            "label": "Locations",
+            "name": "page_id_locations",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_5f92d7b8dd760",
+            "label": "Get a Quote",
+            "name": "page_id_quote",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_602a074d6fdff",
+            "label": "Login",
+            "name": "page_id_login",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_602a07706fe00",
+            "label": "Register",
+            "name": "page_id_register",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_602b6a05a7736",
+            "label": "Account",
+            "name": "page_id_account",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_603d1f37c003e",
+            "label": "Sales Rep Form",
+            "name": "sales_rep_form_id",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "29": "Contact",
+                "28": "Credit Application",
+                "33": "Down Payment Estimator",
+                "35": "Get a Quote",
+                "36": "Let's Stay in Touch",
+                "32": "Pre-Qualify",
+                "31": "Sell My Truck",
+                "38": "Sign Up for Email",
+                "30": "Submit a Warranty Form",
+                "39": "Truck Inquiry",
+                "37": "Truck Watch"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_60550e13c6f66",
+            "label": "Truck Watch Form",
+            "name": "truck_watch_form_id",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "29": "Contact",
+                "28": "Credit Application",
+                "33": "Down Payment Estimator",
+                "35": "Get a Quote",
+                "36": "Let's Stay in Touch",
+                "32": "Pre-Qualify",
+                "31": "Sell My Truck",
+                "38": "Sign Up for Email",
+                "30": "Submit a Warranty Form",
+                "39": "Truck Inquiry",
+                "37": "Truck Watch"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_65eaf00b529d3",
+            "label": "Locations Settings",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_65eaf0d6a23c1",
+            "label": "Location Default Image",
+            "name": "location_image_global",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_65eaef40f55b7",
+            "label": "Locations Disabled",
+            "name": "location_disabled_global",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "ll_location"
+            ],
+            "post_status": "",
+            "taxonomy": "",
+            "return_format": "object",
+            "multiple": 1,
+            "allow_null": 0,
+            "bidirectional": 0,
+            "ui": 1,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_65e960231c245",
+            "label": "Location SEO Global Defaults",
+            "name": "location_seo_global_defaults",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_65e960791c246",
+                    "label": "Meta Keyphrase",
+                    "name": "meta_keyphrase",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "arrow truck sales [city-state]",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_65e960a41c247",
+                    "label": "Meta Description",
+                    "name": "meta_description",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Looking to buy new and used semi trucks in [city-state]? Visit Arrow Truck Sales, INC today!",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_65e960e41c248",
+                    "label": "Meta Author",
+                    "name": "meta_author",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Arrow Truck Sales",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_65e9621a1c249",
+                    "label": "Meta Title",
+                    "name": "meta_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "[city-state] Semi Trucks for Sale | Arrow Truck Sales, Inc.",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                }
+            ]
+        },
+        {
+            "key": "field_65f02eea165e5",
+            "label": "Inventory Settings",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_65f030f33a154",
+            "label": "Invnentory Default Image",
+            "name": "inventory_image_global",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_65f02f092692f",
+            "label": "Number of Featured Trucks",
+            "name": "inventory_number_of_featured_trucks",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 3,
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_65f0312d1afaf",
+            "label": "Exclude Trailers from Featured Trucks",
+            "name": "inventory_exclude_trailers",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_65f0409d39957",
+            "label": "Employee Settings",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_65f04a37c8424",
+            "label": "Language List",
+            "name": "employee_language_list",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_65f04a50c8425",
+                    "label": "",
+                    "name": "name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_65f04a37c8424"
+                }
+            ]
+        },
+        {
+            "key": "field_65f0514eaff7f",
+            "label": "Refresh Language List",
+            "name": "employee_refresh_language_list",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Visit the \/locations page, the refresh will run automatically.",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_65f040ba63360",
+            "label": "Financing Content",
+            "name": "employee_financing_content",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_65f0415e5a08f",
+                    "label": "Financing Headline",
+                    "name": "financing_headline",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Financing",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_65f041815a090",
+                    "label": "Financing Copy",
+                    "name": "financing_copy",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "<p>We have been financing used trucks and trailers for owner-operators and small fleets since 1997. Our staff is highly skilled at understanding what is needed from their lender in order to achieve success in your business, which is why we are proud to offer the easiest financing application in the industry. <a href=\"\/apply-for-credit\">Complete and submit<\/a> our secure credit application. Once submitted, an Arrow representative will reach out to complete the process.<\/p>",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_65f041e692791",
+                    "label": "Warranties Headline",
+                    "name": "warranties_headline",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Warranties",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_65f041fa92792",
+                    "label": "Warranties Copy",
+                    "name": "warranties_copy",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "<h2>\r\n                EXTENDED WARRANTIES\r\n            <\/h2>\r\n            <p>Protect your investment against failure from wear-out for up to 4 years or 400,000 miles. Unlike other used truck warranties in the marketplace, Arrow's warranties include full coverage (not just major components) during the entire coverage period.<\/p>\r\n            <p>We have class 8 coverage plans ranging from 6 months\/50k miles to 48 months\/400k miles and fit almost any need and budget. We also offer optional upgrades on transmission and rear axle parts coverage. <a href=\"\/extended-semi-truck-warranties\" target=\"_blank\">View a full list of covered components here.<\/a><\/p>\r\n            <p>If you experience a problem or breakdown on the road, your claim can be made 24 hours a day, seven days a week. Arrangements are made and you are informed of what immediate action to take. All paperwork and direct payments are made to the repair facility within hours. You make one call and repairs can be made at more than 3,000 recognized repair facilities. We only repair at authorized OEM facilities and use genuine OEM parts for repairs. You have one deductible and your liability for mechanical failure is only $150 per occurrence (subject to change).<\/p>\r\n            <h2>\r\n                AFTERTREATMENT WARRANTY\r\n            <\/h2>\r\n            <p>We've added the most comprehensive aftertreatment warranty in the industry to our already extensive list of warranty offerings. Unlike some of our competitors, our warranty includes all engine models and includes coverage on 42 vital system components for light, medium and heavy-duty diesel engines. We have plans available for 12, 24, 36 and 48 months. <a href=\"\/semi-truck-aftertreatment-warranty\" target=\"_blank\">View covered components and sensors.<\/a><\/p>\r\n            <h2>\r\n                ConfidencePLUS WARRANTY\r\n            <\/h2>\r\n            <p>Arrow's exclusive <a href=\"\/90-day-semi-truck-warranty\" target=\"_blank\">90 day\/25k mile comprehensive coverage<\/a> is standard on virtually every late-model truck we sell at no cost to you.<\/p>",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_65f0422292793",
+                    "label": "Insurance and Protection Headline",
+                    "name": "insurance_and_protection_headline",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Insurance and Protection",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_65f0423c92794",
+                    "label": "Insurance and Protection Copy",
+                    "name": "insurance_and_protection_copy",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "<h2>\r\n                Insurance\r\n            <\/h2>\r\n            <p>Your truck is your livelihood and your investment. Do you have enough available cash to replace your truck if it were damaged, non-drivable or totaled? Are you protected if you cause property damage or bodily injury to others while you're driving without hauling a load? <a href=\"\/semi-truck-damage-insurancephysical-damage-insurance\" target=\"_blank\">Learn more here<\/a> and give me a call with any further questions you may have.<\/p>\r\n            <h2>\r\n                Gap Protection\r\n            <\/h2>\r\n            <p>Did you know that if you suffer the total loss or unrecovered theft of your truck, your insurance company will only pay the actual cash value of your truck, which may not be enough to pay off your remaining loan balance? Arrow's Gap Protection covers the difference so you won't still owe money on an asset that no longer exists.<\/p>\r\n            <a href=\"\/gap-protection\" target=\"_blank\">Example of Gap Protection<\/a>\r\n            <h2>\r\n                Debt Waiver\r\n            <\/h2>\r\n            <p>With Arrow's Debt Waiver program your family won't have to face the burden of a loan balance on your truck in the event of your death. Protect your family's financial security by canceling any remaining balance on your loan and releases full ownership of your truck to your family, with no further financial strain. The cost of the waiver is only pennies per day and may be added to your loan balance and included in your monthly payment. No medical exam is required and the program has very few limitations. Give me a call and we can discuss the details!<\/p>",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_65f0426692795",
+                    "label": "Emergency Services Headline",
+                    "name": "emergency_services_headline",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Emergency Services",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_65f0427992796",
+                    "label": "Emergency Services Copy",
+                    "name": "emergency_services_copy",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "<h2>\r\n                24\/7 Roadside Assistance\r\n            <\/h2>\r\n            <p>\r\n                <span class=\"font-bold\">Arrow offers 24\/7 roadside assistance to everyone regardless of when or where you purchased your commercial vehicle.<\/span>\r\n                Our service provider, RoadsideMASTERS.com, networks with reputable contractors across the US and Canada who won't capitalize on your situation by charging excessive parts costs and labor rates. Plus, you'll receive the quality service you need in the event of a roadside breakdown. RoadsideMASTERS.com uses the latest technology for efficiency and quality. Their GPS technology solution ensures the most qualified provider is dispatched to a breakdown location via a text message link that allows the system to pinpoint your location in seconds.\r\n            <\/p>\r\n            <ul class=\"afiv-extras-list ml-0 md:ml-8\">\r\n                <li>\r\n                    <a class=\"asabutton w-full\" href=\"\/wp-content\/themes\/arrow-truck\/assets\/Roadside_Covered_Services.pdf\">\r\n                        View a list of all covered benefits\r\n                    <\/a>\r\n                <\/li>\r\n                <li>\r\n                    <a class=\"asabutton w-full\" href=\"\/wp-content\/themes\/arrow-truck\/assets\/Roadside_Assistance_Membership_Handbook.pdf\">\r\n                        Download the membership handbook\r\n                    <\/a>\r\n                <\/li>\r\n            <\/ul>\r\n            <h2>\r\n                Arrow Action Services\r\n            <\/h2>\r\n            <p>\r\n                When problems arise, you want a solution that is, cost effective, responsive and minimizes any unwanted downtime. Arrow Action Services (AAS) is an emergency assistance program that delivers round-the-clock peace-of-mind throughout the United States and Canada. Think of AAS as your personal concierge service. From locating a qualified service provider, to arranging hotel accommodations, we do everything possible to help you – and your load – reach your destination…ON TIME.\r\n                <a href=\"\/arrow-action-services\" target=\"_blank\">\r\n                    Learn more here\r\n                <\/a>\r\n                or give me a call with any further questions you may have.\r\n            <\/p>",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_65f042a292797",
+                    "label": "Welcome Headline",
+                    "name": "welcome_headline",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Welcome to the Arrow family.",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_65f042bb92798",
+                    "label": "Welcome Copy",
+                    "name": "welcome_copy",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "<p class=\"col-span-12 afiv-welcome-p\">\r\n        Thank you for the opportunity to serve you, we truly appreciate your business. We feel that customer service should extend after the sale, so I've compiled some information you might find useful after your truck purchase. Please don't hesitate to reach out if there's anything else you need.\r\n    <\/p>",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_65f042f592799",
+                    "label": "Helpful Numbers Headline",
+                    "name": "helpful_numbers_headline",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Helpful Phone Numbers",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_65f043059279a",
+                    "label": "Helpful Numbers Copy",
+                    "name": "helpful_numbers_copy",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "<ul class=\"afiv-extras-list\">\r\n                <li>\r\n                    <h2>Lending Questions \/ Payments<\/h2>\r\n                    <p>Transport Funding<\/p>\r\n                    <a href=\"tel:8005629265\">800.562.9265<\/a>\r\n                <\/li>\r\n                <li>\r\n                    <h2>Arrow Warranty Claims Department<\/h2>\r\n                    <p>M-F: 8:00 AM – 5:00 PM CST<\/p>\r\n                    <a href=\"tel:8882033394\">888.203.3394<\/a>\r\n                <\/li>\r\n                <li>\r\n                    <h2>24 \/ 7 \/ 365 After-Hours Warranty Claim Support<\/h2>\r\n                    <p>NTP (National Truck Protection) Warranty<\/p>\r\n                    <a href=\"tel:8883658027\">888.365.8027<\/a>\r\n                    <p>Premium 2000+ Warranty<\/p>\r\n                    <a href=\"tel:8888832632\">888.883.2632<\/a>\r\n                <\/li>\r\n                <li>\r\n                    <h2>24 \/ 7 \/ 365 Emergency Roadside Assistance<\/h2>\r\n                    <p>RoadsideMASTERS.com<\/p>\r\n                    <a href=\"tel:8002831373\">800.283.1373<\/a>\r\n                <\/li>\r\n                <li>\r\n                    <h2>24 \/ 7 \/ 365 Breakdown Services<\/h2>\r\n                    <p>AAS (Arrow Action Service)<\/p>\r\n                    <a href=\"tel:8777027769\">877.702.7769<\/a>\r\n                <\/li>\r\n            <\/ul>",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_65f0433ee2dbb",
+                    "label": "Transport Funding Headline",
+                    "name": "transport_funding_headline",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Transport Funding Loan Portals",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_65f0434de2dbc",
+                    "label": "Transport Funding Copy",
+                    "name": "transport_funding_copy",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "<p>Access and manage your account through our secure customer portal.<\/p>\r\n            <ul class=\"afiv-extras-list\">\r\n                <li>\r\n                    <a class=\"asabutton w-full md:w-half\" target=\"_blank\" href=\"https:\/\/myaccount.na.vfsco.com\/VCFCustomerPortal\/login.aspx#\">\r\n                        My Account\r\n                    <\/a>\r\n                <\/li>\r\n            <\/ul>\r\n            <p>Transport Funding offers a variety of payment methods to make it easy for you to remit payments in the manner that works best for you.<\/p>\r\n            <ul class=\"afiv-extras-list\">\r\n                <li>\r\n                    <a class=\"asabutton\" target=\"_blank\" href=\"https:\/\/paynow40.speedpay.com\/transportfunding\/login.aspx\">\r\n                        Electronic Payment\r\n                    <\/a>\r\n                <\/li>\r\n                <li>\r\n                    <a class=\"asabutton\" target=\"_blank\" href=\"https:\/\/www.transportfunding.com\/ssl\/ACHForm.aspx\">\r\n                        Automatic Recurring Bank Draft (ACH)\r\n                    <\/a>\r\n                <\/li>\r\n                <li>\r\n                    <a class=\"asabutton\" target=\"_blank\" href=\"tel:18777027769\">\r\n                        Phone Payment\r\n                    <\/a>\r\n                <\/li>\r\n                <li>\r\n                    <a class=\"asabutton\" target=\"_blank\" href=\"http:\/\/www.transportfunding.com\/docs\/payment.aspx\">\r\n                        View All Payment Options\r\n                    <\/a>\r\n                <\/li>\r\n            <\/ul>",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_65f04369e2dbd",
+                    "label": "Customer Appreciation Headline",
+                    "name": "customer_appreciation_headline",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Customer Appreciation",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_65f0437ee2dbe",
+                    "label": "Customer Appreciation Copy",
+                    "name": "customer_appreciation_copy",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "<p>Thank you so much for your business! If you haven't already, be sure to visit our\r\n                <a href=\"\/thankyou\" target=\"_blank\">\r\n                    customer page\r\n                <\/a>\r\n                and learn how you can earn money for referring your friends and get your free 'Thank You' packet.\r\n            <\/p>\r\n            <p>\r\n                Don't hesitate to reach out if there's anything else I can do to help!\r\n            <\/p>",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "site-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1710248437
+}

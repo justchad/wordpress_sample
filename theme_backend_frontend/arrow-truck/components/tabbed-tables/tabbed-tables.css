@@ -1,0 +1,57 @@
+/**
+ * Tabbed Tables Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.tabbed-tables {
+  .ll-tabbed-content__content-wrapper {
+    display: none;
+
+    &.is-active {
+      display: block;
+    }
+
+    .ll-tabbed-content__content {
+      margin-bottom: 3em;
+    }
+  }
+
+  .tabs-list {
+    @apply .flex .justify-center .items-center .mx-auto .bg-gray-100 .relative;
+    border: 1px solid #C9C9C9;
+    border-radius: 100px;
+
+    .tab-item {
+      flex: 0 0 auto;
+      @apply .py-3 .px-6;
+      border-radius: 100px;
+      z-index: 1;
+    }
+
+    .selector {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background: white;
+      border-radius: 100px;
+      box-shadow: 2px 0px 6px rgba(0, 0, 0, 0.04);
+      transition: 0.25s ease;
+      z-index: 0;
+    }
+  }
+
+  .tab-rows {
+    @screen md {
+      column-count: 2;
+      column-gap: 2rem;
+    }
+
+    .tab-row {
+      break-inside: avoid;
+    }
+  }
+}

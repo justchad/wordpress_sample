@@ -1,0 +1,104 @@
+{
+    "key": "group_5e665dc8128e7",
+    "title": "Utility : Analytics sections",
+    "fields": [
+        {
+            "key": "field_5e665e263e6f1",
+            "label": "Scripts",
+            "name": "scripts",
+            "type": "repeater",
+            "instructions": "For all scripts and snippets, always include any tags as needed such as <script> or <img> tags",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_5e665e6d3e6f2",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Script \/ Snippet",
+            "sub_fields": [
+                {
+                    "key": "field_5e665e6d3e6f2",
+                    "label": "Label",
+                    "name": "label",
+                    "type": "text",
+                    "instructions": "what type of snippet is this? (Analytics, facebook pixel, tag manager, etc)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5e665f443e6f3",
+                    "label": "Scripts \/ Snippets",
+                    "name": "scripts_snippets",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_5e665f613e6f4",
+                    "label": "Specific Pages",
+                    "name": "specific_page",
+                    "type": "post_object",
+                    "instructions": "Set this option if you want this script \/ snippet to only be on specific pages.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": "",
+                    "taxonomy": "",
+                    "allow_null": 1,
+                    "multiple": 1,
+                    "return_format": "id",
+                    "ui": 1
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "private": true,
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "modified": 1583772588
+}

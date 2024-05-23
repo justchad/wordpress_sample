@@ -1,0 +1,76 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.flag-circle {
+  display: inline-block;
+  position: relative;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  .icon,
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  &.border:not(.border-4) {
+    border-width: 3px;
+  }
+}
+
+.svg-align {
+  vertical-align: -15%;
+}
+
+.icon-checkmark-empty {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  @apply .border .border-gray-300;
+}
+
+.icon-angle-double-left {
+  width: 0.5888671875em;
+}
+
+.icon-angle-double-right {
+  width: 0.5537109375em;
+}
+
+[data-toggle-target] .icon {
+  pointer-events: none;
+}
+
+.circle-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 9999px;
+  @apply .bg-brand-primary;
+  color: white;
+  display: grid;
+  place-items: center;
+
+  &:hover {
+    @apply .bg-red-400;
+  }
+}
+
+.circle-icon.is-small {
+  width: 28px;
+  height: 28px;
+}

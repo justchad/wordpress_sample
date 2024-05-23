@@ -1,0 +1,568 @@
+<?php
+global $stock_num;
+?>
+
+<?php while (have_posts()) : the_post(); ?>
+  <?php
+    global $post, $truck;
+    $arrow_inv_api = new ArrowApiInventory;
+    $truck = $arrow_inv_api->getTruck( $stock_num )->all();
+    $truck = new ArrowTruck( $truck );
+    $truck->wp_post = $post;
+
+    if ( !ll_get_raw_referer() || ll_get_raw_referer() == get_the_permalink() ) {
+      $url = arrow_page_url( 'search_inventory' );
+    } else {
+      $url = ll_get_raw_referer();
+    }
+  ?>
+
+  <section class="single-truck-page" data-component="single-truck">
+    <div class="max-w-screen-xl mx-auto wishlist-title md:px-gutter sticky top-nav z-10 bg-white">
+      <div class="px-gutter md:px-4 flex justify-between items-start border-b border-gray-200 py-2">
+        <h2 class="text-sm font-bold text-gray-400"><?php echo $truck->name ?></h2>
+
+        <button class="add-to-wishlist" data-truck="<?php echo ll_safe_encode( $truck ); ?>" title="Add <?php echo $truck->name; ?> to Wishlist"><svg class="icon icon-heart text-2xl text-gray-200 pointer-events-none"><use xlink:href="#icon-heart"></use></svg></button>
+      </div>
+    </div> <!-- /.wishlist-title -->
+
+    <div class="row">
+      <div class="col w-full m:w-8">
+        <!-- left side area -->
+        <div class="col w-full single-hero-image">
+          <!-- hero image -->
+          <?php
+            ll_include_component(
+              'fit-image',
+              [
+                'image_id' => "https://fillmurray.com/300/300"
+              ]
+            );
+          ?>
+        </div>
+        <div class="col w-full single-extra-features">
+          <!-- extra features -->
+
+        </div>
+        <div class="col w-full single-image-gallery">
+          <!-- image gallery -->
+          <div class="col w-half single-image-gallery-each">
+            <!-- each image part of foreach when clicked replace image in hero image pane -->
+            <?php
+              ll_include_component(
+                'fit-image',
+                [
+                  'image_id' => "https://fillmurray.com/300/300"
+                ]
+              );
+            ?>
+          </div>
+        </div>
+      </div>
+      <div class="col w-full m:w-4">
+        <!-- right side area -->
+        <div class="single-info-pane">
+          <!-- start info pane -->
+          <h1>2016 VNL 670</h1>
+          <h2>Volvo</h2>
+          <div class="single-price-miles">
+            <h3>$51,950.00</h3>
+            <h3>509,448 Miles</h3>
+          </div>
+          <div class="single-vehicle-list-details">
+            <ul>
+              <li>Engine</li>
+              <li>Horse Power</li>
+              <li>Location</li>
+              <li>Stock Number</li>
+            </ul>
+          </div>
+          <div class="single-truck-desription">
+            <h2>Truck Description</h2>
+            <p>HARD TO FIND 670 ISX MANUAL TRANS. Isx 400hp, manual 10 speed transmission, adaptive cruise control with time gap, collision mitigation system and new 14/32 recaps on drives.</p>
+          </div>
+        </div>
+
+        <div class="single-get-started">
+
+          <div class="single-get-started-buttons">
+            <h2>Get Started</h2>
+            <ul>
+              <li>
+                <button type="button" name="button">
+                  <span>I</span>
+                  Buy Now
+                </button>
+              </li>
+              <li>
+                <button type="button" name="button">
+                  <span>I</span>
+                  Down Payment Estimator
+                </button>
+              </li>
+              <li>
+                <button type="button" name="button">
+                  <span>I</span>
+                  Pre-Qualify for Credit
+                </button>
+              </li>
+              <li>
+                <button type="button" name="button">
+                  <span>I</span>
+                  Credit Application
+                </button>
+              </li>
+              <li>
+                <button type="button" name="button">
+                  <span>I</span>
+                  Contact Us About This Truck
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="single-drop-down-wrapper">
+
+            <div class="single-each-drop-down">
+              <div class="single-each-drop-down-top">
+                Features & Specs
+              </div>
+              <div class="single-each-drop-down-bottom">
+                <!-- stuff goes here -->
+              </div>
+            </div>
+
+            <div class="single-each-drop-down">
+              <div class="single-each-drop-down-top">
+                Warranties
+              </div>
+              <div class="single-each-drop-down-bottom">
+                <!-- stuff goes here -->
+              </div>
+            </div>
+
+            <div class="single-each-drop-down">
+              <div class="single-each-drop-down-top">
+                Can I afford it?
+              </div>
+              <div class="single-each-drop-down-bottom">
+                <!-- stuff goes here -->
+              </div>
+            </div>
+
+          </div>
+
+          <div class="single-summary">
+
+            <h2>Summary</h2>
+
+            <div class="single-price-list-line">
+              <div class="single-price-list-line-label">
+                Truck Price
+              </div>
+              <div class="single-price-list-line-price">
+                $51,950
+              </div>
+            </div>
+
+            <div class="single-price-list-line">
+              <div class="single-price-list-line-label">
+                Down Payment
+              </div>
+              <div class="single-price-list-line-price">
+                -$2,000
+              </div>
+            </div>
+
+            <div class="single-price-list-line">
+              <div class="single-price-list-line-label">
+                Total Finance Amount
+              </div>
+              <div class="single-price-list-line-price">
+                $55,550
+              </div>
+            </div>
+
+            <div class="single-estimated-monthly">
+
+              <div class="single-estimated-monthly-title">
+                Estimated Monthly Payment
+              </div>
+              <div class="single-estimated-monthly-price">
+                $531 - $595
+              </div>
+
+              <button type="button" name="button">
+                Get Pre Approved for Credit
+              </button>
+
+              <p>Save time, apply in a few simple steps!</p>
+
+            </div>
+
+
+
+          </div>
+
+        </div>
+
+        <div class="single-roadside-assistance">
+          <div class="single-roadside-wrapper">
+            <div class="single-roadside-left">
+              <img src="" alt="">
+            </div>
+            <div class="single-roadside-right">
+              <h1>24/7 Roadside Assistance</h1>
+              <ul>
+                <li>Towing Assistance</li>
+                <li>Mobile Mechanic Service</li>
+                <li>Tire Delivery Service</li>
+                <li>Free Delivery Service</li>
+              </ul>
+              <button type="button" name="button">
+                Learn More
+              </button>
+            </div>
+          </div>
+          <div class="single-roadside-wrapper">
+            <div class="single-roadside-left">
+              <img src="" alt="">
+            </div>
+            <div class="single-roadside-right">
+              <h1>24/7 Roadside Assistance</h1>
+              <ul>
+                <li>Towing Assistance</li>
+                <li>Mobile Mechanic Service</li>
+                <li>Tire Delivery Service</li>
+                <li>Free Delivery Service</li>
+              </ul>
+              <button type="button" name="button">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+    <div class="container">
+      <div class="row justify-center">
+
+        <div class="col w-full md:w-10/12 pt-6">
+
+          <a href="<?php echo $url; ?>" class="hover:text-brand-primary"><svg class="icon icon-left-arrow svg-align"><use xlink:href="#icon-left-arrow"></use></svg> Back</a>
+
+          <div class="row mt-6">
+
+            <div class="col w-full lg:w-7/12 mb-8 lg:mb-0">
+
+              <?php
+              // print_r($truck);
+               ?>
+
+              <?php if ( $truck->images->count() > 1 ) : ?>
+                <div class="main-image-wrapper">
+                  <?php
+
+                   ?>
+                  <?php foreach( $truck->thumbnails as $image ) : ?>
+                    <?php
+                        $pieces = explode("_", $image);
+                        $image_url = $pieces[0] . '_' . $truck->STOCKNUM . $pieces[1];
+                     ?>
+                    <div class="image-wrapper relative aspect-4/3 overflow-hidden rounded-lg">
+                      <?php
+                        ll_include_component(
+                          'fit-image',
+                          [
+                            'image_id' => $image_url
+                          ]
+                        );
+                      ?>
+                    </div> <!-- /.image-wrapper -->
+                  <?php endforeach; ?>
+                </div>
+                <div class="images-gallery">
+                  <?php foreach( $truck->thumbnails as $image ) : ?>
+                    <?php
+                        $pieces = explode("_", $image);
+                        $image_tb_url = $pieces[0] . '_' . $truck->STOCKNUM . $pieces[1];
+                     ?>
+                    <div class="image">
+
+                      <div class="image-wrapper relative aspect-4/3">
+
+                        <?php
+                          ll_include_component(
+                            'fit-image',
+                            [
+                              'image_id' => $image_tb_url
+                            ]
+                          );
+                        ?>
+
+                      </div> <!-- /.image-wrapper -->
+
+                    </div> <!-- /.image -->
+                  <?php endforeach; ?>
+                </div> <!-- /.images-gallery -->
+              <?php else : ?>
+                <div class="image-wrapper relative aspect-4/3 overflow-hidden rounded-lg">
+                  <?php
+                    ll_include_component(
+                      'fit-image',
+                      [
+                        'image_id' => $truck->images->first()
+                      ]
+                    );
+                  ?>
+                </div> <!-- /.image-wrapper -->
+              <?php endif; ?>
+
+            </div> <!-- /.col -->
+
+            <div class="col w-full lg:w-5/12">
+
+              <h1 class="hdg-3 mb-5"><?php echo $truck->name; ?></h1>
+
+              <p class="text-lg mb-3 font-medium">
+                <span class="text-brand-primary inline-block"><?php echo $truck->INVPRICE; ?></span> <span class="inline-block mx-1">|</span> <span class="text-gray-300 inline-block"><?php echo $truck->INVMILAG; ?> Miles</span>
+              </p>
+
+              <div class="flex justify-start items-center text-gray-300 text-sm mb-8">
+
+                <p><svg class="icon icon-pin svg-align text-lg mr-1"><use xlink:href="#icon-pin"></use></svg> <?php echo $truck->location(); ?></p>
+
+              </div> <!-- /.flex -->
+
+              <h2 class="text-base font-bold text-gray-400 mb-4">
+                <?php echo( $truck->INVHEADER ? $truck->INVHEADER : 'Truck Description' ) ?>
+              </h2>
+
+              <div class="wysiwyg">
+
+                <?php echo format_text( ucfirst( strtolower( $truck->get_post_data( 'post_content', 'INVDETAIL' ) ) ) ); ?>
+
+              </div> <!-- /.wysiwyg -->
+
+            </div> <!-- /.col -->
+
+          </div> <!-- /.row -->
+
+          <div class="links-row hidden py-3 px-5 lg:py-0 lg:px-0 lg:flex rounded-t-xl lg:rounded-none z-10 lg:z-0 lg:-mx-1/2 lg:mt-10 fixed lg:static left-0 bottom-0 w-full bg-white" id="get-started">
+
+            <div class="link-wrapper">
+
+              <a href="#" class="py-6 lg:py-2 px-6 lg:rounded font-medium lg:font-semibold flex items-center lg:block border-b lg:border-none">
+                <svg class="icon icon-estimate mr-2 text-xl text-brand-primary svg-align"><use xlink:href="#icon-estimate"></use></svg>
+                Monthly Payment Estimator
+                <svg class="icon icon-right-arrow text-gray-300 lg:hidden text-xl ml-auto svg-align"><use xlink:href="#icon-right-arrow"></use></svg>
+              </a>
+
+            </div> <!-- /.link-wrapper -->
+
+            <div class="link-wrapper">
+
+              <a href="<?php echo $truck->estimate_link; ?>" class="py-6 lg:py-2 px-6 lg:rounded font-medium lg:font-semibold flex items-center lg:block border-b lg:border-none">
+                <svg class="icon icon-estimate mr-2 text-xl text-brand-primary svg-align"><use xlink:href="#icon-estimate"></use></svg>
+                Down Payment Estimator
+                <svg class="icon icon-right-arrow text-gray-300 lg:hidden text-xl ml-auto svg-align"><use xlink:href="#icon-right-arrow"></use></svg>
+              </a>
+
+            </div> <!-- /.link-wrapper -->
+
+            <div class="link-wrapper">
+
+              <a href="#" class="py-6 lg:py-2 px-6 lg:rounded font-medium lg:font-semibold flex items-center lg:block border-b lg:border-none">
+                <svg class="icon icon-guarantee mr-2 text-xl text-brand-primary svg-align"><use xlink:href="#icon-guarantee"></use></svg>
+                Pre-Qualify for Credit
+                <svg class="icon icon-right-arrow text-gray-300 lg:hidden text-xl ml-auto svg-align"><use xlink:href="#icon-right-arrow"></use></svg>
+              </a>
+
+            </div> <!-- /.link-wrapper -->
+
+            <div class="link-wrapper">
+
+              <a href="#" class="py-6 lg:py-2 px-6 lg:rounded font-medium lg:font-semibold flex items-center lg:block">
+                <svg class="icon icon-waiver mr-2 text-xl text-brand-primary svg-align"><use xlink:href="#icon-waiver"></use></svg>
+                Credit Application
+                <svg class="icon icon-right-arrow text-gray-300 lg:hidden text-xl ml-auto svg-align"><use xlink:href="#icon-right-arrow"></use></svg>
+              </a>
+
+            </div> <!-- /.link-wrapper -->
+
+          </div> <!-- /.links-row -->
+
+        </div> <!-- /.col -->
+
+      </div> <!-- /.row -->
+
+    </div> <!-- /.container -->
+
+    <?php
+      if ( $truck ) {
+        $tabs = [
+          [
+            'tab_title' => 'Quick',
+            'content_title' => 'Quick Specifications',
+            'rows' => [
+              [
+                'label' => 'Engine Make',
+                'value' => $truck->INVEMAKE
+              ],
+              [
+                'label' => 'Engine Model',
+                'value' => $truck->INVEMODL
+              ],
+              [
+                'label' => 'Horse Power',
+                'value' => $truck->INVHPWR
+              ],
+              [
+                'label' => 'Trans Speed',
+                'value' => $truck->INVTSPD
+              ],
+              [
+                'label' => 'Trans Type',
+                'value' => $truck->INVTRNTY
+              ],
+              [
+                'label' => 'Trans',
+                'value' => "{$truck->INVTRANS} {$truck->INVTMODL}"
+              ],
+              [
+                'label' => 'Axle',
+                'value' => "{$truck->INVAXLE}"
+              ],
+              [
+                'label' => 'Location',
+                'value' => $truck->location()
+              ],
+              [
+                'label' => 'Price',
+                'value' => $truck->INVPRICE
+              ],
+              [
+                'label' => 'Stock #',
+                'value' => $truck->INVSTKNO
+              ]
+            ]
+          ],
+          [
+            'tab_title' => 'Expanded',
+            'content_title' => 'Expanded Specifications',
+            'rows' => [
+              [
+                'label' => 'FCAM',
+                'value' => ''
+              ],
+              [
+                'label' => 'Ratio',
+                'value' => $truck->INVRATIO
+              ],
+              [
+                'label' => 'Sleeper Size',
+                'value' => $truck->INVSLPSZ
+              ],
+              [
+                'label' => '# Bunks',
+                'value' => $truck->BEDCNT
+              ],
+              [
+                'label' => 'Sleeper',
+                'value' => $truck->INVSLPR
+              ],
+              [
+                'label' => 'P/S',
+                'value' => $truck->INVPWRST
+              ],
+              [
+                'label' => 'A/C',
+                'value' => $truck->INVAIRC
+              ],
+              [
+                'label' => 'APU',
+                'value' => ''
+              ],
+              [
+                'label' => 'Suspension',
+                'value' => $truck->INVSUSP
+              ],
+              [
+                'label' => 'Jake Brake',
+                'value' => $truck->INVJAKE
+              ],
+              [
+                'label' => 'Brakes',
+                'value' => $truck->INVBRAKE
+              ],
+              [
+                'label' => '5th Wheel',
+                'value' => $truck->INV5WHL
+              ],
+              [
+                'label' => 'Tire Size',
+                'value' => $truck->INVTIRSZ
+              ],
+              [
+                'label' => 'Wheel Base',
+                'value' => $truck->INVWHLBS
+              ],
+              [
+                'label' => 'Front Axle',
+                'value' => $truck->INVFXMDL
+              ],
+              [
+                'label' => 'Rear Axle',
+                'value' => $truck->INVRXMDL
+              ],
+              [
+                'label' => 'Steer Wheel Type',
+                'value' => $truck->INVWHLF
+              ],
+              [
+                'label' => 'Rear Wheel Type',
+                'value' => $truck->INVWHLRR
+              ],
+              [
+                'label' => 'Ext. Visor',
+                'value' => $truck->INVVISOR,
+              ],
+              [
+                'label' => 'Fairings',
+                'value' => $truck->INVFAIR
+              ],
+              [
+                'label' => 'Tank Cap',
+                'value' => $truck->INVTNKCP
+              ],
+              [
+                'label' => 'Tank #',
+                'value' => $truck->INVTNKNO
+              ],
+              [
+                'label' => 'Miles',
+                'value' => $truck->INVMILAG
+              ],
+              [
+                'label' => 'ECM',
+                'value' => $truck->INVEMCM
+              ]
+            ]
+          ]
+        ];
+
+        ll_include_component(
+          'tabbed-tables',
+          array(
+            'tabs'     => $tabs,
+          )
+        );
+      }
+    ?>
+  </section> <!-- /.single-truck-page -->
+<?php endwhile; ?>

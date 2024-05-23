@@ -1,0 +1,60 @@
+/**
+ * Frequently Asked Questions Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.faq {
+  .faq__item-title {
+    cursor: pointer;
+
+    .icon {
+      flex: 0 0 auto;
+    }
+
+    .item-title {
+      flex: 1 0 0px;
+      width: 75%;
+
+      @screen sm {
+        width: auto;
+      }
+    }
+
+    .icon-plus,
+    .icon-minus {
+      width: 16px;
+    }
+  }
+
+  .faq__item {
+    transition: 0.15s ease;
+    border-top: 1px solid #D8D8D8;
+
+    &:not(.is-open):hover {
+      @apply .bg-gray-100;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid #D8D8D8;
+    }
+
+    .faq__item-answer {
+      p:not([class*="hdg-"], [class*="paragraph-"]) {
+        @apply .paragraph-small;
+      }
+    }
+
+    &.is-open {
+      .icon-plus {
+        display: none;
+      }
+
+      .icon-minus {
+        display: block;
+      }
+    }
+  }
+}

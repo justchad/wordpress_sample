@@ -1,0 +1,12 @@
+.modal {
+  @apply .relative .bg-white .w-full .max-w-2xl .mx-auto;
+}
+
+
+/* Magnific Popup adjustment for mobile */
+
+@media screen and (max-width: 900px) {
+  .mfp-container {
+    @apply px-4;
+  }
+}

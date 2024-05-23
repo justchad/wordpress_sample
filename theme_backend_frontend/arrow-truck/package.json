@@ -1,0 +1,70 @@
+{
+  "name": "arrowtruck",
+  "version": "1.0.0",
+  "description": "Arrow Truck's project dependencies",
+  "author": "JustChad <hellojustchad@gmail.com>",
+  "homepage": "https://arrowtruck.com/",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:AEWP/arrowtruck.com.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "scripts": {
+    "dev": "NODE_ENV=development webpack --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "NODE_ENV=development webpack --watch --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch-admin": "NODE_ENV=development webpack --watch --watch-admin --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch-front": "NODE_ENV=development webpack --watch --watch-front --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "NODE_ENV=production webpack --progress --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "engines": {
+    "node": ">= 10.15.3",
+    "npm": ">=6.4.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "eslint": "^5.16.0",
+    "eslint-config-google": "^0.13.0",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^5.2.2",
+    "globby": "^11.0.1",
+    "grunt": "^1.0.4",
+    "grunt-contrib-copy": "^1.0.0",
+    "laravel-mix": "^4.0.16",
+    "laravel-mix-postcss-config": "^1.0.4",
+    "load-grunt-tasks": "^5.0.0",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-hexrgba": "2.0.1",
+    "postcss-import": "^12.0.1",
+    "postcss-scss": "^2.0.0",
+    "precss": "^4.0.0",
+    "resolve-url-loader": "2.3.1",
+    "sass": "^1.27.0",
+    "sass-loader": "7.*",
+    "stylelint": "^10.0.1",
+    "stylelint-config-sass-guidelines": "^6.0.0",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-no-unsupported-browser-features": "^3.0.2",
+    "stylelint-scss": "^3.8.0",
+    "tailwindcss": "^1.7",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "dependencies": {
+    "@ryangjchandler/spruce": "^2.6.2",
+    "alpinejs": "^2.8.0",
+    "gsap": "^3.3.1",
+    "magnific-popup": "^1.1.0",
+    "scrollmagic": "^2.0.7",
+    "slick-carousel": "^1.8.1"
+  }
+}

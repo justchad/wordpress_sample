@@ -1,0 +1,36 @@
+/**
+ * Import tailwind and our custom typography file for
+ * styling within the wysiwyg on the backend of the site
+*/
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "../css/base/utilities";
+@import "../css/base/typography";
+@import "../css/partials/btn";
+@import "tailwindcss/utilities";
+
+html,
+body {
+  height: 100%;
+  font-size: 14px !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: transparent;
+}
+
+body,
+#tinymce {
+  display: block;
+  padding: 20px !important;
+  margin: 0 !important;
+  color: #000;
+  @apply .font-sans;
+  position: relative;
+
+  &.before\:overlay {
+    &::before {
+      position: fixed;
+    }
+  }
+}

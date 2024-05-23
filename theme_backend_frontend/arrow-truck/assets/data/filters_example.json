@@ -1,0 +1,4774 @@
+(
+    [parameter] => trucktype
+    [label] => Type
+    [id] => ll_inventory_trucktype
+    [prefix] =>
+    [type] => list
+    [context] => main
+    [options] => stdClass Object
+        (
+            [0] => stdClass Object
+                (
+                    [label] => All
+                    [value] =>
+                    [slug] => all_12
+                    [id] => 12
+                    [association] =>
+                )
+
+            [1] => stdClass Object
+                (
+                    [label] => Conventional W/ Sleeper
+                    [value] => 1
+                    [slug] => conventional-w-sleeper_13
+                    [id] => 13
+                    [association] =>
+                )
+
+            [2] => stdClass Object
+                (
+                    [label] => Day Cab
+                    [value] => 2
+                    [slug] => day-cab_14
+                    [id] => 14
+                    [association] =>
+                )
+
+            [3] => stdClass Object
+                (
+                    [label] => Straight Truck Dry Van
+                    [value] => 3
+                    [slug] => straight-truck-dry-van_15
+                    [id] => 15
+                    [association] =>
+                )
+
+            [4] => stdClass Object
+                (
+                    [label] => Straight Truck Flat
+                    [value] => 4
+                    [slug] => straight-truck-flat_16
+                    [id] => 16
+                    [association] =>
+                )
+
+            [5] => stdClass Object
+                (
+                    [label] => Straight Truck Reefer
+                    [value] => 5
+                    [slug] => straight-truck-reefer_17
+                    [id] => 17
+                    [association] =>
+                )
+
+            [6] => stdClass Object
+                (
+                    [label] => Straight Moving Van
+                    [value] => 6
+                    [slug] => straight-moving-van_18
+                    [id] => 18
+                    [association] =>
+                )
+
+            [7] => stdClass Object
+                (
+                    [label] => Dump Truck
+                    [value] => 7
+                    [slug] => dump-truck_19
+                    [id] => 19
+                    [association] =>
+                )
+
+            [8] => stdClass Object
+                (
+                    [label] => Roll Off
+                    [value] => 8
+                    [slug] => roll-off_20
+                    [id] => 20
+                    [association] =>
+                )
+
+            [9] => stdClass Object
+                (
+                    [label] => C&C
+                    [value] => 9
+                    [slug] => cc_21
+                    [id] => 21
+                    [association] =>
+                )
+
+            [10] => stdClass Object
+                (
+                    [label] => Spotter / Yard Dog
+                    [value] => 10
+                    [slug] => spotter-yard-dog_22
+                    [id] => 22
+                    [association] =>
+                )
+
+            [11] => stdClass Object
+                (
+                    [label] => Other
+                    [value] => 11
+                    [slug] => other_23
+                    [id] => 23
+                    [association] =>
+                )
+
+        )
+
+    [template] => templates/partials/filters/list.php
+)
+
+                      stdClass Object
+(
+    [parameter] => invmake
+    [label] => Make
+    [id] => ll_inventory_invmake
+    [prefix] =>
+    [type] => list
+    [context] => main
+    [options] => stdClass Object
+        (
+            [0] => stdClass Object
+                (
+                    [label] => Ford
+                    [value] => FORD
+                    [slug] => ford_24
+                    [id] => 24
+                    [association] =>
+                )
+
+            [1] => stdClass Object
+                (
+                    [label] => Freightliner
+                    [value] => FL
+                    [slug] => freightliner_25
+                    [id] => 25
+                    [association] =>
+                )
+
+            [2] => stdClass Object
+                (
+                    [label] => GMC
+                    [value] => GMC
+                    [slug] => gmc_26
+                    [id] => 26
+                    [association] =>
+                )
+
+            [3] => stdClass Object
+                (
+                    [label] => Hino
+                    [value] => HINO
+                    [slug] => hino_27
+                    [id] => 27
+                    [association] =>
+                )
+
+            [4] => stdClass Object
+                (
+                    [label] => International
+                    [value] => INTL
+                    [slug] => international_28
+                    [id] => 28
+                    [association] =>
+                )
+
+            [5] => stdClass Object
+                (
+                    [label] => Isuzu
+                    [value] => ISUZU
+                    [slug] => isuzu_29
+                    [id] => 29
+                    [association] =>
+                )
+
+            [6] => stdClass Object
+                (
+                    [label] => Kenworth
+                    [value] => KW
+                    [slug] => kenworth_30
+                    [id] => 30
+                    [association] =>
+                )
+
+            [7] => stdClass Object
+                (
+                    [label] => Mack
+                    [value] => MACK
+                    [slug] => mack_31
+                    [id] => 31
+                    [association] =>
+                )
+
+            [8] => stdClass Object
+                (
+                    [label] => Mitsubishi
+                    [value] => MITSU
+                    [slug] => mitsubishi_32
+                    [id] => 32
+                    [association] =>
+                )
+
+            [9] => stdClass Object
+                (
+                    [label] => Peterbilt
+                    [value] => PETE
+                    [slug] => peterbilt_33
+                    [id] => 33
+                    [association] =>
+                )
+
+            [10] => stdClass Object
+                (
+                    [label] => Sterling
+                    [value] => STERLING
+                    [slug] => sterling_34
+                    [id] => 34
+                    [association] =>
+                )
+
+            [11] => stdClass Object
+                (
+                    [label] => Volvo
+                    [value] => VOLVO
+                    [slug] => volvo_35
+                    [id] => 35
+                    [association] =>
+                )
+
+            [12] => stdClass Object
+                (
+                    [label] => Western Star
+                    [value] => WSTAR
+                    [slug] => western-star_36
+                    [id] => 36
+                    [association] =>
+                )
+
+            [13] => stdClass Object
+                (
+                    [label] => Other
+                    [value] => OTHER
+                    [slug] => other_37
+                    [id] => 37
+                    [association] =>
+                )
+
+        )
+
+    [template] => templates/partials/filters/list.php
+)
+
+                      stdClass Object
+(
+    [parameter] => invmodl
+    [label] => Model
+    [id] => ll_inventory_invmodl
+    [prefix] =>
+    [type] => button
+    [context] => main
+    [options] => stdClass Object
+        (
+            [0] => stdClass Object
+                (
+                    [label] => Ottawa T2
+                    [value] => T2
+                    [slug] => ottawa-t2_899
+                    [id] => 899
+                    [association] => invmake|SPOTTER
+                )
+
+            [1] => stdClass Object
+                (
+                    [label] => freightliner
+                    [value] => CA113DC
+                    [slug] => freightliner_900
+                    [id] => 900
+                    [association] => invmake|CA113DC
+                )
+
+            [2] => stdClass Object
+                (
+                    [label] => VNL42T630
+                    [value] => VNL42T630
+                    [slug] => vnl42t630_901
+                    [id] => 901
+                    [association] => invmake|VOLVO
+                )
+
+            [3] => stdClass Object
+                (
+                    [label] => anthem daycab
+                    [value] => ANTHEM
+                    [slug] => anthem-daycab_902
+                    [id] => 902
+                    [association] => invmake|MACK
+                )
+
+            [4] => stdClass Object
+                (
+                    [label] => Peterbilt
+                    [value] => 348
+                    [slug] => peterbilt_903
+                    [id] => 903
+                    [association] => invmake|PETERB
+                )
+
+            [5] => stdClass Object
+                (
+                    [label] => Cascadia tandem 6x2 day cab
+                    [value] => CA12562DC
+                    [slug] => cascadia-tandem-6x2-day-cab_904
+                    [id] => 904
+                    [association] => invmake|FL
+                )
+
+            [6] => stdClass Object
+                (
+                    [label] => Capcity Sabre 9
+                    [value] => TJ9000
+                    [slug] => capcity-sabre-9_905
+                    [id] => 905
+                    [association] => invmake|CAPACITY
+                )
+
+            [7] => stdClass Object
+                (
+                    [label] => CASCADEVO126
+                    [value] => CASCADEVO1
+                    [slug] => cascadevo126_906
+                    [id] => 906
+                    [association] => invmake|FL
+                )
+
+            [8] => stdClass Object
+                (
+                    [label] => Volvo Dead Axel
+                    [value] => ZNL62T730
+                    [slug] => volvo-dead-axel_894
+                    [id] => 894
+                    [association] => invmake|VOLVO
+                )
+
+            [9] => stdClass Object
+                (
+                    [label] => Volvo Dead Axle
+                    [value] => VNL62T730
+                    [slug] => volvo-dead-axle_895
+                    [id] => 895
+                    [association] => invmake|VOLVO
+                )
+
+            [10] => stdClass Object
+                (
+                    [label] => International Low Profile
+                    [value] => 4300LP
+                    [slug] => international-low-profile_880
+                    [id] => 880
+                    [association] => invmake|INTL
+                )
+
+            [11] => stdClass Object
+                (
+                    [label] => Autocar X Spotter
+                    [value] => ACTT42
+                    [slug] => autocar-x-spotter_896
+                    [id] => 896
+                    [association] => invmake|AUTOCAR
+                )
+
+            [12] => stdClass Object
+                (
+                    [label] => VNM630 SINGLE AXLE
+                    [value] => VNM42T630
+                    [slug] => vnm630-single-axle_881
+                    [id] => 881
+                    [association] => invmake|VNM
+                )
+
+            [13] => stdClass Object
+                (
+                    [label] => Cascadia 12584T Daycab
+                    [value] => CA12584DC
+                    [slug] => cascadia-12584t-daycab_897
+                    [id] => 897
+                    [association] => invmake|FL
+                )
+
+            [14] => stdClass Object
+                (
+                    [label] => KW-COE
+                    [value] => K370
+                    [slug] => kw-coe_882
+                    [id] => 882
+                    [association] => invmake|KW
+                )
+
+            [15] => stdClass Object
+                (
+                    [label] => 6x2
+                    [value] => VNL62T780
+                    [slug] => 6x2_898
+                    [id] => 898
+                    [association] => invmake|VOLVO
+                )
+
+            [16] => stdClass Object
+                (
+                    [label] => 337 Peter
+                    [value] => 337
+                    [slug] => 337-peter_883
+                    [id] => 883
+                    [association] => invmake|PETER
+                )
+
+            [17] => stdClass Object
+                (
+                    [label] => Volvo 6x2 630
+                    [value] => VNL62T630
+                    [slug] => volvo-6x2-630_884
+                    [id] => 884
+                    [association] => invmake|VOLVO
+                )
+
+            [18] => stdClass Object
+                (
+                    [label] => VNL670 4X2 TRACTOR
+                    [value] => VNL42670
+                    [slug] => vnl670-4x2-tractor_885
+                    [id] => 885
+                    [association] => invmake|VOLVO
+                )
+
+            [19] => stdClass Object
+                (
+                    [label] => VNL630T 8x4 Tractor
+                    [value] => VNL84T630
+                    [slug] => vnl630t-8x4-tractor_886
+                    [id] => 886
+                    [association] => invmake|VOLVO
+                )
+
+            [20] => stdClass Object
+                (
+                    [label] => Mitsubishi Medium Duty
+                    [value] => FEC52S
+                    [slug] => mitsubishi-medium-duty_887
+                    [id] => 887
+                    [association] => invmake|MITSUBISHI
+                )
+
+            [21] => stdClass Object
+                (
+                    [label] => Sabre 5 Series
+                    [value] => SABRE5
+                    [slug] => sabre-5-series_888
+                    [id] => 888
+                    [association] => invmake|CAPACITY
+                )
+
+            [22] => stdClass Object
+                (
+                    [label] => VNL860
+                    [value] => VNL860
+                    [slug] => vnl860_889
+                    [id] => 889
+                    [association] => invmake|VOLVO
+                )
+
+            [23] => stdClass Object
+                (
+                    [label] => PETE 579 EPIQ
+                    [value] => 579EPIQ
+                    [slug] => pete-579-epiq_890
+                    [id] => 890
+                    [association] => invmake|PETE
+                )
+
+            [24] => stdClass Object
+                (
+                    [label] => VNL760
+                    [value] => VNL760
+                    [slug] => vnl760_891
+                    [id] => 891
+                    [association] => invmake|VOLVO
+                )
+
+            [25] => stdClass Object
+                (
+                    [label] => WESTERN STAR HOOD
+                    [value] => 5700XE
+                    [slug] => western-star-hood_892
+                    [id] => 892
+                    [association] => invmake|WSTAR
+                )
+
+            [26] => stdClass Object
+                (
+                    [label] => Autocar Tandem Yard Spotter
+                    [value] => ACTT64
+                    [slug] => autocar-tandem-yard-spotter_893
+                    [id] => 893
+                    [association] => invmake|ACTT64
+                )
+
+            [27] => stdClass Object
+                (
+                    [label] => PNEUMATIC
+                    [value] => PNEUMATIC
+                    [slug] => pneumatic_862
+                    [id] => 862
+                    [association] => invmake|
+                )
+
+            [28] => stdClass Object
+                (
+                    [label] => Tico Pro Spotter
+                    [value] => PROSPOTTER
+                    [slug] => tico-pro-spotter_878
+                    [id] => 878
+                    [association] => invmake|TICO
+                )
+
+            [29] => stdClass Object
+                (
+                    [label] => Freightliner step van
+                    [value] => MT45
+                    [slug] => freightliner-step-van_863
+                    [id] => 863
+                    [association] => invmake|FL
+                )
+
+            [30] => stdClass Object
+                (
+                    [label] => T880
+                    [value] => T880
+                    [slug] => t880_879
+                    [id] => 879
+                    [association] => invmake|KW
+                )
+
+            [31] => stdClass Object
+                (
+                    [label] => INTL DAYCAB
+                    [value] => TRANSTAR
+                    [slug] => intl-daycab_864
+                    [id] => 864
+                    [association] => invmake|INTL
+                )
+
+            [32] => stdClass Object
+                (
+                    [label] => PETE 579
+                    [value] => 579
+                    [slug] => pete-579_865
+                    [id] => 865
+                    [association] => invmake|PETE
+                )
+
+            [33] => stdClass Object
+                (
+                    [label] => VNL62T 6x2 Tractor
+                    [value] => VNL62T
+                    [slug] => vnl62t-6x2-tractor_866
+                    [id] => 866
+                    [association] => invmake|VOLVO
+                )
+
+            [34] => stdClass Object
+                (
+                    [label] => Mitsubishi Straight Truck
+                    [value] => FE160
+                    [slug] => mitsubishi-straight-truck_867
+                    [id] => 867
+                    [association] => invmake|MITSU
+                )
+
+            [35] => stdClass Object
+                (
+                    [label] => 382 Pete
+                    [value] => 382
+                    [slug] => 382-pete_868
+                    [id] => 868
+                    [association] => invmake|PETE
+                )
+
+            [36] => stdClass Object
+                (
+                    [label] => Cascadia Evolution
+                    [value] => CASCADEVO
+                    [slug] => cascadia-evolution_869
+                    [id] => 869
+                    [association] => invmake|FL
+                )
+
+            [37] => stdClass Object
+                (
+                    [label] => VNM670
+                    [value] => VNM62T670
+                    [slug] => vnm670_870
+                    [id] => 870
+                    [association] => invmake|VNM670
+                )
+
+            [38] => stdClass Object
+                (
+                    [label] => Kenworth Cab Forward
+                    [value] => K270
+                    [slug] => kenworth-cab-forward_871
+                    [id] => 871
+                    [association] => invmake|KW
+                )
+
+            [39] => stdClass Object
+                (
+                    [label] => COE Pete
+                    [value] => 210
+                    [slug] => coe-pete_872
+                    [id] => 872
+                    [association] => invmake|PETERBILT
+                )
+
+            [40] => stdClass Object
+                (
+                    [label] => CORONADO 122 BBC
+                    [value] => CD122
+                    [slug] => coronado-122-bbc_873
+                    [id] => 873
+                    [association] => invmake|FL
+                )
+
+            [41] => stdClass Object
+                (
+                    [label] => CORONADO SUPER DUTY 122 BBC
+                    [value] => CD122SD
+                    [slug] => coronado-super-duty-122-bbc_874
+                    [id] => 874
+                    [association] => invmake|FL
+                )
+
+            [42] => stdClass Object
+                (
+                    [label] => Cascadia tandem 6x2
+                    [value] => CA12562SLP
+                    [slug] => cascadia-tandem-6x2_875
+                    [id] => 875
+                    [association] => invmake|FL
+                )
+
+            [43] => stdClass Object
+                (
+                    [label] => Peterbilt 567
+                    [value] => 567
+                    [slug] => peterbilt-567_876
+                    [id] => 876
+                    [association] => invmake|PETE
+                )
+
+            [44] => stdClass Object
+                (
+                    [label] => VNL62T430
+                    [value] => VNL62T430
+                    [slug] => vnl62t430_877
+                    [id] => 877
+                    [association] => invmake|VOLVO
+                )
+
+            [45] => stdClass Object
+                (
+                    [label] => City Star
+                    [value] => CF500
+                    [slug] => city-star_846
+                    [id] => 846
+                    [association] => invmake|FORD
+                )
+
+            [46] => stdClass Object
+                (
+                    [label] => Mack Single Axle
+                    [value] => CXU612
+                    [slug] => mack-single-axle_847
+                    [id] => 847
+                    [association] => invmake|MACK
+                )
+
+            [47] => stdClass Object
+                (
+                    [label] => W900S - Slope Nose
+                    [value] => W900S
+                    [slug] => w900s-slope-nose_848
+                    [id] => 848
+                    [association] => invmake|KW
+                )
+
+            [48] => stdClass Object
+                (
+                    [label] => SUN VALLEY
+                    [value] => SUN VALLEY
+                    [slug] => sun-valley_849
+                    [id] => 849
+                    [association] => invmake|GENERIC
+                )
+
+            [49] => stdClass Object
+                (
+                    [label] => FXR ISUZU
+                    [value] => FXR
+                    [slug] => fxr-isuzu_850
+                    [id] => 850
+                    [association] => invmake|ISUZU
+                )
+
+            [50] => stdClass Object
+                (
+                    [label] => Cascadia single axle sleepers
+                    [value] => CA12542SLP
+                    [slug] => cascadia-single-axle-sleepers_851
+                    [id] => 851
+                    [association] => invmake|FL
+                )
+
+            [51] => stdClass Object
+                (
+                    [label] => workhorse
+                    [value] => W42
+                    [slug] => workhorse_852
+                    [id] => 852
+                    [association] => invmake|GENERIC
+                )
+
+            [52] => stdClass Object
+                (
+                    [label] => 587
+                    [value] => 587
+                    [slug] => 587_853
+                    [id] => 853
+                    [association] => invmake|PETE
+                )
+
+            [53] => stdClass Object
+                (
+                    [label] => KW T700
+                    [value] => T700
+                    [slug] => kw-t700_854
+                    [id] => 854
+                    [association] => invmake|KW
+                )
+
+            [54] => stdClass Object
+                (
+                    [label] => Pete Cabover
+                    [value] => 220
+                    [slug] => pete-cabover_855
+                    [id] => 855
+                    [association] => invmake|PETE
+                )
+
+            [55] => stdClass Object
+                (
+                    [label] => Capacity TJ7000
+                    [value] => TJ7000
+                    [slug] => capacity-tj7000_856
+                    [id] => 856
+                    [association] => invmake|CAPACITY
+                )
+
+            [56] => stdClass Object
+                (
+                    [label] => TJ6500 CAPACITY
+                    [value] => TJ6500
+                    [slug] => tj6500-capacity_857
+                    [id] => 857
+                    [association] => invmake|CAPACITY
+                )
+
+            [57] => stdClass Object
+                (
+                    [label] => hinno cabover
+                    [value] => FE2620
+                    [slug] => hinno-cabover_858
+                    [id] => 858
+                    [association] => invmake|HINNO
+                )
+
+            [58] => stdClass Object
+                (
+                    [label] => KENWORTH T680
+                    [value] => T680
+                    [slug] => kenworth-t680_859
+                    [id] => 859
+                    [association] => invmake|KW
+                )
+
+            [59] => stdClass Object
+                (
+                    [label] => 880 midroof
+                    [value] => VT830
+                    [slug] => 880-midroof_844
+                    [id] => 844
+                    [association] => invmake|VOLVO
+                )
+
+            [60] => stdClass Object
+                (
+                    [label] => 4100 International
+                    [value] => 4100
+                    [slug] => 4100-international_860
+                    [id] => 860
+                    [association] => invmake|INTL
+                )
+
+            [61] => stdClass Object
+                (
+                    [label] => Sterling Cab & Chassis
+                    [value] => 360
+                    [slug] => sterling-cab-chassis_845
+                    [id] => 845
+                    [association] => invmake|STERLING
+                )
+
+            [62] => stdClass Object
+                (
+                    [label] => VNM64T200
+                    [value] => VNM64T200
+                    [slug] => vnm64t200_861
+                    [id] => 861
+                    [association] => invmake|VOLVO
+                )
+
+            [63] => stdClass Object
+                (
+                    [label] => Volvo daycab
+                    [value] => VNL84T
+                    [slug] => volvo-daycab_830
+                    [id] => 830
+                    [association] => invmake|VOLVO
+                )
+
+            [64] => stdClass Object
+                (
+                    [label] => Hino 25950 GVW Air Brakes
+                    [value] => 268A
+                    [slug] => hino-25950-gvw-air-brakes_831
+                    [id] => 831
+                    [association] => invmake|HINO
+                )
+
+            [65] => stdClass Object
+                (
+                    [label] => Hino 33000 GVW
+                    [value] => 338
+                    [slug] => hino-33000-gvw_832
+                    [id] => 832
+                    [association] => invmake|HINO
+                )
+
+            [66] => stdClass Object
+                (
+                    [label] => Mitsubishi cab over truck
+                    [value] => FM 260
+                    [slug] => mitsubishi-cab-over-truck_833
+                    [id] => 833
+                    [association] => invmake|MITSU
+                )
+
+            [67] => stdClass Object
+                (
+                    [label] => 5500I
+                    [value] => 5500I
+                    [slug] => 5500i_834
+                    [id] => 834
+                    [association] => invmake|INTL
+                )
+
+            [68] => stdClass Object
+                (
+                    [label] => Volvo Dump Factory Triaxle
+                    [value] => VHD84F
+                    [slug] => volvo-dump-factory-triaxle_835
+                    [id] => 835
+                    [association] => invmake|VOLVO
+                )
+
+            [69] => stdClass Object
+                (
+                    [label] => 365
+                    [value] => 365
+                    [slug] => 365_836
+                    [id] => 836
+                    [association] => invmake|PETE
+                )
+
+            [70] => stdClass Object
+                (
+                    [label] => Hino 18000 GVW
+                    [value] => 185
+                    [slug] => hino-18000-gvw_837
+                    [id] => 837
+                    [association] => invmake|HINO
+                )
+
+            [71] => stdClass Object
+                (
+                    [label] => Moffett Fork lift
+                    [value] => M5500
+                    [slug] => moffett-fork-lift_838
+                    [id] => 838
+                    [association] => invmake|MOFFETT
+                )
+
+            [72] => stdClass Object
+                (
+                    [label] => Mack T2013
+                    [value] => T2013
+                    [slug] => mack-t2013_839
+                    [id] => 839
+                    [association] => invmake|MACK
+                )
+
+            [73] => stdClass Object
+                (
+                    [label] => Mitsu 23000 GVW
+                    [value] => FK617
+                    [slug] => mitsu-23000-gvw_824
+                    [id] => 824
+                    [association] => invmake|MITSU
+                )
+
+            [74] => stdClass Object
+                (
+                    [label] => Pete 340
+                    [value] => 340
+                    [slug] => pete-340_840
+                    [id] => 840
+                    [association] => invmake|PETE
+                )
+
+            [75] => stdClass Object
+                (
+                    [label] => VNL730
+                    [value] => VNL730
+                    [slug] => vnl730_825
+                    [id] => 825
+                    [association] => invmake|VOLVO
+                )
+
+            [76] => stdClass Object
+                (
+                    [label] => GMC CAB OVER
+                    [value] => W5500
+                    [slug] => gmc-cab-over_841
+                    [id] => 841
+                    [association] => invmake|GMC
+                )
+
+            [77] => stdClass Object
+                (
+                    [label] => Extended Hood 9900i
+                    [value] => 9900IX
+                    [slug] => extended-hood-9900i_826
+                    [id] => 826
+                    [association] => invmake|INTL
+                )
+
+            [78] => stdClass Object
+                (
+                    [label] => 7700 INTL
+                    [value] => 7700
+                    [slug] => 7700-intl_842
+                    [id] => 842
+                    [association] => invmake|INTL
+                )
+
+            [79] => stdClass Object
+                (
+                    [label] => 5900i
+                    [value] => 5900I
+                    [slug] => 5900i_827
+                    [id] => 827
+                    [association] => invmake|INTL
+                )
+
+            [80] => stdClass Object
+                (
+                    [label] => Cascadia Freightliner
+                    [value] => CASCADIA
+                    [slug] => cascadia-freightliner_843
+                    [id] => 843
+                    [association] => invmake|FL
+                )
+
+            [81] => stdClass Object
+                (
+                    [label] => Mitsubishi Straigh Truck
+                    [value] => FK260
+                    [slug] => mitsubishi-straigh-truck_828
+                    [id] => 828
+                    [association] => invmake|MITSU
+                )
+
+            [82] => stdClass Object
+                (
+                    [label] => Ford
+                    [value] => CF600
+                    [slug] => ford_829
+                    [id] => 829
+                    [association] => invmake|FORD
+                )
+
+            [83] => stdClass Object
+                (
+                    [label] => Citystar
+                    [value] => CITYSTAR
+                    [slug] => citystar_814
+                    [id] => 814
+                    [association] => invmake|INTL
+                )
+
+            [84] => stdClass Object
+                (
+                    [label] => KENWORTH
+                    [value] => T370
+                    [slug] => kenworth_815
+                    [id] => 815
+                    [association] => invmake|KW
+                )
+
+            [85] => stdClass Object
+                (
+                    [label] => 7600
+                    [value] => 7600
+                    [slug] => 7600_816
+                    [id] => 816
+                    [association] => invmake|INTL
+                )
+
+            [86] => stdClass Object
+                (
+                    [label] => 388
+                    [value] => 388
+                    [slug] => 388_817
+                    [id] => 817
+                    [association] => invmake|PETE
+                )
+
+            [87] => stdClass Object
+                (
+                    [label] => 5900
+                    [value] => 5900
+                    [slug] => 5900_818
+                    [id] => 818
+                    [association] => invmake|INTL
+                )
+
+            [88] => stdClass Object
+                (
+                    [label] => SPRINTER 3500
+                    [value] => SPRINTER35
+                    [slug] => sprinter-3500_819
+                    [id] => 819
+                    [association] => invmake|DODGE
+                )
+
+            [89] => stdClass Object
+                (
+                    [label] => T660
+                    [value] => T660
+                    [slug] => t660_804
+                    [id] => 804
+                    [association] => invmake|KW
+                )
+
+            [90] => stdClass Object
+                (
+                    [label] => RT-110 MAGNUM
+                    [value] => RT-110
+                    [slug] => rt-110-magnum_820
+                    [id] => 820
+                    [association] => invmake|MAGNUM
+                )
+
+            [91] => stdClass Object
+                (
+                    [label] => 7400 INTL
+                    [value] => 7400
+                    [slug] => 7400-intl_805
+                    [id] => 805
+                    [association] => invmake|INTL
+                )
+
+            [92] => stdClass Object
+                (
+                    [label] => Hino 165
+                    [value] => 165
+                    [slug] => hino-165_821
+                    [id] => 821
+                    [association] => invmake|HINO
+                )
+
+            [93] => stdClass Object
+                (
+                    [label] => F450 Ford
+                    [value] => F450
+                    [slug] => f450-ford_806
+                    [id] => 806
+                    [association] => invmake|FORD
+                )
+
+            [94] => stdClass Object
+                (
+                    [label] => Ottawa spotter tandem
+                    [value] => YT60
+                    [slug] => ottawa-spotter-tandem_822
+                    [id] => 822
+                    [association] => invmake|OTTAWA
+                )
+
+            [95] => stdClass Object
+                (
+                    [label] => 367
+                    [value] => 367
+                    [slug] => 367_807
+                    [id] => 807
+                    [association] => invmake|PETE
+                )
+
+            [96] => stdClass Object
+                (
+                    [label] => OTTAWA
+                    [value] => COMMANDO30
+                    [slug] => ottawa_823
+                    [id] => 823
+                    [association] => invmake|OTTAWA
+                )
+
+            [97] => stdClass Object
+                (
+                    [label] => VN730 Volvo Midroof
+                    [value] => VN730
+                    [slug] => vn730-volvo-midroof_808
+                    [id] => 808
+                    [association] => invmake|VOLVO
+                )
+
+            [98] => stdClass Object
+                (
+                    [label] => GRANITE
+                    [value] => GU713
+                    [slug] => granite_809
+                    [id] => 809
+                    [association] => invmake|MACK
+                )
+
+            [99] => stdClass Object
+                (
+                    [label] => Hino 145
+                    [value] => 145
+                    [slug] => hino-145_810
+                    [id] => 810
+                    [association] => invmake|HINO
+                )
+
+            [100] => stdClass Object
+                (
+                    [label] => International
+                    [value] => PROSTAR
+                    [slug] => international_811
+                    [id] => 811
+                    [association] => invmake|INTL
+                )
+
+            [101] => stdClass Object
+                (
+                    [label] => 335
+                    [value] => 335
+                    [slug] => 335_812
+                    [id] => 812
+                    [association] => invmake|PETE
+                )
+
+            [102] => stdClass Object
+                (
+                    [label] => FLA8664ST
+                    [value] => FLA8664ST
+                    [slug] => fla8664st_813
+                    [id] => 813
+                    [association] => invmake|FL
+                )
+
+            [103] => stdClass Object
+                (
+                    [label] => GMC Cabover
+                    [value] => W4500
+                    [slug] => gmc-cabover_798
+                    [id] => 798
+                    [association] => invmake|GMC
+                )
+
+            [104] => stdClass Object
+                (
+                    [label] => 384
+                    [value] => 384
+                    [slug] => 384_799
+                    [id] => 799
+                    [association] => invmake|PETE
+                )
+
+            [105] => stdClass Object
+                (
+                    [label] => SPRINTER 2500
+                    [value] => SPRINTER25
+                    [slug] => sprinter-2500_800
+                    [id] => 800
+                    [association] => invmake|DODGE
+                )
+
+            [106] => stdClass Object
+                (
+                    [label] => C4500
+                    [value] => C4500
+                    [slug] => c4500_801
+                    [id] => 801
+                    [association] => invmake|CHEVY
+                )
+
+            [107] => stdClass Object
+                (
+                    [label] => 389
+                    [value] => 389
+                    [slug] => 389_802
+                    [id] => 802
+                    [association] => invmake|PETE
+                )
+
+            [108] => stdClass Object
+                (
+                    [label] => Mack cabover
+                    [value] => MR688P
+                    [slug] => mack-cabover_787
+                    [id] => 787
+                    [association] => invmake|MACK
+                )
+
+            [109] => stdClass Object
+                (
+                    [label] => 268
+                    [value] => 268
+                    [slug] => 268_803
+                    [id] => 803
+                    [association] => invmake|HINO
+                )
+
+            [110] => stdClass Object
+                (
+                    [label] => VNM64T630
+                    [value] => VNM64T-630
+                    [slug] => vnm64t630_788
+                    [id] => 788
+                    [association] => invmake|VOLVO
+                )
+
+            [111] => stdClass Object
+                (
+                    [label] => CTP713
+                    [value] => CTP713
+                    [slug] => ctp713_789
+                    [id] => 789
+                    [association] => invmake|MACK
+                )
+
+            [112] => stdClass Object
+                (
+                    [label] => STERLING SERIES 6X4 AEROMAX
+                    [value] => AT9500
+                    [slug] => sterling-series-6x4-aeromax_790
+                    [id] => 790
+                    [association] => invmake|STERLING
+                )
+
+            [113] => stdClass Object
+                (
+                    [label] => STERLING CONVENTIONAL
+                    [value] => ACTERRA
+                    [slug] => sterling-conventional_791
+                    [id] => 791
+                    [association] => invmake|STERLING
+                )
+
+            [114] => stdClass Object
+                (
+                    [label] => Mack DMM6906S
+                    [value] => DMM6906S
+                    [slug] => mack-dmm6906s_792
+                    [id] => 792
+                    [association] => invmake|MACK
+                )
+
+            [115] => stdClass Object
+                (
+                    [label] => F550
+                    [value] => F550
+                    [slug] => f550_793
+                    [id] => 793
+                    [association] => invmake|FORD
+                )
+
+            [116] => stdClass Object
+                (
+                    [label] => MACK GRANITE
+                    [value] => GU813
+                    [slug] => mack-granite_794
+                    [id] => 794
+                    [association] => invmake|MACK
+                )
+
+            [117] => stdClass Object
+                (
+                    [label] => FLD120425D
+                    [value] => FLD120425D
+                    [slug] => fld120425d_795
+                    [id] => 795
+                    [association] => invmake|FL
+                )
+
+            [118] => stdClass Object
+                (
+                    [label] => MACK PINNACLE
+                    [value] => CHU613
+                    [slug] => mack-pinnacle_796
+                    [id] => 796
+                    [association] => invmake|MACK
+                )
+
+            [119] => stdClass Object
+                (
+                    [label] => S Series
+                    [value] => S SERIES
+                    [slug] => s-series_797
+                    [id] => 797
+                    [association] => invmake|GMC
+                )
+
+            [120] => stdClass Object
+                (
+                    [label] => western star extended hood
+                    [value] => 4900EX
+                    [slug] => western-star-extended-hood_782
+                    [id] => 782
+                    [association] => invmake|WSTAR
+                )
+
+            [121] => stdClass Object
+                (
+                    [label] => MACK
+                    [value] => FREEDOM
+                    [slug] => mack_783
+                    [id] => 783
+                    [association] => invmake|MACK
+                )
+
+            [122] => stdClass Object
+                (
+                    [label] => 9900I
+                    [value] => 9900I
+                    [slug] => 9900i_768
+                    [id] => 768
+                    [association] => invmake|INTL
+                )
+
+            [123] => stdClass Object
+                (
+                    [label] => Volvo
+                    [value] => VT800
+                    [slug] => volvo_784
+                    [id] => 784
+                    [association] => invmake|VOLVO
+                )
+
+            [124] => stdClass Object
+                (
+                    [label] => fld120
+                    [value] => FLD120
+                    [slug] => fld120_769
+                    [id] => 769
+                    [association] => invmake|FL
+                )
+
+            [125] => stdClass Object
+                (
+                    [label] => 386
+                    [value] => 386
+                    [slug] => 386_785
+                    [id] => 785
+                    [association] => invmake|PETE
+                )
+
+            [126] => stdClass Object
+                (
+                    [label] => FLD set forward axle
+                    [value] => FLD12064T
+                    [slug] => fld-set-forward-axle_770
+                    [id] => 770
+                    [association] => invmake|FL
+                )
+
+            [127] => stdClass Object
+                (
+                    [label] => 5307XL
+                    [value] => 5307XL
+                    [slug] => 5307xl_786
+                    [id] => 786
+                    [association] => invmake|COTTRELL
+                )
+
+            [128] => stdClass Object
+                (
+                    [label] => other
+                    [value] => OTHER
+                    [slug] => other_771
+                    [id] => 771
+                    [association] => invmake|GENERIC
+                )
+
+            [129] => stdClass Object
+                (
+                    [label] => 6000
+                    [value] => 6000
+                    [slug] => 6000_772
+                    [id] => 772
+                    [association] => invmake|GMC
+                )
+
+            [130] => stdClass Object
+                (
+                    [label] => VHD64F Set forward
+                    [value] => VHD64F
+                    [slug] => vhd64f-set-forward_773
+                    [id] => 773
+                    [association] => invmake|VOLVO
+                )
+
+            [131] => stdClass Object
+                (
+                    [label] => HINO SG
+                    [value] => SG
+                    [slug] => hino-sg_774
+                    [id] => 774
+                    [association] => invmake|HINO
+                )
+
+            [132] => stdClass Object
+                (
+                    [label] => MITSUBISHI FH
+                    [value] => FH
+                    [slug] => mitsubishi-fh_775
+                    [id] => 775
+                    [association] => invmake|MITSU
+                )
+
+            [133] => stdClass Object
+                (
+                    [label] => ford taurus
+                    [value] => TAURUS
+                    [slug] => ford-taurus_776
+                    [id] => 776
+                    [association] => invmake|FORD
+                )
+
+            [134] => stdClass Object
+                (
+                    [label] => Series 1400UD
+                    [value] => 1400
+                    [slug] => series-1400ud_777
+                    [id] => 777
+                    [association] => invmake|UD
+                )
+
+            [135] => stdClass Object
+                (
+                    [label] => VOLVO VN DAY CAB
+                    [value] => VNL300
+                    [slug] => volvo-vn-day-cab_778
+                    [id] => 778
+                    [association] => invmake|VOLVO
+                )
+
+            [136] => stdClass Object
+                (
+                    [label] => GMC COE
+                    [value] => WT5500
+                    [slug] => gmc-coe_779
+                    [id] => 779
+                    [association] => invmake|GMC
+                )
+
+            [137] => stdClass Object
+                (
+                    [label] => VOLVO 880
+                    [value] => VT880
+                    [slug] => volvo-880_780
+                    [id] => 780
+                    [association] => invmake|VOLVO
+                )
+
+            [138] => stdClass Object
+                (
+                    [label] => CXP613 PINNACLE
+                    [value] => CXP613
+                    [slug] => cxp613-pinnacle_781
+                    [id] => 781
+                    [association] => invmake|MACK
+                )
+
+            [139] => stdClass Object
+                (
+                    [label] => 3500
+                    [value] => 3500
+                    [slug] => 3500_750
+                    [id] => 750
+                    [association] => invmake|CHEVY
+                )
+
+            [140] => stdClass Object
+                (
+                    [label] => CL12064ST
+                    [value] => CL12064ST
+                    [slug] => cl12064st_766
+                    [id] => 766
+                    [association] => invmake|FL
+                )
+
+            [141] => stdClass Object
+                (
+                    [label] => GMC TF7B042
+                    [value] => TF7B042
+                    [slug] => gmc-tf7b042_751
+                    [id] => 751
+                    [association] => invmake|GMC
+                )
+
+            [142] => stdClass Object
+                (
+                    [label] => LT9500
+                    [value] => LT9500
+                    [slug] => lt9500_767
+                    [id] => 767
+                    [association] => invmake|FORD
+                )
+
+            [143] => stdClass Object
+                (
+                    [label] => 8500
+                    [value] => 8500
+                    [slug] => 8500_752
+                    [id] => 752
+                    [association] => invmake|INTL
+                )
+
+            [144] => stdClass Object
+                (
+                    [label] => 385
+                    [value] => 385
+                    [slug] => 385_753
+                    [id] => 753
+                    [association] => invmake|PETE
+                )
+
+            [145] => stdClass Object
+                (
+                    [label] => CL12042ST
+                    [value] => CL12042ST
+                    [slug] => cl12042st_754
+                    [id] => 754
+                    [association] => invmake|FL
+                )
+
+            [146] => stdClass Object
+                (
+                    [label] => 9200I
+                    [value] => 9200I
+                    [slug] => 9200i_755
+                    [id] => 755
+                    [association] => invmake|INTL
+                )
+
+            [147] => stdClass Object
+                (
+                    [label] => 9100I
+                    [value] => 9100I
+                    [slug] => 9100i_756
+                    [id] => 756
+                    [association] => invmake|INTL
+                )
+
+            [148] => stdClass Object
+                (
+                    [label] => M2-106
+                    [value] => M2-106
+                    [slug] => m2-106_757
+                    [id] => 757
+                    [association] => invmake|FL
+                )
+
+            [149] => stdClass Object
+                (
+                    [label] => M2-112
+                    [value] => M2-112
+                    [slug] => m2-112_758
+                    [id] => 758
+                    [association] => invmake|FL
+                )
+
+            [150] => stdClass Object
+                (
+                    [label] => M2-100
+                    [value] => M2-100
+                    [slug] => m2-100_759
+                    [id] => 759
+                    [association] => invmake|FL
+                )
+
+            [151] => stdClass Object
+                (
+                    [label] => M2-106V
+                    [value] => M2-106V
+                    [slug] => m2-106v_760
+                    [id] => 760
+                    [association] => invmake|FL
+                )
+
+            [152] => stdClass Object
+                (
+                    [label] => M2-112V
+                    [value] => M2-112V
+                    [slug] => m2-112v_761
+                    [id] => 761
+                    [association] => invmake|FL
+                )
+
+            [153] => stdClass Object
+                (
+                    [label] => L9522
+                    [value] => L9522
+                    [slug] => l9522_762
+                    [id] => 762
+                    [association] => invmake|FORD
+                )
+
+            [154] => stdClass Object
+                (
+                    [label] => L9513
+                    [value] => L9513
+                    [slug] => l9513_763
+                    [id] => 763
+                    [association] => invmake|FORD
+                )
+
+            [155] => stdClass Object
+                (
+                    [label] => 4200 Low Pro
+                    [value] => 4200LP
+                    [slug] => 4200-low-pro_764
+                    [id] => 764
+                    [association] => invmake|INTL
+                )
+
+            [156] => stdClass Object
+                (
+                    [label] => FLB9042T
+                    [value] => FLB9042T
+                    [slug] => flb9042t_765
+                    [id] => 765
+                    [association] => invmake|FL
+                )
+
+            [157] => stdClass Object
+                (
+                    [label] => W5
+                    [value] => W5
+                    [slug] => w5_734
+                    [id] => 734
+                    [association] => invmake|GMC
+                )
+
+            [158] => stdClass Object
+                (
+                    [label] => W7
+                    [value] => W7
+                    [slug] => w7_735
+                    [id] => 735
+                    [association] => invmake|GMC
+                )
+
+            [159] => stdClass Object
+                (
+                    [label] => 1800
+                    [value] => 1800
+                    [slug] => 1800_736
+                    [id] => 736
+                    [association] => invmake|UD
+                )
+
+            [160] => stdClass Object
+                (
+                    [label] => L9511
+                    [value] => L9511
+                    [slug] => l9511_737
+                    [id] => 737
+                    [association] => invmake|FORD
+                )
+
+            [161] => stdClass Object
+                (
+                    [label] => M7500
+                    [value] => M7500
+                    [slug] => m7500_738
+                    [id] => 738
+                    [association] => invmake|STERLING
+                )
+
+            [162] => stdClass Object
+                (
+                    [label] => 357
+                    [value] => 357
+                    [slug] => 357_739
+                    [id] => 739
+                    [association] => invmake|PETE
+                )
+
+            [163] => stdClass Object
+                (
+                    [label] => VNL64T630
+                    [value] => VNL630
+                    [slug] => vnl64t630_740
+                    [id] => 740
+                    [association] => invmake|VOLVO
+                )
+
+            [164] => stdClass Object
+                (
+                    [label] => FE
+                    [value] => FE
+                    [slug] => fe_741
+                    [id] => 741
+                    [association] => invmake|MITSU
+                )
+
+            [165] => stdClass Object
+                (
+                    [label] => FLB6364T
+                    [value] => FLB6364T
+                    [slug] => flb6364t_742
+                    [id] => 742
+                    [association] => invmake|FL
+                )
+
+            [166] => stdClass Object
+                (
+                    [label] => CC13264 - CORONADO
+                    [value] => CORONADO
+                    [slug] => cc13264-coronado_743
+                    [id] => 743
+                    [association] => invmake|FL
+                )
+
+            [167] => stdClass Object
+                (
+                    [label] => FB1817
+                    [value] => FB1817
+                    [slug] => fb1817_744
+                    [id] => 744
+                    [association] => invmake|HINO
+                )
+
+            [168] => stdClass Object
+                (
+                    [label] => F750
+                    [value] => F750
+                    [slug] => f750_745
+                    [id] => 745
+                    [association] => invmake|FORD
+                )
+
+            [169] => stdClass Object
+                (
+                    [label] => FPR
+                    [value] => FPR
+                    [slug] => fpr_730
+                    [id] => 730
+                    [association] => invmake|MITSU
+                )
+
+            [170] => stdClass Object
+                (
+                    [label] => RB688S
+                    [value] => RB688S
+                    [slug] => rb688s_746
+                    [id] => 746
+                    [association] => invmake|MACK
+                )
+
+            [171] => stdClass Object
+                (
+                    [label] => F650
+                    [value] => F650
+                    [slug] => f650_731
+                    [id] => 731
+                    [association] => invmake|FORD
+                )
+
+            [172] => stdClass Object
+                (
+                    [label] => L8513
+                    [value] => L8513
+                    [slug] => l8513_747
+                    [id] => 747
+                    [association] => invmake|FORD
+                )
+
+            [173] => stdClass Object
+                (
+                    [label] => C3500
+                    [value] => C3500
+                    [slug] => c3500_732
+                    [id] => 732
+                    [association] => invmake|CHEVY
+                )
+
+            [174] => stdClass Object
+                (
+                    [label] => 5954 Western Star
+                    [value] => 5954
+                    [slug] => 5954-western-star_748
+                    [id] => 748
+                    [association] => invmake|WSTAR
+                )
+
+            [175] => stdClass Object
+                (
+                    [label] => T7500
+                    [value] => T7500
+                    [slug] => t7500_733
+                    [id] => 733
+                    [association] => invmake|GMC
+                )
+
+            [176] => stdClass Object
+                (
+                    [label] => DOVETAIL
+                    [value] => DOVETAIL
+                    [slug] => dovetail_749
+                    [id] => 749
+                    [association] => invmake|GENERIC
+                )
+
+            [177] => stdClass Object
+                (
+                    [label] => RD888SX
+                    [value] => RD888SX
+                    [slug] => rd888sx_718
+                    [id] => 718
+                    [association] => invmake|MACK
+                )
+
+            [178] => stdClass Object
+                (
+                    [label] => ARGOSY
+                    [value] => ARGOSY
+                    [slug] => argosy_719
+                    [id] => 719
+                    [association] => invmake|FL
+                )
+
+            [179] => stdClass Object
+                (
+                    [label] => FLD13264T-CLASSIC XL
+                    [value] => CLASSIC132
+                    [slug] => fld13264t-classic-xl_720
+                    [id] => 720
+                    [association] => invmake|FL
+                )
+
+            [180] => stdClass Object
+                (
+                    [label] => FLD12064T-CLASSIC
+                    [value] => CLASSIC120
+                    [slug] => fld12064t-classic_721
+                    [id] => 721
+                    [association] => invmake|FL
+                )
+
+            [181] => stdClass Object
+                (
+                    [label] => C8500
+                    [value] => C8500
+                    [slug] => c8500_722
+                    [id] => 722
+                    [association] => invmake|GMC
+                )
+
+            [182] => stdClass Object
+                (
+                    [label] => 4400
+                    [value] => 4400
+                    [slug] => 4400_723
+                    [id] => 723
+                    [association] => invmake|INTL
+                )
+
+            [183] => stdClass Object
+                (
+                    [label] => 9400I
+                    [value] => 9400I
+                    [slug] => 9400i_724
+                    [id] => 724
+                    [association] => invmake|INTL
+                )
+
+            [184] => stdClass Object
+                (
+                    [label] => L7501
+                    [value] => L7501
+                    [slug] => l7501_725
+                    [id] => 725
+                    [association] => invmake|FORD
+                )
+
+            [185] => stdClass Object
+                (
+                    [label] => CX612 VISION
+                    [value] => CX612
+                    [slug] => cx612-vision_710
+                    [id] => 710
+                    [association] => invmake|MACK
+                )
+
+            [186] => stdClass Object
+                (
+                    [label] => 4700LP
+                    [value] => 4700LP
+                    [slug] => 4700lp_726
+                    [id] => 726
+                    [association] => invmake|INTL
+                )
+
+            [187] => stdClass Object
+                (
+                    [label] => VHD64T
+                    [value] => VHD
+                    [slug] => vhd64t_711
+                    [id] => 711
+                    [association] => invmake|VOLVO
+                )
+
+            [188] => stdClass Object
+                (
+                    [label] => 4964FX
+                    [value] => 4964FX
+                    [slug] => 4964fx_727
+                    [id] => 727
+                    [association] => invmake|WSTAR
+                )
+
+            [189] => stdClass Object
+                (
+                    [label] => 4200
+                    [value] => 4200
+                    [slug] => 4200_712
+                    [id] => 712
+                    [association] => invmake|INTL
+                )
+
+            [190] => stdClass Object
+                (
+                    [label] => DM690SX
+                    [value] => DM690SX
+                    [slug] => dm690sx_728
+                    [id] => 728
+                    [association] => invmake|MACK
+                )
+
+            [191] => stdClass Object
+                (
+                    [label] => FM/SP
+                    [value] => FM/SP
+                    [slug] => fm-sp_713
+                    [id] => 713
+                    [association] => invmake|MITSU
+                )
+
+            [192] => stdClass Object
+                (
+                    [label] => VNM64T610
+                    [value] => VNM64T-610
+                    [slug] => vnm64t610_729
+                    [id] => 729
+                    [association] => invmake|VOLVO
+                )
+
+            [193] => stdClass Object
+                (
+                    [label] => 8600
+                    [value] => 8600
+                    [slug] => 8600_714
+                    [id] => 714
+                    [association] => invmake|INTL
+                )
+
+            [194] => stdClass Object
+                (
+                    [label] => VNL64T670
+                    [value] => VNL670
+                    [slug] => vnl64t670_715
+                    [id] => 715
+                    [association] => invmake|VOLVO
+                )
+
+            [195] => stdClass Object
+                (
+                    [label] => VNL64T780
+                    [value] => VNL780
+                    [slug] => vnl64t780_716
+                    [id] => 716
+                    [association] => invmake|VOLVO
+                )
+
+            [196] => stdClass Object
+                (
+                    [label] => VNL64T430
+                    [value] => VNL430
+                    [slug] => vnl64t430_717
+                    [id] => 717
+                    [association] => invmake|VOLVO
+                )
+
+            [197] => stdClass Object
+                (
+                    [label] => CV513
+                    [value] => CV513
+                    [slug] => cv513_702
+                    [id] => 702
+                    [association] => invmake|MACK
+                )
+
+            [198] => stdClass Object
+                (
+                    [label] => CS300P
+                    [value] => CS300P
+                    [slug] => cs300p_703
+                    [id] => 703
+                    [association] => invmake|MACK
+                )
+
+            [199] => stdClass Object
+                (
+                    [label] => FLC11242ST
+                    [value] => FLC11242ST
+                    [slug] => flc11242st_704
+                    [id] => 704
+                    [association] => invmake|FL
+                )
+
+            [200] => stdClass Object
+                (
+                    [label] => FLC11264ST
+                    [value] => FLC11264ST
+                    [slug] => flc11264st_705
+                    [id] => 705
+                    [association] => invmake|FL
+                )
+
+            [201] => stdClass Object
+                (
+                    [label] => C7500
+                    [value] => C7500
+                    [slug] => c7500_690
+                    [id] => 690
+                    [association] => invmake|GMC
+                )
+
+            [202] => stdClass Object
+                (
+                    [label] => CL733
+                    [value] => CL733
+                    [slug] => cl733_706
+                    [id] => 706
+                    [association] => invmake|MACK
+                )
+
+            [203] => stdClass Object
+                (
+                    [label] => T8500
+                    [value] => T8500
+                    [slug] => t8500_691
+                    [id] => 691
+                    [association] => invmake|GMC
+                )
+
+            [204] => stdClass Object
+                (
+                    [label] => ACL64FT
+                    [value] => ACL64FT
+                    [slug] => acl64ft_707
+                    [id] => 707
+                    [association] => invmake|VOLVO
+                )
+
+            [205] => stdClass Object
+                (
+                    [label] => 320
+                    [value] => 320
+                    [slug] => 320_692
+                    [id] => 692
+                    [association] => invmake|PETE
+                )
+
+            [206] => stdClass Object
+                (
+                    [label] => TJ5000
+                    [value] => TJ5000
+                    [slug] => tj5000_708
+                    [id] => 708
+                    [association] => invmake|CAPACITY
+                )
+
+            [207] => stdClass Object
+                (
+                    [label] => SAVANNAH
+                    [value] => SAVANNAH
+                    [slug] => savannah_693
+                    [id] => 693
+                    [association] => invmake|GMC
+                )
+
+            [208] => stdClass Object
+                (
+                    [label] => FLC12064ST
+                    [value] => FLC12064ST
+                    [slug] => flc12064st_709
+                    [id] => 709
+                    [association] => invmake|FL
+                )
+
+            [209] => stdClass Object
+                (
+                    [label] => ACL64BT
+                    [value] => ACL64BT
+                    [slug] => acl64bt_694
+                    [id] => 694
+                    [association] => invmake|VOLVO
+                )
+
+            [210] => stdClass Object
+                (
+                    [label] => L8501
+                    [value] => L8501
+                    [slug] => l8501_695
+                    [id] => 695
+                    [association] => invmake|FORD
+                )
+
+            [211] => stdClass Object
+                (
+                    [label] => FL50
+                    [value] => FL50
+                    [slug] => fl50_696
+                    [id] => 696
+                    [association] => invmake|FL
+                )
+
+            [212] => stdClass Object
+                (
+                    [label] => 387
+                    [value] => 387
+                    [slug] => 387_697
+                    [id] => 697
+                    [association] => invmake|PETE
+                )
+
+            [213] => stdClass Object
+                (
+                    [label] => 2600
+                    [value] => 2600
+                    [slug] => 2600_698
+                    [id] => 698
+                    [association] => invmake|UD
+                )
+
+            [214] => stdClass Object
+                (
+                    [label] => RD688S
+                    [value] => RD688S
+                    [slug] => rd688s_699
+                    [id] => 699
+                    [association] => invmake|MACK
+                )
+
+            [215] => stdClass Object
+                (
+                    [label] => CV713
+                    [value] => CV713
+                    [slug] => cv713_700
+                    [id] => 700
+                    [association] => invmake|MACK
+                )
+
+            [216] => stdClass Object
+                (
+                    [label] => NPR HD
+                    [value] => NPR-HD
+                    [slug] => npr-hd_701
+                    [id] => 701
+                    [association] => invmake|ISUZU
+                )
+
+            [217] => stdClass Object
+                (
+                    [label] => 9800
+                    [value] => 9800
+                    [slug] => 9800_670
+                    [id] => 670
+                    [association] => invmake|INTL
+                )
+
+            [218] => stdClass Object
+                (
+                    [label] => W3500
+                    [value] => W3500
+                    [slug] => w3500_686
+                    [id] => 686
+                    [association] => invmake|GMC
+                )
+
+            [219] => stdClass Object
+                (
+                    [label] => FL112
+                    [value] => FL112
+                    [slug] => fl112_671
+                    [id] => 671
+                    [association] => invmake|FL
+                )
+
+            [220] => stdClass Object
+                (
+                    [label] => FRR
+                    [value] => FRR
+                    [slug] => frr_687
+                    [id] => 687
+                    [association] => invmake|ISUZU
+                )
+
+            [221] => stdClass Object
+                (
+                    [label] => WIA42TES
+                    [value] => WIA42TES
+                    [slug] => wia42tes_672
+                    [id] => 672
+                    [association] => invmake|VOLVO
+                )
+
+            [222] => stdClass Object
+                (
+                    [label] => CX613 VISION
+                    [value] => CX613
+                    [slug] => cx613-vision_688
+                    [id] => 688
+                    [association] => invmake|MACK
+                )
+
+            [223] => stdClass Object
+                (
+                    [label] => DROPDECK
+                    [value] => DROPDECK
+                    [slug] => dropdeck_673
+                    [id] => 673
+                    [association] => invmake|GENERIC
+                )
+
+            [224] => stdClass Object
+                (
+                    [label] => C6500
+                    [value] => C6500
+                    [slug] => c6500_689
+                    [id] => 689
+                    [association] => invmake|GMC
+                )
+
+            [225] => stdClass Object
+                (
+                    [label] => 9900
+                    [value] => 9900
+                    [slug] => 9900_674
+                    [id] => 674
+                    [association] => invmake|INTL
+                )
+
+            [226] => stdClass Object
+                (
+                    [label] => 9100
+                    [value] => 9100
+                    [slug] => 9100_675
+                    [id] => 675
+                    [association] => invmake|INTL
+                )
+
+            [227] => stdClass Object
+                (
+                    [label] => FLD12062ST
+                    [value] => FLD12062ST
+                    [slug] => fld12062st_676
+                    [id] => 676
+                    [association] => invmake|FL
+                )
+
+            [228] => stdClass Object
+                (
+                    [label] => FLATBED
+                    [value] => FLATBED
+                    [slug] => flatbed_677
+                    [id] => 677
+                    [association] => invmake|GENERIC
+                )
+
+            [229] => stdClass Object
+                (
+                    [label] => DM690S
+                    [value] => DM690S
+                    [slug] => dm690s_678
+                    [id] => 678
+                    [association] => invmake|MACK
+                )
+
+            [230] => stdClass Object
+                (
+                    [label] => TRAILER
+                    [value] => TRAILER
+                    [slug] => trailer_679
+                    [id] => 679
+                    [association] => invmake|GENERIC
+                )
+
+            [231] => stdClass Object
+                (
+                    [label] => NQR
+                    [value] => NQR
+                    [slug] => nqr_680
+                    [id] => 680
+                    [association] => invmake|ISUZU
+                )
+
+            [232] => stdClass Object
+                (
+                    [label] => VAN
+                    [value] => VAN
+                    [slug] => van_681
+                    [id] => 681
+                    [association] => invmake|GENERIC
+                )
+
+            [233] => stdClass Object
+                (
+                    [label] => T6500
+                    [value] => T6500
+                    [slug] => t6500_682
+                    [id] => 682
+                    [association] => invmake|GMC
+                )
+
+            [234] => stdClass Object
+                (
+                    [label] => COLUMBIA
+                    [value] => COLUMBIA
+                    [slug] => columbia_683
+                    [id] => 683
+                    [association] => invmake|FL
+                )
+
+            [235] => stdClass Object
+                (
+                    [label] => VNM42T
+                    [value] => VNM42T
+                    [slug] => vnm42t_684
+                    [id] => 684
+                    [association] => invmake|VOLVO
+                )
+
+            [236] => stdClass Object
+                (
+                    [label] => EAGLE
+                    [value] => EAGLE
+                    [slug] => eagle_685
+                    [id] => 685
+                    [association] => invmake|TRANSCRAFT
+                )
+
+            [237] => stdClass Object
+                (
+                    [label] => 4900
+                    [value] => 4900
+                    [slug] => 4900_654
+                    [id] => 654
+                    [association] => invmake|INTL
+                )
+
+            [238] => stdClass Object
+                (
+                    [label] => 4964
+                    [value] => 4964
+                    [slug] => 4964_655
+                    [id] => 655
+                    [association] => invmake|WSTAR
+                )
+
+            [239] => stdClass Object
+                (
+                    [label] => 4964F
+                    [value] => 4964F
+                    [slug] => 4964f_656
+                    [id] => 656
+                    [association] => invmake|WSTAR
+                )
+
+            [240] => stdClass Object
+                (
+                    [label] => 5000
+                    [value] => 5000
+                    [slug] => 5000_657
+                    [id] => 657
+                    [association] => invmake|INTL
+                )
+
+            [241] => stdClass Object
+                (
+                    [label] => 53'Long BY 102" Wide
+                    [value] => 53'X102
+                    [slug] => 53long-by-102-wide_658
+                    [id] => 658
+                    [association] => invmake|GENERIC
+                )
+
+            [242] => stdClass Object
+                (
+                    [label] => 8100
+                    [value] => 8100
+                    [slug] => 8100_659
+                    [id] => 659
+                    [association] => invmake|INTL
+                )
+
+            [243] => stdClass Object
+                (
+                    [label] => 8200
+                    [value] => 8200
+                    [slug] => 8200_660
+                    [id] => 660
+                    [association] => invmake|INTL
+                )
+
+            [244] => stdClass Object
+                (
+                    [label] => 8300
+                    [value] => 8300
+                    [slug] => 8300_661
+                    [id] => 661
+                    [association] => invmake|INTL
+                )
+
+            [245] => stdClass Object
+                (
+                    [label] => 8642T
+                    [value] => 8642T
+                    [slug] => 8642t_662
+                    [id] => 662
+                    [association] => invmake|FL
+                )
+
+            [246] => stdClass Object
+                (
+                    [label] => 9200
+                    [value] => 9200
+                    [slug] => 9200_663
+                    [id] => 663
+                    [association] => invmake|INTL
+                )
+
+            [247] => stdClass Object
+                (
+                    [label] => 9300
+                    [value] => 9300
+                    [slug] => 9300_664
+                    [id] => 664
+                    [association] => invmake|INTL
+                )
+
+            [248] => stdClass Object
+                (
+                    [label] => 9370
+                    [value] => 9370
+                    [slug] => 9370_665
+                    [id] => 665
+                    [association] => invmake|INTL
+                )
+
+            [249] => stdClass Object
+                (
+                    [label] => 4600
+                    [value] => 4600
+                    [slug] => 4600_650
+                    [id] => 650
+                    [association] => invmake|INTL
+                )
+
+            [250] => stdClass Object
+                (
+                    [label] => 9400
+                    [value] => 9400
+                    [slug] => 9400_666
+                    [id] => 666
+                    [association] => invmake|INTL
+                )
+
+            [251] => stdClass Object
+                (
+                    [label] => 4700
+                    [value] => 4700
+                    [slug] => 4700_651
+                    [id] => 651
+                    [association] => invmake|INTL
+                )
+
+            [252] => stdClass Object
+                (
+                    [label] => 9600
+                    [value] => 9600
+                    [slug] => 9600_667
+                    [id] => 667
+                    [association] => invmake|INTL
+                )
+
+            [253] => stdClass Object
+                (
+                    [label] => 48'Long by 102" Wide
+                    [value] => 48'X102
+                    [slug] => 48long-by-102-wide_652
+                    [id] => 652
+                    [association] => invmake|GENERIC
+                )
+
+            [254] => stdClass Object
+                (
+                    [label] => 9670
+                    [value] => 9670
+                    [slug] => 9670_668
+                    [id] => 668
+                    [association] => invmake|INTL
+                )
+
+            [255] => stdClass Object
+                (
+                    [label] => 48'x96'
+                    [value] => 48'X96'
+                    [slug] => 48x96_653
+                    [id] => 653
+                    [association] => invmake|GENERIC
+                )
+
+            [256] => stdClass Object
+                (
+                    [label] => 9700
+                    [value] => 9700
+                    [slug] => 9700_669
+                    [id] => 669
+                    [association] => invmake|INTL
+                )
+
+            [257] => stdClass Object
+                (
+                    [label] => YT50
+                    [value] => YT50
+                    [slug] => yt50_638
+                    [id] => 638
+                    [association] => invmake|OTTAWA
+                )
+
+            [258] => stdClass Object
+                (
+                    [label] => 2574
+                    [value] => 2574
+                    [slug] => 2574_639
+                    [id] => 639
+                    [association] => invmake|INTL
+                )
+
+            [259] => stdClass Object
+                (
+                    [label] => 330
+                    [value] => 330
+                    [slug] => 330_640
+                    [id] => 640
+                    [association] => invmake|KW
+                )
+
+            [260] => stdClass Object
+                (
+                    [label] => 362
+                    [value] => 362
+                    [slug] => 362_641
+                    [id] => 641
+                    [association] => invmake|PETE
+                )
+
+            [261] => stdClass Object
+                (
+                    [label] => 377
+                    [value] => 377
+                    [slug] => 377_642
+                    [id] => 642
+                    [association] => invmake|PETE
+                )
+
+            [262] => stdClass Object
+                (
+                    [label] => 377SB
+                    [value] => 377SB
+                    [slug] => 377sb_643
+                    [id] => 643
+                    [association] => invmake|PETE
+                )
+
+            [263] => stdClass Object
+                (
+                    [label] => 377SFFA
+                    [value] => 377SFA
+                    [slug] => 377sffa_644
+                    [id] => 644
+                    [association] => invmake|PETE
+                )
+
+            [264] => stdClass Object
+                (
+                    [label] => 378
+                    [value] => 378
+                    [slug] => 378_645
+                    [id] => 645
+                    [association] => invmake|PETE
+                )
+
+            [265] => stdClass Object
+                (
+                    [label] => 378SB
+                    [value] => 378-SBFA
+                    [slug] => 378sb_646
+                    [id] => 646
+                    [association] => invmake|PETE
+                )
+
+            [266] => stdClass Object
+                (
+                    [label] => W6000
+                    [value] => W6000
+                    [slug] => w6000_631
+                    [id] => 631
+                    [association] => invmake|GMC
+                )
+
+            [267] => stdClass Object
+                (
+                    [label] => 379
+                    [value] => 379
+                    [slug] => 379_647
+                    [id] => 647
+                    [association] => invmake|PETE
+                )
+
+            [268] => stdClass Object
+                (
+                    [label] => W6427
+                    [value] => W6427
+                    [slug] => w6427_632
+                    [id] => 632
+                    [association] => invmake|GMC
+                )
+
+            [269] => stdClass Object
+                (
+                    [label] => 379EXHD
+                    [value] => 379-127
+                    [slug] => 379exhd_648
+                    [id] => 648
+                    [association] => invmake|PETE
+                )
+
+            [270] => stdClass Object
+                (
+                    [label] => W900
+                    [value] => W900
+                    [slug] => w900_633
+                    [id] => 633
+                    [association] => invmake|KW
+                )
+
+            [271] => stdClass Object
+                (
+                    [label] => 4300
+                    [value] => 4300
+                    [slug] => 4300_649
+                    [id] => 649
+                    [association] => invmake|INTL
+                )
+
+            [272] => stdClass Object
+                (
+                    [label] => W900B
+                    [value] => W900B
+                    [slug] => w900b_634
+                    [id] => 634
+                    [association] => invmake|KW
+                )
+
+            [273] => stdClass Object
+                (
+                    [label] => W900L
+                    [value] => W900L
+                    [slug] => w900l_635
+                    [id] => 635
+                    [association] => invmake|KW
+                )
+
+            [274] => stdClass Object
+                (
+                    [label] => YARD
+                    [value] => YARD
+                    [slug] => yard_636
+                    [id] => 636
+                    [association] => invmake|OTTAWA
+                )
+
+            [275] => stdClass Object
+                (
+                    [label] => YT30
+                    [value] => YT30
+                    [slug] => yt30_637
+                    [id] => 637
+                    [association] => invmake|OTTAWA
+                )
+
+            [276] => stdClass Object
+                (
+                    [label] => WHITE
+                    [value] => WHITE
+                    [slug] => white_622
+                    [id] => 622
+                    [association] => invmake|WHITE
+                )
+
+            [277] => stdClass Object
+                (
+                    [label] => WIA42T
+                    [value] => WIA42T
+                    [slug] => wia42t_623
+                    [id] => 623
+                    [association] => invmake|VOLVO
+                )
+
+            [278] => stdClass Object
+                (
+                    [label] => WIA42TTES
+                    [value] => WIA42TTES
+                    [slug] => wia42ttes_624
+                    [id] => 624
+                    [association] => invmake|VOLVO
+                )
+
+            [279] => stdClass Object
+                (
+                    [label] => WIA64T
+                    [value] => WIA64T
+                    [slug] => wia64t_625
+                    [id] => 625
+                    [association] => invmake|VOLVO
+                )
+
+            [280] => stdClass Object
+                (
+                    [label] => WIA64TES
+                    [value] => WIA64TES
+                    [slug] => wia64tes_626
+                    [id] => 626
+                    [association] => invmake|VOLVO
+                )
+
+            [281] => stdClass Object
+                (
+                    [label] => WIA64TTES
+                    [value] => WIA64TTES
+                    [slug] => wia64ttes_627
+                    [id] => 627
+                    [association] => invmake|VOLVO
+                )
+
+            [282] => stdClass Object
+                (
+                    [label] => VNL64T
+                    [value] => VNL64T
+                    [slug] => vnl64t_612
+                    [id] => 612
+                    [association] => invmake|VOLVO
+                )
+
+            [283] => stdClass Object
+                (
+                    [label] => wx42T
+                    [value] => WX42T
+                    [slug] => wx42t_628
+                    [id] => 628
+                    [association] => invmake|VOLVO
+                )
+
+            [284] => stdClass Object
+                (
+                    [label] => VNL64T660
+                    [value] => VNL660
+                    [slug] => vnl64t660_613
+                    [id] => 613
+                    [association] => invmake|VOLVO
+                )
+
+            [285] => stdClass Object
+                (
+                    [label] => WX64
+                    [value] => WX64
+                    [slug] => wx64_629
+                    [id] => 629
+                    [association] => invmake|VOLVO
+                )
+
+            [286] => stdClass Object
+                (
+                    [label] => VNL64T770
+                    [value] => VNL770
+                    [slug] => vnl64t770_614
+                    [id] => 614
+                    [association] => invmake|VOLVO
+                )
+
+            [287] => stdClass Object
+                (
+                    [label] => W45042
+                    [value] => W45042
+                    [slug] => w45042_630
+                    [id] => 630
+                    [association] => invmake|GMC
+                )
+
+            [288] => stdClass Object
+                (
+                    [label] => VNM64T
+                    [value] => VNM64T
+                    [slug] => vnm64t_615
+                    [id] => 615
+                    [association] => invmake|VOLVO
+                )
+
+            [289] => stdClass Object
+                (
+                    [label] => W4
+                    [value] => W-4
+                    [slug] => w4_616
+                    [id] => 616
+                    [association] => invmake|GMC
+                )
+
+            [290] => stdClass Object
+                (
+                    [label] => WCA42T
+                    [value] => WCA42T
+                    [slug] => wca42t_617
+                    [id] => 617
+                    [association] => invmake|VOLVO
+                )
+
+            [291] => stdClass Object
+                (
+                    [label] => WCA64T
+                    [value] => WCA64T
+                    [slug] => wca64t_618
+                    [id] => 618
+                    [association] => invmake|VOLVO
+                )
+
+            [292] => stdClass Object
+                (
+                    [label] => WGA42T
+                    [value] => WGA42T
+                    [slug] => wga42t_619
+                    [id] => 619
+                    [association] => invmake|VOLVO
+                )
+
+            [293] => stdClass Object
+                (
+                    [label] => WG42T
+                    [value] => WG42T
+                    [slug] => wg42t_620
+                    [id] => 620
+                    [association] => invmake|VOLVO
+                )
+
+            [294] => stdClass Object
+                (
+                    [label] => WG64T
+                    [value] => WG64T
+                    [slug] => wg64t_621
+                    [id] => 621
+                    [association] => invmake|VOLVO
+                )
+
+            [295] => stdClass Object
+                (
+                    [label] => T800A
+                    [value] => T800A
+                    [slug] => t800a_606
+                    [id] => 606
+                    [association] => invmake|KW
+                )
+
+            [296] => stdClass Object
+                (
+                    [label] => T800B
+                    [value] => T800B
+                    [slug] => t800b_607
+                    [id] => 607
+                    [association] => invmake|KW
+                )
+
+            [297] => stdClass Object
+                (
+                    [label] => STEPVAN
+                    [value] => STEPVAN
+                    [slug] => stepvan_592
+                    [id] => 592
+                    [association] => invmake|GENERIC
+                )
+
+            [298] => stdClass Object
+                (
+                    [label] => VANDURA
+                    [value] => VANDURA
+                    [slug] => vandura_608
+                    [id] => 608
+                    [association] => invmake|GMC
+                )
+
+            [299] => stdClass Object
+                (
+                    [label] => TANKER
+                    [value] => TANKER
+                    [slug] => tanker_593
+                    [id] => 593
+                    [association] => invmake|GENERIC
+                )
+
+            [300] => stdClass Object
+                (
+                    [label] => VNL42T
+                    [value] => VNL42T
+                    [slug] => vnl42t_609
+                    [id] => 609
+                    [association] => invmake|VOLVO
+                )
+
+            [301] => stdClass Object
+                (
+                    [label] => TILT MASTER
+                    [value] => TILTMASTER
+                    [slug] => tilt-master_594
+                    [id] => 594
+                    [association] => invmake|CHEVY
+                )
+
+            [302] => stdClass Object
+                (
+                    [label] => VNL64T420
+                    [value] => VNL420
+                    [slug] => vnl64t420_610
+                    [id] => 610
+                    [association] => invmake|VOLVO
+                )
+
+            [303] => stdClass Object
+                (
+                    [label] => TOPKICK
+                    [value] => TOPKICK
+                    [slug] => topkick_595
+                    [id] => 595
+                    [association] => invmake|GMC
+                )
+
+            [304] => stdClass Object
+                (
+                    [label] => VNL64T610
+                    [value] => VNL610
+                    [slug] => vnl64t610_611
+                    [id] => 611
+                    [association] => invmake|VOLVO
+                )
+
+            [305] => stdClass Object
+                (
+                    [label] => TRANSFER
+                    [value] => TRANSFER
+                    [slug] => transfer_596
+                    [id] => 596
+                    [association] => invmake|GENERIC
+                )
+
+            [306] => stdClass Object
+                (
+                    [label] => T2000
+                    [value] => T2000
+                    [slug] => t2000_597
+                    [id] => 597
+                    [association] => invmake|KW
+                )
+
+            [307] => stdClass Object
+                (
+                    [label] => T300
+                    [value] => T300
+                    [slug] => t300_598
+                    [id] => 598
+                    [association] => invmake|KW
+                )
+
+            [308] => stdClass Object
+                (
+                    [label] => T400
+                    [value] => T400
+                    [slug] => t400_599
+                    [id] => 599
+                    [association] => invmake|KW
+                )
+
+            [309] => stdClass Object
+                (
+                    [label] => T400B
+                    [value] => T400B
+                    [slug] => t400b_600
+                    [id] => 600
+                    [association] => invmake|KW
+                )
+
+            [310] => stdClass Object
+                (
+                    [label] => T450
+                    [value] => T450
+                    [slug] => t450_601
+                    [id] => 601
+                    [association] => invmake|KW
+                )
+
+            [311] => stdClass Object
+                (
+                    [label] => T600
+                    [value] => T600
+                    [slug] => t600_602
+                    [id] => 602
+                    [association] => invmake|KW
+                )
+
+            [312] => stdClass Object
+                (
+                    [label] => T600A
+                    [value] => T600A
+                    [slug] => t600a_603
+                    [id] => 603
+                    [association] => invmake|KW
+                )
+
+            [313] => stdClass Object
+                (
+                    [label] => T600B
+                    [value] => T600B
+                    [slug] => t600b_604
+                    [id] => 604
+                    [association] => invmake|KW
+                )
+
+            [314] => stdClass Object
+                (
+                    [label] => T800
+                    [value] => T800
+                    [slug] => t800_605
+                    [id] => 605
+                    [association] => invmake|KW
+                )
+
+            [315] => stdClass Object
+                (
+                    [label] => LONESTAR
+                    [value] => LONESTAR
+                    [slug] => lonestar_574
+                    [id] => 574
+                    [association] => invmake|INTL
+                )
+
+            [316] => stdClass Object
+                (
+                    [label] => RD690S
+                    [value] => RD690S
+                    [slug] => rd690s_590
+                    [id] => 590
+                    [association] => invmake|MACK
+                )
+
+            [317] => stdClass Object
+                (
+                    [label] => LS8000
+                    [value] => LS8000
+                    [slug] => ls8000_575
+                    [id] => 575
+                    [association] => invmake|FORD
+                )
+
+            [318] => stdClass Object
+                (
+                    [label] => REEFER BOX ONLY
+                    [value] => REEFER
+                    [slug] => reefer-box-only_591
+                    [id] => 591
+                    [association] => invmake|GENERIC
+                )
+
+            [319] => stdClass Object
+                (
+                    [label] => LS9000
+                    [value] => LS9000
+                    [slug] => ls9000_576
+                    [id] => 576
+                    [association] => invmake|FORD
+                )
+
+            [320] => stdClass Object
+                (
+                    [label] => LTA9000
+                    [value] => LTA9000
+                    [slug] => lta9000_577
+                    [id] => 577
+                    [association] => invmake|FORD
+                )
+
+            [321] => stdClass Object
+                (
+                    [label] => LTL9000
+                    [value] => LTL9000
+                    [slug] => ltl9000_578
+                    [id] => 578
+                    [association] => invmake|FORD
+                )
+
+            [322] => stdClass Object
+                (
+                    [label] => L8000
+                    [value] => L8000
+                    [slug] => l8000_579
+                    [id] => 579
+                    [association] => invmake|FORD
+                )
+
+            [323] => stdClass Object
+                (
+                    [label] => L9000
+                    [value] => L9000
+                    [slug] => l9000_580
+                    [id] => 580
+                    [association] => invmake|FORD
+                )
+
+            [324] => stdClass Object
+                (
+                    [label] => MIDLINER MS200P
+                    [value] => MS200P
+                    [slug] => midliner-ms200p_581
+                    [id] => 581
+                    [association] => invmake|MACK
+                )
+
+            [325] => stdClass Object
+                (
+                    [label] => MIDLINER MS250P
+                    [value] => MS250P
+                    [slug] => midliner-ms250p_582
+                    [id] => 582
+                    [association] => invmake|MACK
+                )
+
+            [326] => stdClass Object
+                (
+                    [label] => MIDLINER MS300P
+                    [value] => MS300P
+                    [slug] => midliner-ms300p_583
+                    [id] => 583
+                    [association] => invmake|MACK
+                )
+
+            [327] => stdClass Object
+                (
+                    [label] => NOVA
+                    [value] => NOVA
+                    [slug] => nova_584
+                    [id] => 584
+                    [association] => invmake|CHEVY
+                )
+
+            [328] => stdClass Object
+                (
+                    [label] => NPR
+                    [value] => NPR
+                    [slug] => npr_585
+                    [id] => 585
+                    [association] => invmake|ISUZU
+                )
+
+            [329] => stdClass Object
+                (
+                    [label] => NRR
+                    [value] => NRR
+                    [slug] => nrr_586
+                    [id] => 586
+                    [association] => invmake|ISUZU
+                )
+
+            [330] => stdClass Object
+                (
+                    [label] => N1016
+                    [value] => N1016
+                    [slug] => n1016_587
+                    [id] => 587
+                    [association] => invmake|FL
+                )
+
+            [331] => stdClass Object
+                (
+                    [label] => LN8000
+                    [value] => LN8000
+                    [slug] => ln8000_572
+                    [id] => 572
+                    [association] => invmake|FORD
+                )
+
+            [332] => stdClass Object
+                (
+                    [label] => N1216
+                    [value] => N1216
+                    [slug] => n1216_588
+                    [id] => 588
+                    [association] => invmake|FL
+                )
+
+            [333] => stdClass Object
+                (
+                    [label] => LN9000
+                    [value] => LN9000
+                    [slug] => ln9000_573
+                    [id] => 573
+                    [association] => invmake|FORD
+                )
+
+            [334] => stdClass Object
+                (
+                    [label] => RD688
+                    [value] => RD688
+                    [slug] => rd688_589
+                    [id] => 589
+                    [association] => invmake|MACK
+                )
+
+            [335] => stdClass Object
+                (
+                    [label] => FSR
+                    [value] => FSR
+                    [slug] => fsr_558
+                    [id] => 558
+                    [association] => invmake|ISUZU
+                )
+
+            [336] => stdClass Object
+                (
+                    [label] => FTR
+                    [value] => FTR
+                    [slug] => ftr_559
+                    [id] => 559
+                    [association] => invmake|ISUZU
+                )
+
+            [337] => stdClass Object
+                (
+                    [label] => FVR
+                    [value] => FVR
+                    [slug] => fvr_560
+                    [id] => 560
+                    [association] => invmake|ISUZU
+                )
+
+            [338] => stdClass Object
+                (
+                    [label] => F150
+                    [value] => F150
+                    [slug] => f150_561
+                    [id] => 561
+                    [association] => invmake|FORD
+                )
+
+            [339] => stdClass Object
+                (
+                    [label] => F250
+                    [value] => F250
+                    [slug] => f250_562
+                    [id] => 562
+                    [association] => invmake|FORD
+                )
+
+            [340] => stdClass Object
+                (
+                    [label] => F350
+                    [value] => F350
+                    [slug] => f350_563
+                    [id] => 563
+                    [association] => invmake|FORD
+                )
+
+            [341] => stdClass Object
+                (
+                    [label] => F7B042
+                    [value] => F7B042
+                    [slug] => f7b042_564
+                    [id] => 564
+                    [association] => invmake|FORD
+                )
+
+            [342] => stdClass Object
+                (
+                    [label] => F700
+                    [value] => F700
+                    [slug] => f700_565
+                    [id] => 565
+                    [association] => invmake|FORD
+                )
+
+            [343] => stdClass Object
+                (
+                    [label] => F800
+                    [value] => F800
+                    [slug] => f800_566
+                    [id] => 566
+                    [association] => invmake|MACK
+                )
+
+            [344] => stdClass Object
+                (
+                    [label] => G25
+                    [value] => G25
+                    [slug] => g25_567
+                    [id] => 567
+                    [association] => invmake|CHEVY
+                )
+
+            [345] => stdClass Object
+                (
+                    [label] => FLD12064ST
+                    [value] => FLD12064ST
+                    [slug] => fld12064st_552
+                    [id] => 552
+                    [association] => invmake|FL
+                )
+
+            [346] => stdClass Object
+                (
+                    [label] => G30
+                    [value] => G30
+                    [slug] => g30_568
+                    [id] => 568
+                    [association] => invmake|CHEVY
+                )
+
+            [347] => stdClass Object
+                (
+                    [label] => FL106
+                    [value] => FL106
+                    [slug] => fl106_553
+                    [id] => 553
+                    [association] => invmake|FL
+                )
+
+            [348] => stdClass Object
+                (
+                    [label] => KODIAK
+                    [value] => KODIAK
+                    [slug] => kodiak_569
+                    [id] => 569
+                    [association] => invmake|GMC
+                )
+
+            [349] => stdClass Object
+                (
+                    [label] => FL60
+                    [value] => FL60
+                    [slug] => fl60_554
+                    [id] => 554
+                    [association] => invmake|FL
+                )
+
+            [350] => stdClass Object
+                (
+                    [label] => K100
+                    [value] => K100
+                    [slug] => k100_570
+                    [id] => 570
+                    [association] => invmake|KW
+                )
+
+            [351] => stdClass Object
+                (
+                    [label] => FL70
+                    [value] => FL70
+                    [slug] => fl70_555
+                    [id] => 555
+                    [association] => invmake|FL
+                )
+
+            [352] => stdClass Object
+                (
+                    [label] => K300
+                    [value] => K300
+                    [slug] => k300_571
+                    [id] => 571
+                    [association] => invmake|KW
+                )
+
+            [353] => stdClass Object
+                (
+                    [label] => FL80
+                    [value] => FL80
+                    [slug] => fl80_556
+                    [id] => 556
+                    [association] => invmake|FL
+                )
+
+            [354] => stdClass Object
+                (
+                    [label] => FM/MR
+                    [value] => FM/MR
+                    [slug] => fm-mr_557
+                    [id] => 557
+                    [association] => invmake|MITSU
+                )
+
+            [355] => stdClass Object
+                (
+                    [label] => E450
+                    [value] => E450
+                    [slug] => e450_542
+                    [id] => 542
+                    [association] => invmake|CHEVY
+                )
+
+            [356] => stdClass Object
+                (
+                    [label] => FLD112
+                    [value] => FLD112
+                    [slug] => fld112_543
+                    [id] => 543
+                    [association] => invmake|FL
+                )
+
+            [357] => stdClass Object
+                (
+                    [label] => FLD11242
+                    [value] => FLD11242
+                    [slug] => fld11242_544
+                    [id] => 544
+                    [association] => invmake|FL
+                )
+
+            [358] => stdClass Object
+                (
+                    [label] => FLD11242ST
+                    [value] => FLD11242ST
+                    [slug] => fld11242st_545
+                    [id] => 545
+                    [association] => invmake|FL
+                )
+
+            [359] => stdClass Object
+                (
+                    [label] => FLD11262ST
+                    [value] => FLD11262ST
+                    [slug] => fld11262st_546
+                    [id] => 546
+                    [association] => invmake|FL
+                )
+
+            [360] => stdClass Object
+                (
+                    [label] => FLD11262T
+                    [value] => FLD11262T
+                    [slug] => fld11262t_547
+                    [id] => 547
+                    [association] => invmake|FL
+                )
+
+            [361] => stdClass Object
+                (
+                    [label] => C35
+                    [value] => C35
+                    [slug] => c35_532
+                    [id] => 532
+                    [association] => invmake|GMC
+                )
+
+            [362] => stdClass Object
+                (
+                    [label] => FLD11264ST
+                    [value] => FLD11264ST
+                    [slug] => fld11264st_548
+                    [id] => 548
+                    [association] => invmake|FL
+                )
+
+            [363] => stdClass Object
+                (
+                    [label] => C60
+                    [value] => C60
+                    [slug] => c60_533
+                    [id] => 533
+                    [association] => invmake|CHEVY
+                )
+
+            [364] => stdClass Object
+                (
+                    [label] => FLD12042ST
+                    [value] => FLD12042ST
+                    [slug] => fld12042st_549
+                    [id] => 549
+                    [association] => invmake|FL
+                )
+
+            [365] => stdClass Object
+                (
+                    [label] => C7G042
+                    [value] => C7H042
+                    [slug] => c7g042_534
+                    [id] => 534
+                    [association] => invmake|GMC
+                )
+
+            [366] => stdClass Object
+                (
+                    [label] => FLD12042T
+                    [value] => FLD12042T
+                    [slug] => fld12042t_550
+                    [id] => 550
+                    [association] => invmake|FL
+                )
+
+            [367] => stdClass Object
+                (
+                    [label] => DM
+                    [value] => DM
+                    [slug] => dm_535
+                    [id] => 535
+                    [association] => invmake|MACK
+                )
+
+            [368] => stdClass Object
+                (
+                    [label] => FLD12064SD
+                    [value] => FLD12064SD
+                    [slug] => fld12064sd_551
+                    [id] => 551
+                    [association] => invmake|FL
+                )
+
+            [369] => stdClass Object
+                (
+                    [label] => DM688S
+                    [value] => DM688S
+                    [slug] => dm688s_536
+                    [id] => 536
+                    [association] => invmake|MACK
+                )
+
+            [370] => stdClass Object
+                (
+                    [label] => DRYVAN
+                    [value] => DRYVAN
+                    [slug] => dryvan_537
+                    [id] => 537
+                    [association] => invmake|GENERIC
+                )
+
+            [371] => stdClass Object
+                (
+                    [label] => END DUMP
+                    [value] => END DUMP
+                    [slug] => end-dump_538
+                    [id] => 538
+                    [association] => invmake|GENERIC
+                )
+
+            [372] => stdClass Object
+                (
+                    [label] => EXPEDITOR
+                    [value] => EXPEDITOR
+                    [slug] => expeditor_539
+                    [id] => 539
+                    [association] => invmake|GENERIC
+                )
+
+            [373] => stdClass Object
+                (
+                    [label] => E250
+                    [value] => E250
+                    [slug] => e250_540
+                    [id] => 540
+                    [association] => invmake|CHEVY
+                )
+
+            [374] => stdClass Object
+                (
+                    [label] => E350
+                    [value] => E350
+                    [slug] => e350_541
+                    [id] => 541
+                    [association] => invmake|CHEVY
+                )
+
+            [375] => stdClass Object
+                (
+                    [label] => CS200
+                    [value] => CS200
+                    [slug] => cs200_526
+                    [id] => 526
+                    [association] => invmake|MACK
+                )
+
+            [376] => stdClass Object
+                (
+                    [label] => CS250
+                    [value] => CS250
+                    [slug] => cs250_527
+                    [id] => 527
+                    [association] => invmake|MACK
+                )
+
+            [377] => stdClass Object
+                (
+                    [label] => ACL64B
+                    [value] => BCL64B
+                    [slug] => acl64b_512
+                    [id] => 512
+                    [association] => invmake|VOLVO
+                )
+
+            [378] => stdClass Object
+                (
+                    [label] => CS300
+                    [value] => CS300
+                    [slug] => cs300_528
+                    [id] => 528
+                    [association] => invmake|MACK
+                )
+
+            [379] => stdClass Object
+                (
+                    [label] => AEROMAX
+                    [value] => AEROMAX
+                    [slug] => aeromax_513
+                    [id] => 513
+                    [association] => invmake|STERLING
+                )
+
+            [380] => stdClass Object
+                (
+                    [label] => CS3000
+                    [value] => CS3000
+                    [slug] => cs3000_529
+                    [id] => 529
+                    [association] => invmake|MACK
+                )
+
+            [381] => stdClass Object
+                (
+                    [label] => AT9513
+                    [value] => AT9513
+                    [slug] => at9513_514
+                    [id] => 514
+                    [association] => invmake|STERLING
+                )
+
+            [382] => stdClass Object
+                (
+                    [label] => CUTAWAY
+                    [value] => CUTAWAY
+                    [slug] => cutaway_530
+                    [id] => 530
+                    [association] => invmake|GMC
+                )
+
+            [383] => stdClass Object
+                (
+                    [label] => A9513
+                    [value] => A9513
+                    [slug] => a9513_515
+                    [id] => 515
+                    [association] => invmake|STERLING
+                )
+
+            [384] => stdClass Object
+                (
+                    [label] => C30
+                    [value] => C30
+                    [slug] => c30_531
+                    [id] => 531
+                    [association] => invmake|CHEVY
+                )
+
+            [385] => stdClass Object
+                (
+                    [label] => CENTURY
+                    [value] => CENTURY
+                    [slug] => century_516
+                    [id] => 516
+                    [association] => invmake|FL
+                )
+
+            [386] => stdClass Object
+                (
+                    [label] => CF6000
+                    [value] => CF6000
+                    [slug] => cf6000_517
+                    [id] => 517
+                    [association] => invmake|FORD
+                )
+
+            [387] => stdClass Object
+                (
+                    [label] => CF7000
+                    [value] => CF7000
+                    [slug] => cf7000_518
+                    [id] => 518
+                    [association] => invmake|FORD
+                )
+
+            [388] => stdClass Object
+                (
+                    [label] => CF8000
+                    [value] => CF8000
+                    [slug] => cf8000_519
+                    [id] => 519
+                    [association] => invmake|FORD
+                )
+
+            [389] => stdClass Object
+                (
+                    [label] => MACK 4X2 SERIES
+                    [value] => CH612
+                    [slug] => mack-4x2-series_520
+                    [id] => 520
+                    [association] => invmake|MACK
+                )
+
+            [390] => stdClass Object
+                (
+                    [label] => MACK 6X4 SERIES
+                    [value] => CH613
+                    [slug] => mack-6x4-series_521
+                    [id] => 521
+                    [association] => invmake|MACK
+                )
+
+            [391] => stdClass Object
+                (
+                    [label] => CLT9000
+                    [value] => CLT9000
+                    [slug] => clt9000_522
+                    [id] => 522
+                    [association] => invmake|FORD
+                )
+
+            [392] => stdClass Object
+                (
+                    [label] => CL613
+                    [value] => CL613
+                    [slug] => cl613_523
+                    [id] => 523
+                    [association] => invmake|MACK
+                )
+
+            [393] => stdClass Object
+                (
+                    [label] => CL713
+                    [value] => CL713
+                    [slug] => cl713_524
+                    [id] => 524
+                    [association] => invmake|MACK
+                )
+
+            [394] => stdClass Object
+                (
+                    [label] => CL9000
+                    [value] => CL9000
+                    [slug] => cl9000_525
+                    [id] => 525
+                    [association] => invmake|FORD
+                )
+
+        )
+
+    [template] => templates/partials/filters/button.php
+)
+
+                      stdClass Object
+(
+    [parameter] => invemake
+    [label] => Engine Make
+    [id] => ll_inventory_invemake
+    [prefix] =>
+    [type] => button
+    [context] => additional
+    [options] => stdClass Object
+        (
+            [0] => stdClass Object
+                (
+                    [label] => Detroit
+                    [value] => DET
+                    [slug] => detroit_38
+                    [id] => 38
+                    [association] =>
+                )
+
+            [1] => stdClass Object
+                (
+                    [label] => Ford
+                    [value] => FORD
+                    [slug] => ford_39
+                    [id] => 39
+                    [association] =>
+                )
+
+            [2] => stdClass Object
+                (
+                    [label] => GMC
+                    [value] => GMC
+                    [slug] => gmc_40
+                    [id] => 40
+                    [association] =>
+                )
+
+            [3] => stdClass Object
+                (
+                    [label] => Hino
+                    [value] => HINO
+                    [slug] => hino_41
+                    [id] => 41
+                    [association] =>
+                )
+
+            [4] => stdClass Object
+                (
+                    [label] => Isuzu
+                    [value] => ISUZU
+                    [slug] => isuzu_42
+                    [id] => 42
+                    [association] =>
+                )
+
+            [5] => stdClass Object
+                (
+                    [label] => Caterpiller
+                    [value] => CAT
+                    [slug] => caterpiller_43
+                    [id] => 43
+                    [association] =>
+                )
+
+            [6] => stdClass Object
+                (
+                    [label] => Cummins
+                    [value] => CUMM
+                    [slug] => cummins_44
+                    [id] => 44
+                    [association] =>
+                )
+
+        )
+
+    [template] => templates/partials/filters/button.php
+)
+
+                      stdClass Object
+(
+    [parameter] => invmodel
+    [label] => Engine Model
+    [id] => ll_inventory_invmodel
+    [prefix] =>
+    [type] => button
+    [context] => additional
+    [options] => stdClass Object
+        (
+        )
+
+    [template] => templates/partials/filters/button.php
+)
+
+                      stdClass Object
+(
+    [parameter] => invtrnty
+    [label] => Transmission Type
+    [id] => ll_inventory_invtrnty
+    [prefix] =>
+    [type] => button
+    [context] => additional
+    [options] => stdClass Object
+        (
+            [0] => stdClass Object
+                (
+                    [label] => All
+                    [value] =>
+                    [slug] => all_45
+                    [id] => 45
+                    [association] =>
+                )
+
+            [1] => stdClass Object
+                (
+                    [label] => Manual
+                    [value] => M
+                    [slug] => manual_46
+                    [id] => 46
+                    [association] =>
+                )
+
+            [2] => stdClass Object
+                (
+                    [label] => Automatic / Automated
+                    [value] => A
+                    [slug] => automatic-automated_47
+                    [id] => 47
+                    [association] =>
+                )
+
+        )
+
+    [template] => templates/partials/filters/button.php
+)
+
+                      stdClass Object
+(
+    [parameter] => invtrans
+    [label] => Transmission Make
+    [id] => ll_inventory_invtrans
+    [prefix] =>
+    [type] => button
+    [context] => additional
+    [options] => stdClass Object
+        (
+        )
+
+    [template] => templates/partials/filters/button.php
+)
+
+                      stdClass Object
+(
+    [parameter] => invtmodl
+    [label] => Transmission Model
+    [id] => ll_inventory_invtmodl
+    [prefix] =>
+    [type] => button
+    [context] => additional
+    [options] => stdClass Object
+        (
+        )
+
+    [template] => templates/partials/filters/button.php
+)
+
+                      stdClass Object
+(
+    [parameter] => invtspd
+    [label] => Transmission Speed
+    [id] => ll_inventory_invtspd
+    [prefix] =>
+    [type] => button
+    [context] => additional
+    [options] => stdClass Object
+        (
+        )
+
+    [template] => templates/partials/filters/button.php
+)
+
+                      stdClass Object
+(
+    [parameter] => invsusp
+    [label] => Suspension
+    [id] => ll_inventory_invsusp
+    [prefix] =>
+    [type] => button
+    [context] => additional
+    [options] => stdClass Object
+        (
+        )
+
+    [template] => templates/partials/filters/button.php
+)
+
+                      stdClass Object
+(
+    [parameter] => invmilag
+    [label] => Mileage
+    [id] => ll_inventory_invmilag
+    [prefix] =>
+    [type] => range
+    [context] => main
+    [options] => stdClass Object
+        (
+            [0] => stdClass Object
+                (
+                    [label] => 0
+                    [value] => 0
+                    [slug] => zero_48
+                    [id] => 48
+                    [association] =>
+                )
+
+            [1] => stdClass Object
+                (
+                    [label] => 100,000
+                    [value] => 100000
+                    [slug] => 100000_49
+                    [id] => 49
+                    [association] =>
+                )
+
+            [2] => stdClass Object
+                (
+                    [label] => 1,000,000
+                    [value] => 1000000
+                    [slug] => 1000000_50
+                    [id] => 50
+                    [association] =>
+                )
+
+            [3] => stdClass Object
+                (
+                    [label] => Unlimited
+                    [value] => 9999999999
+                    [slug] => unlimited_51
+                    [id] => 51
+                    [association] =>
+                )
+
+        )
+
+    [template] => templates/partials/filters/range.php
+)
+
+                      stdClass Object
+(
+    [parameter] => invprice
+    [label] => Price
+    [id] => ll_inventory_invprice
+    [prefix] =>
+    [type] => range
+    [context] => main
+    [options] => stdClass Object
+        (
+            [0] => stdClass Object
+                (
+                    [label] => $0
+                    [value] => 0
+                    [slug] => zero_52
+                    [id] => 52
+                    [association] =>
+                )
+
+            [1] => stdClass Object
+                (
+                    [label] => $20,000
+                    [value] => 20000
+                    [slug] => 20000_53
+                    [id] => 53
+                    [association] =>
+                )
+
+            [2] => stdClass Object
+                (
+                    [label] => $100,000
+                    [value] => 100000
+                    [slug] => 100000_54
+                    [id] => 54
+                    [association] =>
+                )
+
+            [3] => stdClass Object
+                (
+                    [label] => Unlimted
+                    [value] => 999999999
+                    [slug] => unlimted_55
+                    [id] => 55
+                    [association] =>
+                )
+
+        )
+
+    [template] => templates/partials/filters/range.php
+)
+
+                      stdClass Object
+(
+    [parameter] => invhpwr
+    [label] => Engine Horsepower
+    [id] => ll_inventory_invhpwr
+    [prefix] =>
+    [type] => button
+    [context] => additional
+    [options] => stdClass Object
+        (
+            [0] => stdClass Object
+                (
+                    [label] => All
+                    [value] =>
+                    [slug] => all_56
+                    [id] => 56
+                    [association] =>
+                )
+
+            [1] => stdClass Object
+                (
+                    [label] => 0 - 299
+                    [value] => 0
+                    [slug] => 0-299_57
+                    [id] => 57
+                    [association] =>
+                )
+
+            [2] => stdClass Object
+                (
+                    [label] => 300 - 399
+                    [value] => 300
+                    [slug] => 300-399_58
+                    [id] => 58
+                    [association] =>
+                )
+
+            [3] => stdClass Object
+                (
+                    [label] => 400 - 499
+                    [value] => 400
+                    [slug] => 400-499_59
+                    [id] => 59
+                    [association] =>
+                )
+
+            [4] => stdClass Object
+                (
+                    [label] => 500+
+                    [value] => 500
+                    [slug] => 500_60
+                    [id] => 60
+                    [association] =>
+                )
+
+        )
+
+    [template] => templates/partials/filters/button.php
+)
+
+                      stdClass Object
+(
+    [parameter] => invaxle
+    [label] => Axle
+    [id] => ll_inventory_invaxle
+    [prefix] =>
+    [type] => button
+    [context] => additional
+    [options] => stdClass Object
+        (
+            [0] => stdClass Object
+                (
+                    [label] => All
+                    [value] =>
+                    [slug] => all_61
+                    [id] => 61
+                    [association] =>
+                )
+
+            [1] => stdClass Object
+                (
+                    [label] => Tandem 6 x 4
+                    [value] => T
+                    [slug] => tandem-6-x-4_62
+                    [id] => 62
+                    [association] =>
+                )
+
+            [2] => stdClass Object
+                (
+                    [label] => Tandem 6 x 2
+                    [value] => D
+                    [slug] => tandem-6-x-2_63
+                    [id] => 63
+                    [association] =>
+                )
+
+            [3] => stdClass Object
+                (
+                    [label] => Single
+                    [value] => S
+                    [slug] => single_64
+                    [id] => 64
+                    [association] =>
+                )
+
+            [4] => stdClass Object
+                (
+                    [label] => Triaxle
+                    [value] => R
+                    [slug] => triaxle_65
+                    [id] => 65
+                    [association] =>
+                )
+
+            [5] => stdClass Object
+                (
+                    [label] => Multiple
+                    [value] => M
+                    [slug] => multiple_66
+                    [id] => 66
+                    [association] =>
+                )
+
+        )
+
+    [template] => templates/partials/filters/button.php
+)
+
+                      stdClass Object
+(
+    [parameter] => invslpr
+    [label] => Sleeper Type
+    [id] => ll_inventory_invslpr
+    [prefix] =>
+    [type] => button
+    [context] => additional
+    [options] => stdClass Object
+        (
+            [0] => stdClass Object
+                (
+                    [label] => All
+                    [value] =>
+                    [slug] => all_67
+                    [id] => 67
+                    [association] =>
+                )
+
+            [1] => stdClass Object
+                (
+                    [label] => Raised Roof Sleeper
+                    [value] => RAISEDROOF
+                    [slug] => raised-roof-sleeper_68
+                    [id] => 68
+                    [association] =>
+                )
+
+            [2] => stdClass Object
+                (
+                    [label] => Mid Roof Sleeper
+                    [value] => MID ROOF
+                    [slug] => mid-roof-sleeper_69
+                    [id] => 69
+                    [association] =>
+                )
+
+            [3] => stdClass Object
+                (
+                    [label] => Flat Roof Sleeper
+                    [value] => FLAT ROOF
+                    [slug] => flat-roof-sleeper_70
+                    [id] => 70
+                    [association] =>
+                )
+
+            [4] => stdClass Object
+                (
+                    [label] => Non-Sleeper
+                    [value] => NON
+                    [slug] => non-sleeper_71
+                    [id] => 71
+                    [association] =>
+                )
+
+        )
+
+    [template] => templates/partials/filters/button.php
+)
+
+                      stdClass Object
+(
+    [parameter] => invslpsz
+    [label] => Sleeper Size
+    [id] => ll_inventory_invslpsz
+    [prefix] =>
+    [type] => button
+    [context] => additional
+    [options] => stdClass Object
+        (
+            [0] => stdClass Object
+                (
+                    [label] => All
+                    [value] =>
+                    [slug] => all_72
+                    [id] => 72
+                    [association] =>
+                )
+
+            [1] => stdClass Object
+                (
+                    [label] => 0" - 39"
+                    [value] => 0
+                    [slug] => 0-39_73
+                    [id] => 73
+                    [association] =>
+                )
+
+            [2] => stdClass Object
+                (
+                    [label] => 40" - 49"
+                    [value] => 40
+                    [slug] => 40-49_74
+                    [id] => 74
+                    [association] =>
+                )
+
+            [3] => stdClass Object
+                (
+                    [label] => 50" - 59"
+                    [value] => 50
+                    [slug] => 50-59_75
+                    [id] => 75
+                    [association] =>
+                )
+
+            [4] => stdClass Object
+                (
+                    [label] => 60" - 69"
+                    [value] => 60
+                    [slug] => 60-69_76
+                    [id] => 76
+                    [association] =>
+                )
+
+            [5] => stdClass Object
+                (
+                    [label] => 70" - 79"
+                    [value] => 70
+                    [slug] => 70-79_77
+                    [id] => 77
+                    [association] =>
+                )
+
+            [6] => stdClass Object
+                (
+                    [label] => 80"+
+                    [value] => 80
+                    [slug] => 80_78
+                    [id] => 78
+                    [association] =>
+                )
+
+        )
+
+    [template] => templates/partials/filters/button.php
+)
+
+                      stdClass Object
+(
+    [parameter] => location
+    [label] => Location
+    [id] => ll_inventory_location
+    [prefix] =>
+    [type] => button
+    [context] => additional
+    [options] => stdClass Object
+        (
+            [0] => stdClass Object
+                (
+                    [label] => All
+                    [value] =>
+                    [slug] => all_81
+                    [id] => 81
+                    [association] =>
+                )
+
+            [1] => stdClass Object
+                (
+                    [label] => Newark, NJ
+                    [value] => NJ
+                    [slug] => newark-nj_93
+                    [id] => 93
+                    [association] =>
+                )
+
+            [2] => stdClass Object
+                (
+                    [label] => Philadelphia, PA
+                    [value] => PH
+                    [slug] => philadelphia-pa_94
+                    [id] => 94
+                    [association] =>
+                )
+
+            [3] => stdClass Object
+                (
+                    [label] => Springfield, MO
+                    [value] => SP
+                    [slug] => springfield-mo_79
+                    [id] => 79
+                    [association] =>
+                )
+
+            [4] => stdClass Object
+                (
+                    [label] => Phoenix, AZ
+                    [value] => PX
+                    [slug] => phoenix-az_95
+                    [id] => 95
+                    [association] =>
+                )
+
+            [5] => stdClass Object
+                (
+                    [label] => St Louis, MO
+                    [value] => SL
+                    [slug] => st-louis-mo_80
+                    [id] => 80
+                    [association] =>
+                )
+
+            [6] => stdClass Object
+                (
+                    [label] => San Antonio, TX
+                    [value] => SA
+                    [slug] => san-antonio-tx_96
+                    [id] => 96
+                    [association] =>
+                )
+
+            [7] => stdClass Object
+                (
+                    [label] => Stockton, CA
+                    [value] => ST
+                    [slug] => stockton-ca_82
+                    [id] => 82
+                    [association] =>
+                )
+
+            [8] => stdClass Object
+                (
+                    [label] => Atlanta, GA
+                    [value] => AT
+                    [slug] => atlanta-ga_83
+                    [id] => 83
+                    [association] =>
+                )
+
+            [9] => stdClass Object
+                (
+                    [label] => Tampa, FL
+                    [value] => TA
+                    [slug] => tampa-fl_84
+                    [id] => 84
+                    [association] =>
+                )
+
+            [10] => stdClass Object
+                (
+                    [label] => Chicago, IL
+                    [value] => CH
+                    [slug] => chicago-il_85
+                    [id] => 85
+                    [association] =>
+                )
+
+            [11] => stdClass Object
+                (
+                    [label] => Cincinnati, OH
+                    [value] => CN
+                    [slug] => cincinnati-oh_86
+                    [id] => 86
+                    [association] =>
+                )
+
+            [12] => stdClass Object
+                (
+                    [label] => Dallas, TX
+                    [value] => DA
+                    [slug] => dallas-tx_87
+                    [id] => 87
+                    [association] =>
+                )
+
+            [13] => stdClass Object
+                (
+                    [label] => Fontana, CA
+                    [value] => FT
+                    [slug] => fontana-ca_88
+                    [id] => 88
+                    [association] =>
+                )
+
+            [14] => stdClass Object
+                (
+                    [label] => Fresno, CA
+                    [value] => FR
+                    [slug] => fresno-ca_89
+                    [id] => 89
+                    [association] =>
+                )
+
+            [15] => stdClass Object
+                (
+                    [label] => Houston, TX
+                    [value] => HS
+                    [slug] => houston-tx_90
+                    [id] => 90
+                    [association] =>
+                )
+
+            [16] => stdClass Object
+                (
+                    [label] => Jacksonville, FL
+                    [value] => JX
+                    [slug] => jacksonville-fl_91
+                    [id] => 91
+                    [association] =>
+                )
+
+            [17] => stdClass Object
+                (
+                    [label] => Kansas City, MO
+                    [value] => KC
+                    [slug] => kansas-city-mo_92
+                    [id] => 92
+                    [association] =>
+                )
+
+        )
+
+    [template] => templates/partials/filters/button.php
+)
+
+                      stdClass Object
+(
+    [parameter] => industry
+    [label] => Industry
+    [id] => ll_inventory_industry
+    [prefix] =>
+    [type] => list
+    [context] => main
+    [options] => stdClass Object
+        (
+            [0] => stdClass Object
+                (
+                    [label] => All
+                    [value] =>
+                    [slug] => all_97
+                    [id] => 97
+                    [association] =>
+                )
+
+            [1] => stdClass Object
+                (
+                    [label] => Over-The-Road
+                    [value] => 1
+                    [slug] => over-the-road_98
+                    [id] => 98
+                    [association] =>
+                )
+
+            [2] => stdClass Object
+                (
+                    [label] => Regional
+                    [value] => 2
+                    [slug] => regional_99
+                    [id] => 99
+                    [association] =>
+                )
+
+            [3] => stdClass Object
+                (
+                    [label] => Local
+                    [value] => 3
+                    [slug] => local_100
+                    [id] => 100
+                    [association] =>
+                )
+
+            [4] => stdClass Object
+                (
+                    [label] => Moving and Storage
+                    [value] => 4
+                    [slug] => moving-and-storage_101
+                    [id] => 101
+                    [association] =>
+                )
+
+            [5] => stdClass Object
+                (
+                    [label] => Construction
+                    [value] => 5
+                    [slug] => construction_102
+                    [id] => 102
+                    [association] =>
+                )
+
+            [6] => stdClass Object
+                (
+                    [label] => Agricultural
+                    [value] => 6
+                    [slug] => agricultural_103
+                    [id] => 103
+                    [association] =>
+                )
+
+        )
+
+    [template] => templates/partials/filters/list.php
+)
+
+                      stdClass Object
+(
+    [parameter] => trailer
+    [label] => Trailer
+    [id] => ll_inventory_trailer
+    [prefix] =>
+    [type] => button
+    [context] => additional
+    [options] => stdClass Object
+        (
+            [0] => stdClass Object
+                (
+                    [label] => All Trailers
+                    [value] => T%
+                    [slug] => all-trailers_104
+                    [id] => 104
+                    [association] =>
+                )
+
+            [1] => stdClass Object
+                (
+                    [label] => Trailer Belly Dump
+                    [value] => T4
+                    [slug] => trailer-belly-dump_105
+                    [id] => 105
+                    [association] =>
+                )
+
+            [2] => stdClass Object
+                (
+                    [label] => Trailer Car Hauler
+                    [value] => T7
+                    [slug] => trailer-car-hauler_106
+                    [id] => 106
+                    [association] =>
+                )
+
+            [3] => stdClass Object
+                (
+                    [label] => Trailer Drop Deck
+                    [value] => T5
+                    [slug] => trailer-drop-deck_107
+                    [id] => 107
+                    [association] =>
+                )
+
+            [4] => stdClass Object
+                (
+                    [label] => Trailer Dry Van
+                    [value] => TA
+                    [slug] => trailer-dry-van_108
+                    [id] => 108
+                    [association] =>
+                )
+
+            [5] => stdClass Object
+                (
+                    [label] => Trailer End Dump
+                    [value] => T8
+                    [slug] => trailer-end-dump_109
+                    [id] => 109
+                    [association] =>
+                )
+
+            [6] => stdClass Object
+                (
+                    [label] => Trailer Flat
+                    [value] => T1
+                    [slug] => trailer-flat_110
+                    [id] => 110
+                    [association] =>
+                )
+
+            [7] => stdClass Object
+                (
+                    [label] => Trailer Grain
+                    [value] => T6
+                    [slug] => trailer-grain_111
+                    [id] => 111
+                    [association] =>
+                )
+
+            [8] => stdClass Object
+                (
+                    [label] => Trailer Low Boy
+                    [value] => T9
+                    [slug] => trailer-low-boy_112
+                    [id] => 112
+                    [association] =>
+                )
+
+            [9] => stdClass Object
+                (
+                    [label] => Trailer Pneumatic
+                    [value] => TP
+                    [slug] => trailer-pneumatic_113
+                    [id] => 113
+                    [association] =>
+                )
+
+            [10] => stdClass Object
+                (
+                    [label] => Trailer Reefer
+                    [value] => T2
+                    [slug] => trailer-reefer_114
+                    [id] => 114
+                    [association] =>
+                )
+
+            [11] => stdClass Object
+                (
+                    [label] => Trailer Tanker
+                    [value] => T3
+                    [slug] => trailer-tanker_115
+                    [id] => 115
+                    [association] =>
+                )
+
+        )
+
+    [template] => templates/partials/filters/button.php
+)

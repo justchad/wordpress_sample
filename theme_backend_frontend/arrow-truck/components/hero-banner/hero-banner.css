@@ -1,0 +1,117 @@
+/**
+ * Hero Banner Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+ @media only screen and (max-width: 600px){
+   .alignment-container {
+     max-height: 56vh !important;
+     min-height: 10vh !important;
+   }
+ }
+ .blogwrapper-hero{
+   /* width: 10% !important; */
+ }
+
+.hero-banner {
+
+  &::after {
+    @apply .overlay;
+    background: linear-gradient(179.95deg, rgba(0, 0, 0, 0) 15.66%, rgba(0, 0, 0, 0.4) 84.99%);
+  }
+
+  /* .blogwrapper-hero{
+    width: 25% !important;
+  } */
+
+  img.logo{
+    min-width: 40px;
+  }
+
+  .title-tag {
+    position: relative;
+    border-radius: 4px 0 0 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 97%;
+      height: 100%;
+      width: 100vw;
+      @apply .bg-white;
+    }
+
+    strong {
+      @apply .text-sm .uppercase .font-semibold .text-gray-400;
+      letter-spacing: 0.04em;
+    }
+  }
+
+  .alignment-container {
+
+    min-height: calc( 60vh - ( var(--adminbarHeight) + var(--navbarHeight) ) );
+
+    &::after {
+      content: '';
+      display: block;
+      padding-top: 100%;
+
+      @screen sm {
+        padding-top: 0;
+        min-height: calc( 30vh - ( var(--adminbarHeight) + var(--navbarHeight) ) );
+      }
+
+      @screen md {
+        padding-top: 0;
+        min-height: calc( 40vh - ( var(--adminbarHeight) + var(--navbarHeight) ) );
+      }
+
+      @screen lg {
+        min-height: calc( 100vh - ( var(--adminbarHeight) + var(--navbarHeight) ) );
+      }
+
+      @screen sm {
+        max-height: 29vh;
+        min-height: 10vh !important;
+      }
+    }
+
+
+    .container {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @screen sm {
+        position: relative;
+        transform: translateX(0);
+        left: auto;
+      }
+    }
+
+    .hdg-hero {
+      transform: translateX(100vw);
+      transition: 1.5s ease-in-out;
+    }
+  }
+
+  .logo-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+  }
+
+  &.is-loaded {
+    .alignment-container {
+      .hdg-hero {
+        transform: translateX(0);
+      }
+    }
+  }
+}

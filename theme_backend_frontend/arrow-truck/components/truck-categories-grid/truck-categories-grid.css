@@ -1,0 +1,82 @@
+/**
+ * Truck Categories Grid Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+ .start-shopping-button{
+   display: block;
+   max-width: 300px;
+   float: right;
+ }
+
+.truck-categories-grid {
+  .cat-card {
+    backface-visibility: hidden;
+    /* transform: translate3d(0,0,0); */
+
+    &::after {
+      @apply .overlay .overlay-gradient;
+      z-index: 1;
+    }
+
+    p {
+      @apply .text-lg .font-bold .text-center .px-6 .text-white .w-full;
+      position: relative;
+      bottom: 48px;
+      left: 0;
+      z-index: 2;
+    }
+  }
+
+  .fit-image {
+    overflow: hidden;
+    img {
+      /* transform: scale3d(1, 1, 1); */
+      /* transition: 0.25s ease;
+      transform: scale(1); */
+    }
+  }
+
+  .cat-card:hover {
+    .fit-image img {
+      /* transform: scale3d(1.1, 1.1, 1.1); */
+    }
+  }
+
+  .slick-dots {
+    @apply .flex .justify-center;
+    bottom: -40px;
+    left: 0;
+
+    li {
+      height: 10px;
+      width: 10px;
+      margin: 0 4px;
+      flex: 0 0 auto;
+
+      button {
+        background-color: #C4C4C4;
+        opacity: 1;
+        height: 10px;
+        width: 10px;
+        margin: 0;
+        padding: 0;
+        vertical-align: middle;
+        border-radius: 50%;
+
+        &::before {
+          display: none;
+        }
+      }
+
+      &.slick-active {
+        button {
+          @apply .bg-brand-primary;
+        }
+      }
+    }
+  }
+}

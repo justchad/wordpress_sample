@@ -1,0 +1,29 @@
+/**
+ * Map Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.map {
+ .mapboxgl-canvas {
+    outline: none;
+  }
+
+  .mapboxgl-popup-content {
+    padding: 0 !important;
+    min-width: 173px;
+    border-radius: 4px;
+    color: #505050;
+  }
+
+  .mapboxgl-popup-close-button {
+    right: 6px;
+    top: 4px;
+  }
+
+  .mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+    border-top-color: black !important;
+  }
+}

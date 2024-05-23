@@ -1,0 +1,77 @@
+{
+    "key": "group_5f5c43d8cb8ad",
+    "title": "Utility : Image",
+    "fields": [
+        {
+            "key": "field_5f5c43d8ce9c7",
+            "label": "Image",
+            "name": "image_id",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5f5c43d8cea01",
+            "label": "Image Focus Point",
+            "name": "image_focus_point",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "button-grid",
+                "id": ""
+            },
+            "choices": {
+                "object-left-top": "<div class=\"h-5 w-5\"><\/div>",
+                "object-top": "<div class=\"h-5 w-5\"><\/div>",
+                "object-right-top": "<div class=\"h-5 w-5\"><\/div>",
+                "object-left": "<div class=\"h-5 w-5\"><\/div>",
+                "object-center": "<div class=\"h-5 w-5\"><\/div>",
+                "object-right": "<div class=\"h-5 w-5\"><\/div>",
+                "object-left-bottom": "<div class=\"h-5 w-5\"><\/div>",
+                "object-bottom": "<div class=\"h-5 w-5\"><\/div>",
+                "object-right-bottom": "<div class=\"h-5 w-5\"><\/div>"
+            },
+            "allow_null": 0,
+            "default_value": "object-center",
+            "layout": "horizontal",
+            "return_format": "value"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "modified": 1601049948
+}

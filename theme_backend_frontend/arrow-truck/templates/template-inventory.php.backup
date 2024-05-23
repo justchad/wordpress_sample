@@ -1,0 +1,214 @@
+<?php
+/*
+Template Name: Search Inventory
+*/
+?>
+
+
+<?php
+  $yes_values = ['FEATURED', 'BUDGET', 'NEWEST', 'LATELOW', 'OUTLET', 'OFFERS'];
+  if ( $_GET && isset( $_GET['stock-num'] ) ) {
+    unset( $_GET['stock-num'] );
+  }
+
+  $yes_values = ['FEATURED', 'BUDGET', 'NEWEST', 'LATELOW', 'OUTLET', 'OFFERS'];
+  $search_params = collect( $request_data )->mapWithKeys( function( $value, $key ) use ( $yes_values ) {
+    $key = LL_StringUtil::uppercase( $key );
+    if ( in_array( $key, $yes_values ) ) {
+      $value = 'Y';
+    } elseif ( LL_StringUtil::ends_with( $key, '_E' ) || LL_StringUtil::ends_with($key, '_S') ) {
+      if ( !$value ) {
+        if ( LL_StringUtil::ends_with( $key, '_E' ) ) {
+          $value = '9999999999';
+        } else {
+          $value = '0';
+        }
+      } else {
+        $value = preg_replace("/[^0-9]/", "", $value );
+      }
+    } else {
+      $value = LL_StringUtil::uppercase( $value );
+    }
+
+    return [ $key => $value ];
+  } );
+
+  $search_params = $search_params->filter()->toArray();
+
+  if ( !empty( $search_params ) ) {
+    $trucks = ArrowApiInventory::search( $search_params );
+  } else {
+    $trucks = ArrowApiInventory::getAll();
+  }
+
+  $filters = new ArrowFilters;
+?>
+
+<?php while (have_posts()) : the_post(); ?>
+  <div class="search-inventory-page bg-white" data-component="filters"">
+
+    <div class="search-inventory-header pt-4">
+
+      <div class="container">
+        <div class="search-inventory-form">
+
+          <div class="flex items-center justify-between flex-wrap">
+
+            <div class="flex-1 mr-4">
+              <h1 class="hdg-3 text-lg lg:text-3xl">Search Inventory</h1>
+            </div>
+
+            <button id="filter-count" class="show-filters filter-button" data-toggle-target=".current-filters-wrapper, .search-inventory-results" data-toggle-class="is-open" data-toggle-outside data-toggle-group="search-form" data-toggle-escape><span class="filters pointer-events-none">Filters (<span class="count pointer-events-none">0</span>)</span><span class="hide-filters hidden">Hide</span></button>
+
+            <div class="w-full relative current-filters-wrapper">
+
+              <div class="flex justify-start items-center current-filters">
+              </div> <!-- /.flex -->
+
+            </div> <!-- /.w-full -->
+
+          </div> <!-- /.flex -->
+
+          <form action="#" id="inventory-filter">
+            <div class="flex justify-between items-center form-buttons mt-6">
+              <?php foreach( $filters->fields as $field ) : ?>
+                <?php if ( $field->context == 'main' ) : ?>
+                  <div class="button-area">
+
+                    <button data-toggle-target="#<?php echo $field->id; ?>-dropdown"
+                            data-toggle-class="is-open"
+                            data-toggle-group="search-form"
+                            data-toggle-escape
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            aria-controls="#<?php echo $field->id; ?>-dropdown">
+                      <?php echo $field->label; ?>
+                      <svg class="icon icon-chevron-down hidden lg:inline-block"><use xlink:href="#icon-chevron-down"></use></svg>
+                    </button>
+
+                    <div class="search-dropdown" id="<?php echo $field->id; ?>-dropdown">
+                      <span class="arrow"></span>
+                      <div class="search-dropdown-inner px-6 py-6">
+                        <?php include( locate_template( $field->template ) ); ?>
+                      </div>
+                    </div> <!-- /.search-dropdown -->
+
+                  </div>
+                <?php endif; ?>
+              <?php endforeach; ?>
+
+              <div class="button-area">
+                <button class="lg:hidden" data-toggle-group="menu-toggles"
+                        data-toggle-target="#advanced-search, #search-title-menu"
+                        data-toggle-class="is-open"
+                        data-toggle-escape
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                        aria-controls="#more-filters-dropdown">
+                  More
+                  <svg class="icon icon-right-arrow text-brand-primary text-lg svg-align"><use xlink:href="#icon-right-arrow"></use></svg>
+                </button>
+                <button class="hidden lg:block" data-toggle-target="#more-filters-dropdown"
+                        data-toggle-class="is-open"
+                        data-toggle-group="search-form"
+                        data-toggle-escape
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                        aria-controls="#more-filters-dropdown">
+                  More
+                  <svg class="icon icon-right-arrow text-brand-primary text-lg svg-align"><use xlink:href="#icon-right-arrow"></use></svg>
+                </button>
+
+                <div class="search-dropdown is-wide" id="more-filters-dropdown">
+                  <span class="arrow"></span>
+                  <div class="input-area">
+                    <label for="stock-num">Stock #</label>
+                    <input type="text" name="stock-num" id="stock-num" placeholder="Enter Stock Number">
+                  </div>
+
+                  <div class="search-dropdown-inner px-4 py-4">
+                    <?php foreach( $filters->fields as $field ) : ?>
+                      <?php if ( $field->context == 'additional' && count( (array) $field->options ) > 0 ) : ?>
+                        <?php include( locate_template( $field->template ) ); ?>
+                      <?php endif; ?>
+                    <?php endforeach; ?>
+                  </div>
+                </div> <!-- /.search-dropdown -->
+              </div>
+            </div> <!-- /.flex -->
+          </form>
+
+        </div> <!-- /.search-inventory-form -->
+
+      </div> <!-- /.container -->
+
+    </div> <!-- /.search-inventory-header -->
+
+    <div class="search-inventory-results">
+
+      <div class="container">
+
+        <div class="mt-8 flex justify-between items-center">
+
+          <div class="flex-0 w-1/2 lg:w-1/4 relative">
+
+            <button class="flex-0 text-sm sort-toggle" data-toggle-target="#sort-dropdown" data-toggle-class="is-open" data-toggle-group="search-form" data-toggle-outside data-toggle-escape aria-haspopup="true" aria-expanded="false" aria-controls="#sort-dropdown">Sort by <svg class="icon icon-chevron-down text-brand-primary text-base ml-1 pointer-events-none"><use xlink:href="#icon-chevron-down"></use></svg></button>
+
+            <div class="sort-dropdown" id="sort-dropdown">
+              <span class="arrow"></span>
+              <ul>
+                <li><button title="Sort by Name">Name</button></li>
+                <li><button title="Sort by Year">Year</button></li>
+                <li><button title="Sort by Price">Price</button></li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="flex-0 flex justify-end items-center">
+
+            <button data-view="list-view" title="List View" class="mr-2 view-button"><svg class="pointer-events-none icon icon-list"><use xlink:href="#icon-list"></use></svg></button>
+
+            <button data-view="grid-view" title="Grid View" class="mr-2 view-button"><svg class="pointer-events-none icon icon-grid text-2xl"><use xlink:href="#icon-grid"></use></svg></button>
+
+            <p class="font-bold text-sm">Results: <span class="results-total"></span></p>
+
+          </div> <!-- /.flex-0 -->
+
+        </div> <!-- /.flex -->
+
+      </div> <!-- /.container -->
+
+      <?php
+        ll_include_component(
+          'featured-trucks-grid',
+          array(
+            'mobile_slider'   => false,
+            'list'            => true,
+            'all_trucks'      => true,
+            'trucks'          => []
+          ),
+          array(
+            'id'      => 'trucks-list-view',
+            'classes' => ['is-list']
+          )
+        );
+      ?>
+      <div class="spinner-wrap"><div class="spinner"><svg class="icon icon-loading" aria-hidden="true"><use xlink:href="#icon-loading"></use></svg></div></div>
+
+      <div id="truck-watch" class="hidden mb-10">
+        <?php if ( get_field( 'truck_watch_form_id', 'option' ) ) : ?>
+          <?php echo gravity_form( get_field( 'truck_watch_form_id', 'option' ), false,false, false, '', true ); ?>
+        <?php endif; ?>
+      </div>
+    </div> <!-- /.search-inventory-results -->
+
+    <nav class="flex items-center justify-center mb-24 mx-auto hidden" id="results-pagination">
+      <a class="filter-pagination filters-start mr-6" href="#"><svg class="icon icon-angle-double-left pointer-events-none" aria-hidden="true"><use xlink:href="#icon-angle-double-left"></use></svg></a>
+      <a class="filter-pagination filters-back circle-icon" href="#"><svg class="icon icon-chevron-left pointer-events-none" aria-hidden="true"><use xlink:href="#icon-chevron-left"></use></svg></a>
+      <span id="pagination-text" class="page font-bold text-sm mx-12"></span>
+      <a class="filter-pagination filters-next circle-icon" href="#"><svg class="icon icon-chevron-right pointer-events-none" aria-hidden="true"><use xlink:href="#icon-chevron-right"></use></svg></a>
+      <a class="filter-pagination filters-end ml-6" href="#"><svg class="icon icon-angle-double-right pointer-events-none" aria-hidden="true"><use xlink:href="#icon-angle-double-right"></use></svg></a>
+    </nav>
+  </div> <!-- /.search-inventory-page -->
+<?php endwhile; ?>

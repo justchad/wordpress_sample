@@ -1,0 +1,21 @@
+/**
+ * Two Column WYSIWYG Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.two-column-wysiwyg {
+  .large-title {
+    position: absolute;
+    bottom: calc( 100% - 1.5rem );
+    left: 0;
+    font-size: 50px;
+
+    @screen sm {
+      bottom: calc( 100% - 2.5rem );
+      font-size: 80px;
+    }
+  }
+}

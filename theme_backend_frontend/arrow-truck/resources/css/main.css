@@ -1,0 +1,39 @@
+@import 'base/root';
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+
+/*
+ * import vendors and third party
+ * scripts here.Magnific, slick ect
+ */
+@import '../../node_modules/magnific-popup/dist/magnific-popup.css';
+@import '../../node_modules/slick-carousel/slick/slick.css';
+@import '../../node_modules/slick-carousel/slick/slick-theme.css';
+
+
+/* import ll base styles */
+@import 'base/variables';
+@import 'base/utilities';
+@import 'base/base.css';
+@import 'base/typography';
+@import 'base/grid';
+
+/* import partials */
+@import 'partials/animation';
+@import 'partials/btn';
+@import 'partials/icon';
+@import 'partials/navbar';
+@import 'partials/modal';
+@import 'partials/form-skin';
+@import 'partials/footer';
+@import 'partials/truck-card';
+@import 'partials/simple-slider';
+
+/* import pages */
+@import 'pages/404';
+@import 'pages/single-truck';
+@import 'pages/search-inventory';
+@import 'pages/locations';
+
+@import "tailwindcss/utilities";

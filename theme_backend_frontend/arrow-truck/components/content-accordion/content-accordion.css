@@ -1,0 +1,80 @@
+/**
+ * Content Accordion Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+
+.content-accordion {
+  .content-accordion__item-title {
+    cursor: pointer;
+
+    .icon {
+      flex: 0 0 auto;
+    }
+
+    .item-title {
+      flex: 1 0 0px;
+      width: 75%;
+
+      @screen sm {
+        width: auto;
+      }
+    }
+
+    .icon-plus,
+    .icon-minus {
+      width: 16px;
+    }
+  }
+
+  .images {
+    .image {
+      max-width: 138px;
+    }
+  }
+
+  .content-accordion__item {
+    border-bottom: 1px solid #D8D8D8;
+    transition: 0.25s ease;
+
+    &:not(.is-open):hover {
+      @apply .bg-gray-100;
+    }
+
+    &:last-child {
+      border: none;
+    }
+
+    .content-accordion__item-answer {
+      p:not([class*="hdg-"], [class*="paragraph-"]) {
+        @apply .paragraph-small;
+      }
+    }
+
+    .icon-plus {
+      transform: rotate(-90deg);
+      transform-origin: 50% 50%;
+      transition: 0.25s ease-in-out;
+    }
+
+    .icon-chevron-down {
+      transform: rotate(0deg);
+      transform-origin: 50% 50%;
+      transition: 0.25s ease-in-out;
+    }
+
+    &.is-open {
+      .icon-plus {
+        display: none;
+      }
+
+      .icon-minus {
+        display: block;
+      }
+    }
+  }
+}
+

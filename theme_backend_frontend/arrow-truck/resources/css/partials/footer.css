@@ -1,0 +1,43 @@
+.footer {
+  .logo-wrapper {
+    display: block;
+    width: 73px;
+    height: 73px;
+    border-radius: 50%;
+    @apply .relative .bg-red-200;
+
+    img {
+      position: absolute;
+      top: 48%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .footer-country-toggle {
+    .icon-chevron-down {
+      transform: rotate(0);
+      transition: 0.15s ease;
+    }
+
+    &.is-open {
+      .icon-chevron-down {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.signupforeamils{
+  background-color: #F7F7F7;
+  p{
+    font-size: 1.1rem;
+    a{
+      color: #C72027;
+      font-weight: bold;
+      &:hover{
+        color: #000;
+      }
+    }
+  }
+}

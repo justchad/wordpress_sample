@@ -1,0 +1,65 @@
+<?php
+
+    if(isset($_GET['from'])){
+
+        ll_encode_cookie_handler(ll_safe_encode($_GET['from']), 'fromcanada');
+
+
+        if(isset($_COOKIE['fromcanada'])){
+            ll_decode_cookie_handler('fromcanada', false);
+        }
+    }
+
+    if($_GET['from'] && $_GET['username']){
+
+        $loginusername = $_GET['username'];
+        $ref_user = get_user_by( 'login', $loginusername );
+
+        $roles = ( array ) $ref_user->roles;
+        if (in_array("administrator", $roles)){
+            return;
+        }
+
+        if($ref_user){
+            wp_set_current_user( $ref_user->ID );
+            wp_set_auth_cookie( $ref_user->ID, true );
+        }else{
+            // ref user not found need to create and set.
+            $username = $_GET['username'];
+            $password = wp_generate_password();
+            $email = $_GET['email'];
+            $first_name = $_GET['firstname'];
+            $last_name = $_GET['lastname'];
+
+            $new_user_canada = wp_insert_user( [
+              'user_login' => $username,
+              'user_pass'  => $password,
+              'user_email' => $email,
+              'first_name' => $first_name,
+              'last_name'  => $last_name,
+              'role'       => 'customer'
+            ] );
+
+            if ( is_wp_error( $new_user_canada ) ) {
+              $arrow_errors['new_user'] = $new_user_canada->get_error_message();
+              throw new LL_Exception( $new_user_canada->get_error_message() );
+            }
+
+            wp_set_current_user( $new_user_canada );
+            wp_set_auth_cookie( $new_user_canada, true );
+
+            update_usermeta( $new_user_canada, 'phone', strip_phone( $_GET['phone'] ) );
+            update_usermeta( $new_user_canada, 'address_zip', ll_format_postcode( $_GET['zipcode'], 'US' ) );
+            update_usermeta( $new_user_canada, 'brand_preference', $_GET['brand_preference'] );
+            update_usermeta( $new_user_canada, 'equipment_preference', $_GET['equipment_preference'] );
+            update_usermeta( $new_user_canada, 'brand_key', $_GET['brand_key'] );
+            update_usermeta( $new_user_canada, 'equipment_key', $_GET['equipment_key'] );
+            update_usermeta( $new_user_canada, 'equipment_key', $_GET['equipment_key'] );
+            add_user_meta( $new_user_canada, 'referer_location', $_GET['from'] );
+
+        }
+
+    }else{
+        // no ref user set.
+    }
+?>

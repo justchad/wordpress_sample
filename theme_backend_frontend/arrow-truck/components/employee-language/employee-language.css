@@ -1,0 +1,130 @@
+/**
+ * Employee Language Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.employee-language {
+
+}
+
+.all-employees-wrapper{
+  padding: 3rem 0;
+  min-width: 314px;
+
+  .all-employees-card{
+    padding: 1rem;
+    min-width: 280px;
+  }
+  .all-employees-card-image{
+    background-size: 100%;
+    width: 100%;
+    min-height: 280px;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .all-employees-card-info{
+    h2{
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin: 1rem 0;
+      margin-bottom: 0;
+    }
+    h3{
+      margin-bottom: 1rem;
+    }
+    .employee-card-info-branch{
+      span{
+        display: block;
+        margin-right: .5rem;
+        a{
+          color: #C72027;
+          &:hover{
+            color: #757575;
+          }
+        }
+      }
+    }
+    .all-employee-card-language-wrapper{
+      span{
+        display: block;
+      }
+    }
+  }
+}
+.employee-card-info-branch-phone{
+  a{
+    &:hover{
+      color: #C72027;
+    }
+  }
+}
+.employee-card-info-branch-email{
+  a{
+    &:hover{
+      color: #C72027;
+    }
+  }
+}
+.all-employees-card-inner{
+  border: solid 1px rgba(0,0,0,0.1);
+  border-radius: 0.25rem;
+  padding: 1rem;
+}
+.employee-card-coms-wrapper{
+  background-color: whitesmoke;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: solid 1px rgba(0,0,0,0.1);
+}
+.all-employee-card-bio{
+
+}
+.all-employee-card-bio-button{
+  font-weight: bold;
+  &:hover{
+    color: #C72027;
+  }
+}
+.all-employee-card-bio{
+  padding: 1rem 0;
+  padding-bottom: 0;
+}
+.all-employee-card-bio-content{
+  padding: 1rem 0;
+}
+.employee-card-header-small{
+  font-size: 1.15rem !important;
+}
+
+@media only screen and (max-width: 1269px) {
+  .all-employees-card-image{
+    min-height: 215px !important;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .all-employees-card-image{
+    min-height: 249px !important;
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  .all-employees-card-image{
+    max-height: 563px !important;
+    min-height: 249px !important;
+    min-width: 249px !important;
+  }
+}
+
+.all-employees-card-image {
+  width: 50%;
+}
+
+.all-employees-card-image:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}

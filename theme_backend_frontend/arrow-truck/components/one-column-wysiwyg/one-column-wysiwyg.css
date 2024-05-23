@@ -1,0 +1,15 @@
+/**
+ * One Column WYSIWYG Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.one-column-wysiwyg {
+  margin-top: -1px;
+  position: relative;
+  .hdg-hero {
+    margin-bottom: -2rem;
+  }
+}

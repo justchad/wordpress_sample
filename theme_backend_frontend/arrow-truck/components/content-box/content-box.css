@@ -1,0 +1,38 @@
+/**
+ * Content Box Styles
+ * ----------------------------------------------------------------------------
+ *
+ * About the module
+ *
+ */
+
+.content-box {
+  .col {
+    flex: 0 0 auto;
+  }
+
+  .content-column {
+    position: relative;
+    @apply .-mt-8;
+    margin-left: 3.5rem;
+    z-index: 1;
+
+    @screen lg {
+      @apply .mt-24;
+      width: 56%;
+      transform: translateX(calc( 1.5625rem * -6 ));
+    }
+
+    @screen xl {
+      width: 45%;
+    }
+  }
+
+  .fit-image {
+    overflow: hidden;
+
+    img {
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+  }
+}
